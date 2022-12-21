@@ -6,47 +6,39 @@ import edu.clevertec.check.pdf.cashreceiptpdffileprinterimpl.CashReceiptPdfFileP
 import edu.clevertec.check.service.OrderProcessingService;
 import edu.clevertec.check.service.OutputCheckService;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
-import edu.clevertec.check.validation.DataValidation;
-import edu.clevertec.check.validation.impl.DataValidationImpl;
+import edu.clevertec.check.validation.impl.DataValidation;
 import edu.clevertec.check.validation.impl.FileValidationImpl;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.util.Arrays;
 
-import static edu.clevertec.check.validation.DataValidation.MESSAGE_DATA_INVALID;
-import static edu.clevertec.check.validation.DataValidation.PATTERN_DATA_VALIDATION_STRING_ARRAY;
-
 @Slf4j
 public class CheckRunner {
+    private static String MESSAGE_DATA_INVALID = "The %s + is not valid. Check the correctness of the entered data.They must be entered " +
+            "in regular expression format: %s Valid data example: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111" +
+            " or enter the path of the source file, e.g. src\\main\\resources\\data.txt";
+
     /**
      * The main method for managing the application.
      *
      * @param args parameters of a set of products, their quantities and type of discount card, or path file.
      */
     public static void main(String[] args) {
-        log.debug("Input args: " + String.join(" ", args));
-        DataValidation dataValidation = new DataValidationImpl(args);
-        dataValidation.isEmpty();
-        // try - if the source data is an array of strings:
-        boolean isStringMass = dataValidation.validationStringArray();
-        // try - if the source data is a file:
-        boolean isFile = dataValidation.validationFile();
+        log.info("Input args: " + String.join(" ", args));
+        DataValidation.requiredNotEmptyArgs(args);
 
-        if (isStringMass) {
-            OrderProcessingService resultProcessedData = formationCheckBody(args);
+        if (DataValidation.isReadFromConsole(args)) {
+            OrderProcessingService resultProcessedData = generateCheck(args);
             OutputCheckService.printCheckToConsole(resultProcessedData.getOrderFromCheck());
-        }
-        if (isFile) {
-            String[] stringMassFRomFile = FileValidationImpl.FileUpLoad.loadStringsFromFile();
-            OrderProcessingService resultProcessedData = formationCheckBody(stringMassFRomFile);
+        } else if (DataValidation.isReadFromFile(args)) {
+            OrderProcessingService resultProcessedData =
+                    generateCheck(FileValidationImpl.FileUpLoad.loadStringsFromFile());
             OutputCheckService.printCheckToFile(new File("src/main/resources/receipt.txt"),
                     resultProcessedData.getOrderFromCheck());
-        }
-        //If the file and string array is not found:
-        if (!isFile ^ isStringMass) {
+        } else {
             throw new DataException((String.format(MESSAGE_DATA_INVALID,
-                    Arrays.toString(args), PATTERN_DATA_VALIDATION_STRING_ARRAY)));
+                    Arrays.toString(args), DataValidation.PATTERN_DATA_VALIDATION_STRING_ARRAY)));
         }
     }
 
@@ -56,7 +48,7 @@ public class CheckRunner {
      * @param data parameters of a set of products, their quantities and type of discount card.
      * @return OrderProcessingService which contains processed data.
      */
-    private static OrderProcessingService formationCheckBody(String[] data) {
+    private static OrderProcessingService generateCheck(String[] data) {
         OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(data);
         resultProcessedData.orderProcessing().formationOfCheck();
         CashReceiptPdfFilePrinter printer = new CashReceiptPdfFilePrinterImpl();

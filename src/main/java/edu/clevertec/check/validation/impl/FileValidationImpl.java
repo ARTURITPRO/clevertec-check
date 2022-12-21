@@ -28,7 +28,6 @@ public class FileValidationImpl implements FileValidation {
      */
     private static File file;
 
-
     /**
      * File validation
      * <p>

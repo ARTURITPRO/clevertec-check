@@ -1,7 +1,6 @@
 package edu.clevertec.check.validation.impl;
 
 import edu.clevertec.check.exception.DataException;
-import edu.clevertec.check.validation.DataValidation;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -22,11 +21,11 @@ import java.util.regex.Pattern;
  * @author Artur Malashkov
  */
 @Slf4j
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-@RequiredArgsConstructor
-public class DataValidationImpl implements DataValidation {
+public class DataValidation {
 
-    String[] args;
+    public static String PATTERN_DATA_VALIDATION_STRING_ARRAY = "\\s*((\\d+-\\d+)?(\\s+\\d+-\\d+)+\\s+(\\w{8}|\\w{10})-\\d{1,20})\\s*|(\\s*(\\w{8}|\\w{10})-\\d{1,20}\\s*(\\d+-\\d+)?(\\s+\\d+-\\d+)+)\\s*|\\s*((\\d+-\\d+)?(\\s+\\d+-\\d+)+\\s+(\\w{8}|\\w{10})-\\d{1,20}\\s+(\\d+-\\d+)?(\\s+\\d+-\\d+)+)\\s*";
+
+
     /**
      * Is valid
      * <p>
@@ -37,13 +36,12 @@ public class DataValidationImpl implements DataValidation {
      *
      * @throws DataException if the array of strings is empty.
      */
-    @Override
-    public void isEmpty() {
+    public static void requiredNotEmptyArgs(String[] args) {
         Arrays.stream(args).findAny().orElseThrow(() -> new DataException(" Empty Data"));
     }
 
-    @Override
-    public boolean validationStringArray() {
+
+    public static boolean isReadFromConsole(String[] args) {
         String inputData = String.join(" ", args);
         Pattern patternArgsConsoleString = Pattern.compile(PATTERN_DATA_VALIDATION_STRING_ARRAY);
         Matcher matcherArgsConsoleString = patternArgsConsoleString.matcher(inputData);
@@ -53,10 +51,10 @@ public class DataValidationImpl implements DataValidation {
         }
         return false;
     }
-    @Override
-    public boolean validationFile() {
+
+    public static boolean isReadFromFile(String[] args) {
         String inputData = String.join(" ", args);
-        Pattern patternConsoleFileString = Pattern.compile(PATTERN_DATA_VALIDATION_STRING_FILE);
+        Pattern patternConsoleFileString = Pattern.compile(".txt");
         Matcher matcherConsoleFileString = patternConsoleFileString.matcher(inputData);
         FileValidationImpl fileValidationImpl = new FileValidationImpl();
         Predicate<String[]> predicate = fileValidationImpl::isValidFile;

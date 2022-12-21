@@ -1,98 +1,13 @@
-22:34:00.995 [main] DEBUG edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
-22:34:01.000 [main] INFO  e.c.c.v.impl.DataValidationImpl - String args is Found
-22:34:01.006 [main] DEBUG e.c.c.v.impl.FileValidationImpl - file found: false
-22:34:01.012 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :1-1
-22:34:01.013 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 1-1
-22:34:01.014 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 1
-22:34:01.015 [main] DEBUG e.clevertec.check.util.SettingsUtil - SETTINGS
-22:34:01.019 [main] DEBUG e.clevertec.check.util.SettingsUtil - SETTINGS {db.autorundbsql=true, db.driver=org.postgresql.Driver, db.password=0147896325aA, db.username=postgres, db.url=jdbc:postgresql://localhost:5432/product_market}
-22:34:01.407 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
-22:34:01.422 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [1, 1] 
- product found in Data Base: Product(id=1, name=milk, price=1.0, isPromotional=true)
-22:34:01.423 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :2-2
-22:34:01.423 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 2-2
-22:34:01.423 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 2
-22:34:01.495 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
-22:34:01.495 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [2, 2] 
- product found in Data Base: Product(id=2, name=brot, price=1.5, isPromotional=false)
-22:34:01.495 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :3-3
-22:34:01.495 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 3-3
-22:34:01.495 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 3
-22:34:01.568 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
-22:34:01.568 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [3, 3] 
- product found in Data Base: Product(id=3, name=icecream, price=2.0, isPromotional=true)
-22:34:01.568 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :4-4
-22:34:01.568 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 4-4
-22:34:01.568 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 4
-22:34:01.644 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
-22:34:01.644 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [4, 4] 
- product found in Data Base: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
-22:34:01.644 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :5-5
-22:34:01.644 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 5-5
-22:34:01.644 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 5
-22:34:01.710 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
-22:34:01.710 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [5, 5] 
- product found in Data Base: Product(id=5, name=chicken, price=3.0, isPromotional=true)
-22:34:01.710 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :6-6
-22:34:01.710 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 6-6
-22:34:01.710 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 6
-22:34:01.779 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
-22:34:01.780 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [6, 6] 
- product found in Data Base: Product(id=6, name=pizza, price=3.5, isPromotional=false)
-22:34:01.780 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :7-7
-22:34:01.780 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 7-7
-22:34:01.780 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 7
-22:34:01.835 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
-22:34:01.835 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [7, 7] 
- product found in Data Base: Product(id=7, name=pudding, price=4.0, isPromotional=true)
-22:34:01.835 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :8-8
-22:34:01.835 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 8-8
-22:34:01.835 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 8
-22:34:01.895 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
-22:34:01.895 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [8, 8] 
- product found in Data Base: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
-22:34:01.895 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :9-9
-22:34:01.895 [main] DEBUG e.c.c.v.impl.ProductValidationImpl - isValidProductAndQuantity(String str) = 9-9
-22:34:01.895 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search product with id = 9
-22:34:01.948 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
-22:34:01.948 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsProduct: [9, 9] 
- product found in Data Base: Product(id=9, name=pie, price=5.0, isPromotional=true)
-22:34:01.948 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - String data :mastercard-11111
-22:34:01.949 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - argsCard: [mastercard, 11111]
-22:34:01.949 [main] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
-22:34:01.949 [main] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
-22:34:01.949 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - nameCard: mastercard
-22:34:01.949 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - numberCard: 11111
-22:34:01.949 [main] DEBUG e.c.c.s.i.OrderProcessingServiceImpl - search DiscountCard with number = 11111
-22:34:02.349 [main] DEBUG e.c.check.service.OutputCheckService - checkBody: 
-*     The item chicken is promotional
-*     Its amount is more than 5
-*     You get a 10% discount 
-*     The cost chicken will be:$2,7
-*     Instead of $3.0        
-5     chicken           $2,7       $13,5     
-1     milk              $1.0       $1        
-2     brot              $1.5       $3        
-6     pizza             $3.5       $21       
-*     The item pie is promotional
-*     Its amount is more than 5
-*     You get a 10% discount 
-*     The cost pie will be:$4,5
-*     Instead of $5.0        
-9     pie               $4,5       $40,5     
-8     popcorn           $4.5       $36       
-*     The item pudding is promotional
-*     Its amount is more than 5
-*     You get a 10% discount 
-*     The cost pudding will be:$3,6
-*     Instead of $4.0        
-7     pudding           $3,6       $25,2     
-4     chocolate         $2.5       $10       
-3     icecream          $2.0       $6        
-----------------------------------------
-#	  DiscountCard mastercard number 11111
-#	  has been provided
-#	  Included 10% discount
-----------------------------------------
-####  Total cost:                 $140,58
-22:34:02.357 [main] INFO  e.c.check.service.OutputCheckService - Print check to console...
+23:59:24.498 [main] INFO  e.c.c.v.impl.DataValidationImpl - String args is Found
+23:59:24.976 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+23:59:25.102 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+23:59:25.191 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+23:59:25.276 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+23:59:25.363 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+23:59:25.435 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+23:59:25.491 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+23:59:25.547 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+23:59:25.606 [main] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+23:59:25.607 [main] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+23:59:25.607 [main] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+23:59:26.125 [main] INFO  e.c.check.service.OutputCheckService - Print check to console...
