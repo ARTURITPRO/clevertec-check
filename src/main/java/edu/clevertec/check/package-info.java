@@ -17,10 +17,11 @@
  *      If an argument with id is passed that has already been passed in the same argument list, then their number is
  * summed up. For example "2-2 2-3 2-4" -> "2-9"
  *      Passing a map to arguments:
- * The card can be of two types mastercard (with 5% discount) or goldcard (with 10% discount).
+ * The card can be of the mastercard type. The discount, number, id for each card is listed in the discount_card
+ * database.
  * The card name and number are first checked by the pattern. The name must be between 8 and 10 characters long.
  * The card number must be 5 digits. Otherwise, a SourceArgs exception will be thrown.
- *      Next, the name of the card is checked for a letter-by-letter match "goldCard" or "masterCard" in any case. Otherwise
+ *      Next, the name of the card is checked for a letter-by-letter match "masterCard" in any case. Otherwise
  *  an InvalidCardNameException will be thrown.
  *  Card number must be 5 digits, otherwise it will be thrown out InvalidCardNumberException.
  *  When passing a map as an argument, the type of map and its number are separated by a hyphen.

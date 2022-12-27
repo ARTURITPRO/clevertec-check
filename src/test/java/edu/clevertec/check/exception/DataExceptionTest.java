@@ -14,9 +14,8 @@ class DataExceptionTest {
         emptyData = new String[0];
     }
 
-//    @Test
-//    void getMessage() {
-//
-//        assertThrows(DataException.class, DataValidation.requiredNotEmptyArgs(emptyData));
-//    }
+    @Test
+    void getMessage() {
+        assertThrows(DataException.class, () -> DataValidation.requiredNotEmptyArgs(emptyData));
+    }
 }

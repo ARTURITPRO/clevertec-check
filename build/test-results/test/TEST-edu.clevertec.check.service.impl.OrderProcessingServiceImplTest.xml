@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-12-27T11:01:31" hostname="DESKTOP-H3UOLLG" time="2.548">
+  <properties/>
+  <testcase name="orderProcessing()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.578"/>
+  <testcase name="getResultProcessedData()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.001"/>
+  <testcase name="setDiscountCard()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.001"/>
+  <testcase name="getTotalCost()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.603"/>
+  <testcase name="getOrderFromCheck()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.656"/>
+  <testcase name="getCustomShoppingList()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.703"/>
+  <testcase name="formationOfCheck()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

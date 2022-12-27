@@ -64,4 +64,7 @@ public class DataValidation {
         }
         return false;
     }
+
+    public static void requiredNotEmptyArgs() {
+    }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.clevertec.check.service.impl.ProductServiceImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-12-27T11:01:34" hostname="DESKTOP-H3UOLLG" time="0.664">
+  <properties/>
+  <testcase name="delete()" classname="edu.clevertec.check.service.impl.ProductServiceImplTest" time="0.111"/>
+  <testcase name="testFindAll()" classname="edu.clevertec.check.service.impl.ProductServiceImplTest" time="0.11"/>
+  <testcase name="findAll()" classname="edu.clevertec.check.service.impl.ProductServiceImplTest" time="0.114"/>
+  <testcase name="update()" classname="edu.clevertec.check.service.impl.ProductServiceImplTest" time="0.114"/>
+  <testcase name="findById()" classname="edu.clevertec.check.service.impl.ProductServiceImplTest" time="0.105"/>
+  <testcase name="save()" classname="edu.clevertec.check.service.impl.ProductServiceImplTest" time="0.107"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
