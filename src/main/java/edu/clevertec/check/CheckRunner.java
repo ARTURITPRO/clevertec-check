@@ -3,14 +3,20 @@ package edu.clevertec.check;
 import edu.clevertec.check.exception.DataException;
 import edu.clevertec.check.pdf.CashReceiptPdfFilePrinter;
 import edu.clevertec.check.pdf.cashreceiptpdffileprinterimpl.CashReceiptPdfFilePrinterImpl;
+import edu.clevertec.check.repository.impl.DiscountCardRepoImpl;
+import edu.clevertec.check.repository.impl.ProductRepoImpl;
 import edu.clevertec.check.service.OrderProcessingService;
 import edu.clevertec.check.service.OutputCheckService;
+import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
+import edu.clevertec.check.service.impl.ProductServiceImpl;
 import edu.clevertec.check.validation.impl.DataValidation;
 import edu.clevertec.check.validation.impl.FileValidationImpl;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 
 @Slf4j
@@ -48,8 +54,10 @@ public class CheckRunner {
      * @param data parameters of a set of products, their quantities and type of discount card.
      * @return OrderProcessingService which contains processed data.
      */
-    private static OrderProcessingService generateCheck(String[] data) {
-        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(data);
+    @SneakyThrows
+    private static OrderProcessingService generateCheck(String[] data)  {
+        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
+                (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing().formationOfCheck();
         CashReceiptPdfFilePrinter printer = new CashReceiptPdfFilePrinterImpl();
         printer.print(resultProcessedData); //Print check to PDF file (in root project)

@@ -1,10 +1,7 @@
 package edu.clevertec.check.entity;
 
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 /**
@@ -15,7 +12,9 @@ import lombok.experimental.FieldDefaults;
  */
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@NoArgsConstructor
 @Builder
+@AllArgsConstructor
 public class Product implements Entity, Comparable<Product> {
 
     /**
@@ -26,18 +25,18 @@ public class Product implements Entity, Comparable<Product> {
     /**
      * Product name. Used to generate a check for purchases in a store.
      */
-    @NonNull final String name;
+    @NonNull  String name;
 
     /**
      * Product price. Used to generate a check for purchases in a store.
      */
-    @NonNull final Double price;
+    @NonNull  Double price;
 
     /**
      * The promotional item is used when calculating the discount for the product. If the product is promotional,
      * then the price for the product will be less than the specified one.
      */
-    @NonNull final Boolean isPromotional;
+    @NonNull  Boolean isPromotional;
 
     /**
      * Used when searching for products with the same ID and summing the number of products if their IDs match.

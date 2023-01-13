@@ -41,24 +41,25 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
     /**
      *  The ProductServiceImpl constructor defines the database implementation.
      */
-    private final ProductService<Integer, Product> productService = new ProductServiceImpl(new ProductRepoImpl());
-    /**
-     * The DiscountCardServiceImpl constructor defines the database implementation.
-     */
-    private final DiscountCardService <Integer, DiscountCard> discountCardService =
-            new DiscountCardServiceImpl(new DiscountCardRepoImpl());
-
-    /**
-     * The order processing is used only after string array validation.
-     */
-    @Getter
-    private OrderProcessingService resultProcessedData;
+    private final ProductService<Integer, Product> productService;
 
     /**
      * An array of strings that will later be converted into a set of products
      * {@link OrderProcessingServiceImpl#customShoppingList}
      */
     private final String[] dataMass;
+
+    /**
+     * The DiscountCardServiceImpl constructor defines the database implementation.
+     */
+    private final DiscountCardService <Integer, DiscountCard> discountCardService;
+
+
+    /**
+     * The order processing is used only after string array validation.
+     */
+    @Getter
+    private OrderProcessingService resultProcessedData;
 
     /**
      * This is a list of products with quantities, which was obtained by converting through

@@ -164,7 +164,9 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
 
     @SneakyThrows
     private static Product productCreation(ResultSet resultSet) {
-        return Product.builder().id(resultSet.getObject("id", Integer.class))
+        return Product
+                .builder()
+                .id(resultSet.getObject("id", Integer.class))
                 .name(resultSet.getObject("name", String.class))
                 .price(resultSet.getObject("price", Double.class))
                 .isPromotional(resultSet.getObject("is_promotional", Boolean.class))

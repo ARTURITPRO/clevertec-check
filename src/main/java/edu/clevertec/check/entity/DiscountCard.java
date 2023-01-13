@@ -12,7 +12,9 @@ import lombok.experimental.FieldDefaults;
  */
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@NoArgsConstructor
 @Builder
+@AllArgsConstructor
 public class DiscountCard implements Entity{
     /**
      * ID is used to identify the card
@@ -21,17 +23,17 @@ public class DiscountCard implements Entity{
     /**
      * Discount card name. Used to generate a check for purchases in a store.
      */
-    @NonNull final  String name;
+    @NonNull String name;
 
     /**
      * The discount depends on the type of discount card.
      */
-    @NonNull final Integer discount;
+    @NonNull Integer discount;
 
     /**
      * Discount card number. Used to generate a check for purchases in a store.
      */
-    @NonNull  final Integer number;
+    @NonNull Integer number;
 
     /**
      * @return discount card in the required format for generating a check.

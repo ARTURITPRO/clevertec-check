@@ -192,10 +192,12 @@ public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountC
 
     @SneakyThrows
     private static DiscountCard discountCardCreation(ResultSet resultSet) {
-        return DiscountCard.builder()
+        return DiscountCard
+                .builder()
                 .id(resultSet.getObject("id", Integer.class))
                 .name(resultSet.getObject("name", String.class))
                 .discount(resultSet.getObject("discount", Integer.class))
-                .number(resultSet.getObject("number", Integer.class)).build();
+                .number(resultSet.getObject("number", Integer.class))
+                .build();
     }
 }

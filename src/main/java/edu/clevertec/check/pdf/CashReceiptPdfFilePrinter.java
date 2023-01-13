@@ -19,7 +19,8 @@ public interface CashReceiptPdfFilePrinter {
      * @throws IOException Signals that an I/O exception to some sort has occurred.
      *
      */
-    void print(OrderProcessingService cashReceipt);
+    byte[] print(OrderProcessingService cashReceipt) throws IOException;
 
+    String READ_FILE_PATH = "C:\\Users\\maste\\IdeaProjects\\7-clevertec-check-demo-20-12-2022 test\\clevertec-check\\clevertec.pdf";
 
 }

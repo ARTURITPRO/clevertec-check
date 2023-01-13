@@ -21,7 +21,10 @@ import edu.clevertec.check.pdf.CashReceiptPdfFilePrinter;
 import edu.clevertec.check.service.OrderProcessingService;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
@@ -30,9 +33,10 @@ import java.util.Map;
 /**
  * Used to print a receipt in PDF format.
  *
- * @version JDK 1.8
  * @author Artur Malashkov
+ * @version JDK 1.8
  */
+@Slf4j
 public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter {
 
     /**
@@ -42,7 +46,7 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
      * </p>
      *
      * @param orderProcessingService a class object that contains all the necessary information.
-     *                        {@link OrderProcessingService}
+     *                               {@link OrderProcessingService}
      * @see PdfDocument#addNewPage()
      * @see Document#add(IBlockElement)
      * @see PdfCanvas#addXObjectAt(PdfXObject, float, float)
@@ -50,16 +54,17 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
      */
     @SneakyThrows
     @Override
-    public void print(OrderProcessingService orderProcessingService) {
+    public byte[] print(OrderProcessingService orderProcessingService)  {
+        @Cleanup ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
         /** The path to the background file. */
-        String READ_FILE_PATH = "src\\main\\resources\\template\\clevertec.pdf";
+        File file = new File(READ_FILE_PATH);
+
+        @Cleanup PdfDocument backgroundPdfDocument = new PdfDocument(new PdfReader(file));
+
         @Cleanup
-        PdfDocument backgroundPdfDocument = new PdfDocument(new PdfReader(READ_FILE_PATH));
-        /** The path where the check will be written in PDF format. */
-        String PATH_RECORD_FILE = "checkOfSupermarket.pdf";
-        @Cleanup
-        PdfDocument checkPdfDocument = new PdfDocument(new PdfWriter(PATH_RECORD_FILE));
+        PdfDocument checkPdfDocument = new PdfDocument(new PdfWriter(outputStream));
+
         @Cleanup
         Document document = new Document(checkPdfDocument);
 
@@ -73,6 +78,10 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
 
         PdfFormXObject pdfFormXObject = backgroundPdfDocument.getFirstPage().copyAsFormXObject(checkPdfDocument);
         PdfCanvas.addXObjectAt(pdfFormXObject, 0, 0);
+        backgroundPdfDocument.close();
+        checkPdfDocument.close();
+        document.close();
+        return outputStream.toByteArray();
     }
 
     /**
@@ -114,7 +123,7 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
      * </p>
      *
      * @param orderProcessingService a class object that contains all the necessary information.
-     *                        {@link OrderProcessingService}
+     *                               {@link OrderProcessingService}
      * @return of the main part of the table {@link Table#setTextAlignment(TextAlignment)}
      * @see OrderProcessingService
      * @see Cell#add(IBlockElement)
@@ -147,7 +156,7 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
      * </p>
      *
      * @param orderProcessingService a class object that contains all the necessary information.
-     *                        {@link OrderProcessingService}
+     *                               {@link OrderProcessingService}
      * @return of the main part of the table {@link Table#setTextAlignment(TextAlignment)}
      * @see Cell#add(IBlockElement)
      * @see Table#addCell(Cell)
