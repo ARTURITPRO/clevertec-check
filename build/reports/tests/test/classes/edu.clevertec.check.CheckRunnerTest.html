@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CheckRunnerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CheckRunnerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/edu.clevertec.check.html">edu.clevertec.check</a> &gt; CheckRunnerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.777s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">main()</td>
+<td class="success">1.777s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>12:06:04.721 [Test worker] INFO  edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+12:06:04.726 [Test worker] INFO  e.c.c.validation.impl.DataValidation - String args is Found
+12:06:05.022 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:05.114 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:05.200 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:05.351 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:05.412 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:05.468 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:05.529 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:05.687 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:05.844 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:05.846 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:06:05.846 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:06:06.277 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to console...
+****************************************
+*               Dionis                 *
+*           EKE &quot;Centrail&quot;             *
+*              +375445581844           *
+ZWDN:304219              CKHO:300030394
+REGN:3100016076           UNP:390286042
+KASSA:0001 Change:000750  DKH:000271821
+31 Osipova Tatiana     CHK:01/000000285
+TIME  12:06:06		   DATE  2023-02-20
+----------------------------------------
+QTY   DESCRIPTION       PRICE      TOTAL
+*     The item chicken is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost chicken will be:$2,7
+*     Instead of $3.0        
+5     chicken           $2,7       $13,5     
+1     milk              $1.0       $1        
+2     brot              $1.5       $3        
+6     pizza             $3.5       $21       
+*     The item pie is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost pie will be:$4,5
+*     Instead of $5.0        
+9     pie               $4,5       $40,5     
+8     popcorn           $4.5       $36       
+*     The item pudding is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost pudding will be:$3,6
+*     Instead of $4.0        
+7     pudding           $3,6       $25,2     
+4     chocolate         $2.5       $10       
+3     icecream          $2.0       $6        
+----------------------------------------
+#	  DiscountCard mastercard number 11111
+#	  has been provided
+#	  Included 10% discount
+----------------------------------------
+####  Total cost:                 $140,58
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 20 февр. 2023 г., 12:06:13</p>
+</div>
+</div>
+</body>
+</html>

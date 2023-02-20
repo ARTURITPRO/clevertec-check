@@ -1,13 +1,15 @@
 package edu.clevertec.check.exception;
 
+import edu.clevertec.check.repository.impl.DiscountCardRepoImpl;
+import edu.clevertec.check.repository.impl.ProductRepoImpl;
 import edu.clevertec.check.service.OrderProcessingService;
+import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
-import edu.clevertec.check.validation.ProductValidation;
-import edu.clevertec.check.validation.impl.ProductValidationImpl;
+import edu.clevertec.check.service.impl.ProductServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ShoppingListExceptionTest {
 
@@ -16,7 +18,8 @@ class ShoppingListExceptionTest {
     OrderProcessingService resultProcessedData;
     @BeforeEach
     void init (){
-         resultProcessedData = new OrderProcessingServiceImpl(data);
+         resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
+                 (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
 
     }
     @Test

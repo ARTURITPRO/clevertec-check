@@ -1,0 +1,41 @@
+****************************************
+*               Dionis                 *
+*           EKE "Centrail"             *
+*              +375445581844           *
+ZWDN:304219              CKHO:300030394
+REGN:3100016076           UNP:390286042
+KASSA:0001 Change:000750  DKH:000271821
+31 Osipova Tatiana     CHK:01/000000285
+TIME  12:05:43		   DATE  2023-02-20
+----------------------------------------
+QTY   DESCRIPTION       PRICE      TOTAL
+*     The item chicken is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost chicken will be:$2,7
+*     Instead of $3.0        
+5     chicken           $2,7       $13,5     
+1     milk              $1.0       $1        
+2     brot              $1.5       $3        
+6     pizza             $3.5       $21       
+*     The item pie is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost pie will be:$4,5
+*     Instead of $5.0        
+9     pie               $4,5       $40,5     
+8     popcorn           $4.5       $36       
+*     The item pudding is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost pudding will be:$3,6
+*     Instead of $4.0        
+7     pudding           $3,6       $25,2     
+4     chocolate         $2.5       $10       
+3     icecream          $2.0       $6        
+----------------------------------------
+#	  DiscountCard mastercard number 11111
+#	  has been provided
+#	  Included 10% discount
+----------------------------------------
+####  Total cost:                 $140,58

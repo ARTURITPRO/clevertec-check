@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-02-20T09:06:06" hostname="DESKTOP-H3UOLLG" time="1.033">
+  <properties/>
+  <testcase name="delete()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.143"/>
+  <testcase name="testFindAll()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.082"/>
+  <testcase name="findAll()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.074"/>
+  <testcase name="update()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.122"/>
+  <testcase name="findById()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.126"/>
+  <testcase name="save()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.119"/>
+  <testcase name="testFindAll1()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.117"/>
+  <testcase name="testFindAll2()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.13"/>
+  <testcase name="findByNumber()" classname="edu.clevertec.check.repository.impl.DiscountCardRepoImplTest" time="0.112"/>
+  <system-out><![CDATA[12:06:06.440 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 4
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:06.605 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:06.726 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:06:06.853 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:06:06.974 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 11111
+12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:07.093 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:07.093 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:07.224 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.clevertec.check.repository.impl.ProductRepoImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-02-20T09:06:07" hostname="DESKTOP-H3UOLLG" time="0.708">
+  <properties/>
+  <testcase name="delete()" classname="edu.clevertec.check.repository.impl.ProductRepoImplTest" time="0.118"/>
+  <testcase name="testFindAll()" classname="edu.clevertec.check.repository.impl.ProductRepoImplTest" time="0.116"/>
+  <testcase name="findAll()" classname="edu.clevertec.check.repository.impl.ProductRepoImplTest" time="0.121"/>
+  <testcase name="update()" classname="edu.clevertec.check.repository.impl.ProductRepoImplTest" time="0.117"/>
+  <testcase name="findById()" classname="edu.clevertec.check.repository.impl.ProductRepoImplTest" time="0.119"/>
+  <testcase name="save()" classname="edu.clevertec.check.repository.impl.ProductRepoImplTest" time="0.115"/>
+  <system-out><![CDATA[12:06:07.455 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:07.573 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:07.573 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:07.693 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:07.812 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:06:07.931 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:08.046 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

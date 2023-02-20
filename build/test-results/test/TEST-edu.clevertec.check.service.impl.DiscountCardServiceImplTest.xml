@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-02-20T09:06:09" hostname="DESKTOP-H3UOLLG" time="0.94">
+  <properties/>
+  <testcase name="delete()" classname="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" time="0.125"/>
+  <testcase name="testFindAll()" classname="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" time="0.122"/>
+  <testcase name="findAll()" classname="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" time="0.121"/>
+  <testcase name="update()" classname="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" time="0.227"/>
+  <testcase name="findById()" classname="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" time="0.116"/>
+  <testcase name="save()" classname="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" time="0.112"/>
+  <testcase name="findByNumber()" classname="edu.clevertec.check.service.impl.DiscountCardServiceImplTest" time="0.113"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

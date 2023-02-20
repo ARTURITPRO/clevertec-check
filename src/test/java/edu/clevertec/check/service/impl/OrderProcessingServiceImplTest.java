@@ -2,19 +2,19 @@ package edu.clevertec.check.service.impl;
 
 import edu.clevertec.check.entity.DiscountCard;
 import edu.clevertec.check.entity.Product;
+import edu.clevertec.check.repository.impl.DiscountCardRepoImpl;
+import edu.clevertec.check.repository.impl.ProductRepoImpl;
 import edu.clevertec.check.service.OrderProcessingService;
-import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OrderProcessingServiceImplTest {
     String[] data;
@@ -35,7 +35,8 @@ public class OrderProcessingServiceImplTest {
         data[8] = "9-9";
         data[9] = "mastercard-11111";
 
-        resultProcessedData = new OrderProcessingServiceImpl(data);
+        resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
+                (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         customShoppingList = new HashMap<>();
         Product milk = Product.builder().id(1).name("milk").price(1.0).isPromotional(true).build();
         Product brot = Product.builder().id(2).name("brot").price(1.5).isPromotional(false).build();
@@ -59,7 +60,8 @@ public class OrderProcessingServiceImplTest {
 
     @Test
     void orderProcessing() {
-        OrderProcessingService orderProcessingService = new OrderProcessingServiceImpl(data);
+        OrderProcessingService orderProcessingService = new OrderProcessingServiceImpl(new ProductServiceImpl
+                (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         DiscountCard discountCard = DiscountCard.builder().id(1).name("mastercard").discount(10).number(11111).build();
         orderProcessingService.setDiscountCard(discountCard);
         orderProcessingService.setCustomShoppingList(customShoppingList);

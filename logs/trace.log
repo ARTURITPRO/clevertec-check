@@ -170,3 +170,567 @@
 13:36:39.830 [main] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
 13:36:39.830 [main] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
 13:36:40.231 [main] INFO  e.c.check.service.OutputCheckService - Print check to console...
+12:02:36.868 [Test worker] INFO  edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+12:02:36.875 [Test worker] INFO  e.c.c.validation.impl.DataValidation - String args is Found
+12:02:37.244 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:37.335 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:37.406 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:37.479 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:37.552 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:37.613 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:37.671 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:37.720 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:37.769 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:37.772 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:02:37.772 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:02:38.179 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to console...
+12:02:38.344 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 4
+12:02:38.480 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:02:38.480 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:02:38.480 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:02:38.481 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:02:38.481 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:02:38.556 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:02:38.557 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:02:38.557 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:02:38.557 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:02:38.557 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:02:38.679 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:02:38.796 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:02:38.917 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 11111
+12:02:39.033 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:02:39.033 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:02:39.033 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:02:39.034 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:02:39.034 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:02:39.156 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:02:39.156 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:02:39.156 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:02:39.157 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:02:39.157 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:02:39.496 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:02:39.611 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:39.612 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:39.612 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:39.612 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:39.612 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:39.612 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:39.613 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:39.613 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:39.613 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:39.727 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:39.728 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:39.728 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:39.728 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:39.729 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:39.729 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:39.729 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:39.729 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:39.729 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:39.955 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:02:40.077 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:40.199 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+12:02:40.224 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to File...
+12:02:41.453 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 3
+12:02:41.570 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:02:41.571 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:02:41.572 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:02:41.572 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:02:41.573 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:02:41.732 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:02:41.732 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:02:41.733 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:02:41.733 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:02:41.734 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:02:41.958 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:02:42.193 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:02:42.311 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 66666
+12:02:42.504 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:42.552 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:42.621 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:42.682 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:42.734 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:42.786 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:42.835 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:42.882 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:42.931 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:42.931 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:02:42.932 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:02:43.042 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:43.090 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:43.140 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:43.192 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:43.244 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:43.295 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:43.348 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:43.418 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:43.470 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:43.471 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:02:43.471 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:02:43.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:43.619 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:43.666 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:43.716 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:43.765 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:43.813 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:43.861 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:43.908 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:43.956 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:43.957 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:02:43.957 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:02:44.059 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:44.109 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:44.160 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:44.208 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:44.255 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:44.420 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:44.475 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:44.530 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:44.579 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:44.580 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:02:44.580 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:02:44.724 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:02:44.839 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:44.840 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:44.840 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:44.840 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:44.840 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:44.841 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:44.841 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:44.841 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:44.841 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:44.965 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:44.965 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:02:44.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:02:44.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:02:44.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:02:44.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:02:44.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:02:44.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:02:44.967 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:02:45.188 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:02:45.302 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:02:45.420 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+12:04:59.298 [Test worker] INFO  edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+12:04:59.306 [Test worker] INFO  e.c.check.validation.DataValidation - String args is Found
+12:04:59.632 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:04:59.737 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:04:59.816 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:04:59.985 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:00.043 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:00.097 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:00.147 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:00.305 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:00.355 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:00.357 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:00.357 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:00.756 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to console...
+12:05:01.028 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 4
+12:05:01.104 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:01.105 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:01.105 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:01.105 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:01.105 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:01.177 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:01.178 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:01.178 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:01.178 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:01.178 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:01.307 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:05:01.421 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:05:01.540 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 11111
+12:05:01.660 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:01.661 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:01.661 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:01.661 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:01.661 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:01.783 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:01.784 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:01.784 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:01.784 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:01.784 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:02.117 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:05:02.231 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:02.231 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:02.231 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:02.231 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:02.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:02.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:02.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:02.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:02.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:02.347 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:02.347 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:02.348 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:02.348 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:02.348 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:02.348 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:02.348 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:02.349 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:02.349 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:02.464 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:05:02.577 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:02.692 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+12:05:02.715 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to File...
+12:05:03.928 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 3
+12:05:04.044 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:04.045 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:04.045 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:04.046 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:04.046 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:04.269 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:04.269 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:04.270 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:04.270 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:04.270 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:04.385 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:05:04.499 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:05:04.618 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 66666
+12:05:05.019 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:05.069 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:05.121 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:05.173 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:05.221 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:05.271 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:05.320 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:05.370 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:05.452 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:05.453 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:05.453 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:05.561 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:05.617 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:05.667 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:05.720 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:05.770 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:05.817 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:05.867 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:05.919 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:05.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:05.966 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:05.966 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:06.066 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:06.116 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:06.164 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:06.212 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:06.362 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:06.408 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:06.457 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:06.505 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:06.554 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:06.554 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:06.554 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:06.651 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:06.699 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:06.749 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:06.799 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:06.846 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:06.907 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:06.963 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:07.018 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:07.072 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:07.073 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:07.073 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:07.336 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:05:07.456 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:07.456 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:07.457 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:07.457 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:07.457 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:07.457 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:07.457 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:07.458 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:07.458 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:07.577 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:07.578 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:07.578 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:07.578 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:07.578 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:07.579 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:07.579 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:07.579 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:07.579 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:07.806 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:05:08.025 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:08.138 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+12:05:40.047 [Test worker] INFO  edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+12:05:40.052 [Test worker] INFO  e.c.c.validation.impl.DataValidation - String args is Found
+12:05:40.343 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:40.428 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:40.501 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:40.574 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:40.737 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:40.886 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:40.933 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:40.982 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:41.138 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:41.140 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:41.141 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:41.539 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to console...
+12:05:41.765 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 4
+12:05:41.873 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:41.874 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:41.874 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:41.874 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:41.875 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:41.951 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:41.951 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:41.952 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:41.952 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:41.952 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:42.075 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:05:42.196 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:05:42.313 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 11111
+12:05:42.535 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:42.536 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:42.536 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:42.536 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:42.537 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:42.657 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:42.657 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:42.657 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:42.657 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:42.657 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:43.007 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:05:43.230 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:43.231 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:43.231 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:43.231 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:43.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:43.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:43.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:43.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:43.232 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:43.348 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:43.349 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:43.349 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:43.349 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:43.349 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:43.350 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:43.350 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:43.350 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:43.350 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:43.463 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:05:43.579 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:43.707 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+12:05:43.731 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to File...
+12:05:44.831 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 3
+12:05:45.053 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:45.054 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:45.055 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:45.055 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:45.055 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:45.175 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:05:45.175 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:05:45.175 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:05:45.176 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:05:45.176 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:05:45.297 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:05:45.415 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:05:45.530 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 66666
+12:05:45.716 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:45.764 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:45.815 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:45.863 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:45.914 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:45.966 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:46.016 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:46.065 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:46.115 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:46.116 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:46.116 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:46.458 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:46.505 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:46.553 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:46.602 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:46.650 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:46.696 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:46.744 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:46.897 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:47.051 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:47.052 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:47.052 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:47.150 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:47.197 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:47.245 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:47.292 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:47.341 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:47.388 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:47.436 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:47.485 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:47.533 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:47.533 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:47.534 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:47.636 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:47.686 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:47.847 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:47.895 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:47.942 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:47.996 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:48.059 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:48.119 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:48.171 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:48.171 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:05:48.172 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:05:48.430 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:05:48.546 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:48.546 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:48.547 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:48.547 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:48.547 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:48.548 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:48.548 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:48.548 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:48.548 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:48.773 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:48.774 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:05:48.774 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:05:48.774 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:05:48.774 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:05:48.774 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:05:48.775 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:05:48.775 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:05:48.775 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:05:49.104 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:05:49.219 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:05:49.333 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+12:06:04.721 [Test worker] INFO  edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+12:06:04.726 [Test worker] INFO  e.c.c.validation.impl.DataValidation - String args is Found
+12:06:05.022 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:05.114 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:05.200 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:05.351 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:05.412 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:05.468 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:05.529 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:05.687 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:05.844 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:05.846 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:06:05.846 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:06:06.277 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to console...
+12:06:06.440 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 4
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:06.605 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:06.726 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:06:06.853 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:06:06.974 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 11111
+12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:07.093 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:07.093 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:07.224 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:07.455 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:07.573 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:07.573 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:07.693 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:07.812 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:06:07.931 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:08.046 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+12:06:08.070 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to File...
+12:06:09.218 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 3
+12:06:09.342 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:09.343 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:09.344 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:09.344 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:09.345 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:09.465 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12:06:09.465 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12:06:09.465 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12:06:09.466 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12:06:09.466 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12:06:09.690 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+12:06:09.809 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+12:06:09.922 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 66666
+12:06:10.104 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:10.156 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:10.210 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:10.257 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:10.306 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:10.357 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:10.408 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:10.456 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:10.505 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:10.506 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:06:10.506 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:06:10.824 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:10.872 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:10.933 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:11.000 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:11.048 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:11.102 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:11.155 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:11.319 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:11.368 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:11.368 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:06:11.369 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:06:11.469 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:11.517 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:11.568 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:11.616 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:11.665 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:11.712 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:11.761 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:11.807 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:11.855 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:11.855 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:06:11.856 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:06:11.957 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:12.006 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:12.056 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:12.105 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:12.151 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:12.226 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:12.281 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:12.339 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:12.395 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:12.396 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
+12:06:12.396 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
+12:06:12.551 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+12:06:12.669 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:12.670 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:12.670 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:12.670 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:12.670 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:12.670 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:12.671 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:12.671 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:12.671 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:12.786 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:12.786 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+12:06:12.787 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+12:06:12.787 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+12:06:12.787 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+12:06:12.787 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+12:06:12.787 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+12:06:12.788 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+12:06:12.788 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+12:06:12.903 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+12:06:13.016 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+12:06:13.237 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)

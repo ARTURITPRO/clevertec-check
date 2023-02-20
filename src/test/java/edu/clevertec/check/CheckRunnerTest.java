@@ -1,8 +1,12 @@
 package edu.clevertec.check;
 
 import edu.clevertec.check.entity.Product;
+import edu.clevertec.check.repository.impl.DiscountCardRepoImpl;
+import edu.clevertec.check.repository.impl.ProductRepoImpl;
 import edu.clevertec.check.service.OrderProcessingService;
+import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
+import edu.clevertec.check.service.impl.ProductServiceImpl;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,7 +38,8 @@ class CheckRunnerTest {
         data[8] = "9-9";
         data[9] = "mastercard-11111";
 
-        resultProcessedData = new OrderProcessingServiceImpl(data);
+        resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
+                (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         customShoppingList = new HashMap<>();
         Product milk = Product.builder().id(1).name("milk").price(1.0).isPromotional(true).build();
         Product brot = Product.builder().id(2).name("brot").price(1.5).isPromotional(false).build();
