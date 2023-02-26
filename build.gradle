@@ -12,18 +12,34 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework:spring-web:5.3.4'
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.25'
     implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
     implementation 'com.google.code.gson:gson:2.9.0'
+
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1'
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.1'
+
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
     implementation 'com.itextpdf:itext7-core:7.2.3'
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.2'
+
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.10.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:2.17.0'
+
+    testImplementation "org.testcontainers:postgresql:1.17.6"
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.7.4'
+    testImplementation group: 'org.springframework', name: 'spring-test', version: '6.0.5'
+
+    implementation group: 'org.apache.ibatis', name: 'ibatis-core', version: '3.0'
+
+    //Для тестов контроллеров
+    implementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.3.v20170317'
+    implementation group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.3.v20170317'
 }
 
 test {

@@ -1,30 +1,39 @@
 package edu.clevertec.check.repository.impl;
 
 import edu.clevertec.check.entity.Product;
-import edu.clevertec.check.service.impl.ProductServiceImpl;
-import edu.clevertec.check.util.ConnectionManager;
-import lombok.Cleanup;
+import edu.clevertec.check.util.ConnectionManagerTest;
 import lombok.SneakyThrows;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.apache.ibatis.jdbc.ScriptRunner;
+import org.junit.jupiter.api.*;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.Reader;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("ProductRepoImplTest")
 class ProductRepoImplTest {
 
-    List<Product> customShoppingList;
-    ProductRepoImpl productRepo;
-    Connection connection;
+    static List<Product> customShoppingList;
 
-    @BeforeEach
-    void init() {
-        connection = ConnectionManager.get();
+    static ProductRepoImpl productRepo;
+
+    static ScriptRunner scriptRunner;
+
+    static Connection connection;
+
+    static Reader reader;
+
+    static ConnectionManagerTest connectionManagerTest = new ConnectionManagerTest();
+
+    @BeforeAll
+    static void initListProduct() {
+        connection = connectionManagerTest.get();
         productRepo = new ProductRepoImpl();
         customShoppingList = new ArrayList<>();
         Product milk = Product.builder().id(1).name("milk").price(1.0).isPromotional(true).build();
@@ -47,65 +56,108 @@ class ProductRepoImplTest {
         customShoppingList.add(pie);
     }
 
-    @Test
-    void findAll() {
-        assertEquals(customShoppingList, productRepo.findAll(9, 1));
+    @Nested
+    class FindAllListProductTest {
+        @Test
+        void findAllPageSizeAndSizeListProduct() {
+            assertEquals(customShoppingList, productRepo.findAll(connectionManagerTest, 9, 1));
+        }
+
+        @Test
+        void testFindAllPageSizeListProduct() {
+            assertEquals(customShoppingList, productRepo.findAll(connectionManagerTest, 9));
+        }
     }
 
-    @Test
-    void testFindAll() {
-        assertEquals(customShoppingList, productRepo.findAll(9));
+    @Nested
+    class SaveProductTest {
+
+        @Test
+        void saveProduct() {
+            Product coco = Product.builder().id(9).name("pie").price(5.0).isPromotional(true).build();
+            assertEquals(coco, productRepo.save(connectionManagerTest, coco));
+        }
+
+        @Test
+        void saveNullProductThrows() {
+            assertThrows(NullPointerException.class, () -> productRepo.save(connectionManagerTest, null));
+        }
+
+        @Test
+        void saveNegativeIDProduct() {
+            Product coco = Product.builder().id(-20).name("pie").price(5.0).isPromotional(true).build();
+            assertEquals(coco, productRepo.save(connectionManagerTest, coco));
+        }
     }
 
-    @SneakyThrows
-    @Test
-    void save() {
-        Product coco = Product.builder().id(9).name("pie").price(5.0).isPromotional(true).build();
-        assertEquals(coco, productRepo.save(coco));
+    @Nested
+    class FindByIdProductTest {
+        @Test
+        void findByIdProduct() {
+            assertEquals(customShoppingList.get(0), productRepo.findById(connectionManagerTest, 1).get());
+        }
+
+        @Test
+        void findByNullIdProductThrows() {
+            assertThrows(NullPointerException.class, () -> productRepo.findById(connectionManagerTest, null).get());
+        }
+
+        @Test
+        void findByInvalidIdProductThrows() {
+            assertThrows(NoSuchElementException.class, () -> productRepo.findById(connectionManagerTest, -1).get());
+        }
+
+        @Test
+        void findByNonExistentIdProductThrows() {
+            assertThrows(NoSuchElementException.class, () -> productRepo.findById(connectionManagerTest, 100).get());
+        }
     }
 
-    @Test
-    void findById() {
-        assertEquals(customShoppingList.get(0), productRepo.findById(1).get());
+    @Nested
+    class UpdateProductTest {
+        @Test
+        void updateProduct() {
+            Product banana = Product.builder().id(9).name("banana").price(10.0).isPromotional(true).build();
+            assertEquals(banana, productRepo.update(connectionManagerTest, banana).get());
+        }
+
+        @Test
+        void updateNullProductThrows() {
+            assertThrows(NullPointerException.class, () -> productRepo.update(connectionManagerTest, null).get());
+        }
+
+        @Test
+        void updateNegativeElementIdProductThrows() {
+            Product banana = Product.builder().id(-4).name("banana").price(10.0).isPromotional(true).build();
+            assertThrows(NoSuchElementException.class, () -> productRepo.update(connectionManagerTest, banana).get());
+        }
     }
 
-    @Test
-    void update() {
-        Product banana = Product.builder().id(9).name("banana").price(10.0).isPromotional(true).build();
-        assertEquals(banana, productRepo.update(banana).get());
-    }
+    @Nested
+    class DeleteProductTest {
+        @Test
+        void deleteProductById() {
+            assertTrue(productRepo.delete(connectionManagerTest, 5));
+        }
 
-    @Test
-    void delete() {
-        assertTrue(productRepo.delete(5));
+        @Test
+        void deleteNullProductThrows() {
+            assertThrows(NullPointerException.class, () -> productRepo.delete(connectionManagerTest, null));
+        }
+
+        @Test
+        void deleteNullNonExistentElementProductAssertFalse() {
+            assertFalse(productRepo.delete(connectionManagerTest, 100));
+        }
     }
 
     @SneakyThrows
     @AfterEach
     void after() {
-        @Cleanup PreparedStatement dropTableProduct = connection.prepareStatement(
-                "DROP TABLE product;");
-        dropTableProduct.executeUpdate();
-        @Cleanup PreparedStatement createTableProduct = connection.prepareStatement(
-                "create table product" +
-                        "(" +
-                        "    id          SERIAL PRIMARY KEY," +
-                        "    name        varchar(25)," +
-                        "    price        double precision," +
-                        "    is_promotional boolean" +
-                        ");");
-        createTableProduct.executeUpdate();
-        @Cleanup PreparedStatement insertTableProduct = connection.prepareStatement(
-                "insert into product ( name, price, is_promotional ) values" +
-                        "('milk', 1.0, true)," +
-                        "('brot', 1.5, false)," +
-                        "('icecream', 2.0, true)," +
-                        "('chocolate', 2.5, false)," +
-                        "('chicken', 3.0, true)," +
-                        "('pizza', 3.5, false)," +
-                        "('pudding', 4.0, true)," +
-                        "('popcorn', 4.5, false)," +
-                        "('pie', 5.0, true);");
-        insertTableProduct.executeUpdate();
+        System.out.println(" @AfterEach");
+        connection = connectionManagerTest.get();
+        scriptRunner = new ScriptRunner(connection);
+        reader = new BufferedReader(new FileReader("src/test/resources/db.migration/test.sql"));
+        scriptRunner.runScript(reader);
     }
 }

@@ -7,6 +7,7 @@ import edu.clevertec.check.service.OrderProcessingService;
 import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
+import edu.clevertec.check.util.ConnectionManagerImpl;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -38,7 +39,7 @@ class CheckRunnerTest {
         data[8] = "9-9";
         data[9] = "mastercard-11111";
 
-        resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
+        resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),new ProductServiceImpl
                 (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         customShoppingList = new HashMap<>();
         Product milk = Product.builder().id(1).name("milk").price(1.0).isPromotional(true).build();
@@ -62,7 +63,7 @@ class CheckRunnerTest {
 
         stringBuilder = new StringBuilder();
         stringBuilder.append(
-                "*     The item chicken is promotional\n" +
+                        "*     The item chicken is promotional\n" +
                         "*     Its amount is more than 5\n" +
                         "*     You get a 10% discount \n" +
                         "*     The cost chicken will be:$2,7\n" +
@@ -108,6 +109,7 @@ class CheckRunnerTest {
             }
         }
         stringBuilderFile.delete(0,442);
+
         assertEquals(stringBuilderFile.toString(), stringBuilder.toString());
     }
 }

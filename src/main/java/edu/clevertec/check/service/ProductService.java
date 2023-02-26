@@ -1,21 +1,22 @@
 package edu.clevertec.check.service;
 
 import edu.clevertec.check.entity.Product;
+import edu.clevertec.check.util.ConnectionManager;
 
 import java.util.Collection;
 import java.util.Optional;
 
 public interface ProductService<K, T> {
     
-    Collection<Product> findAll(Integer pageSize, Integer size);
+    Collection<Product> findAll(ConnectionManager connectionManager, Integer pageSize, Integer size);
 
-    Collection<Product> findAll(Integer pageSize);
+    Collection<Product> findAll(ConnectionManager connectionManager, Integer pageSize);
 
-    T save(T entity);
+    T save(ConnectionManager connectionManager, T entity);
 
-    Optional<T> findById(K id);
+    Optional<T> findById(ConnectionManager connectionManager, K id);
 
-    Optional<T> update(T entity);
+    Optional<T> update(ConnectionManager connectionManager, T entity);
 
-    boolean delete(K id);
+    boolean delete(ConnectionManager connectionManager, K id);
 }

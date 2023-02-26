@@ -88,6 +88,4 @@ public class OutputCheckService {
         return "TIME  " + ZonedDateTime.now().format(formatterTime)
                 + "\t\t   DATE  " + ZonedDateTime.now().format(formatterDate);
     }
-
-
 }

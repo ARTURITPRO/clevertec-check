@@ -1,17 +1,68 @@
-…12:06:04.721 [Test worker] INFO  edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
-^12:06:04.726 [Test worker] INFO  e.c.c.validation.impl.DataValidation - String args is Found
-Ÿ12:06:05.022 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
- 12:06:05.114 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
-£12:06:05.200 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
-¥12:06:05.351 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
-¢12:06:05.412 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
-¡12:06:05.468 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
-¢12:06:05.529 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
-£12:06:05.687 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
-ž12:06:05.844 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
-f12:06:05.846 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - number DiscountCard is valid
-d12:06:05.846 [Test worker] INFO  e.c.c.v.i.DiscountCardValidationImpl - name DiscountCard is valid
-c12:06:06.277 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to console...
+…17:09:11.611 [Test worker] INFO  edu.clevertec.check.CheckRunner - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+l17:09:11.657 [Test worker] INFO  edu.clevertec.check.validation.impl.DataValidation - String args is Found
+¶17:09:12.411 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+·17:09:12.528 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+º17:09:12.620 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+¼17:09:12.723 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+¹17:09:12.837 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+¸17:09:12.926 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+¹17:09:12.988 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+º17:09:13.123 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+µ17:09:13.174 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+€17:09:13.177 [Test worker] INFO  edu.clevertec.check.validation.impl.DiscountCardValidationImpl - number DiscountCard is valid
+~17:09:13.178 [Test worker] INFO  edu.clevertec.check.validation.impl.DiscountCardValidationImpl - name DiscountCard is valid
+¨17:09:13.234 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+¨17:09:13.235 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+¨17:09:13.235 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+¨17:09:13.235 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+¨17:09:13.235 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+¨17:09:13.235 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 66666
+¨17:09:13.235 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 77777
+¨17:09:13.236 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 88888
+¨17:09:13.236 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 99999
+Û!!![DiscountCard mastercard number 11111, DiscountCard mastercard number 22222, DiscountCard mastercard number 33333, DiscountCard mastercard number 44444, DiscountCard mastercard number 55555, DiscountCard mastercard number 66666, DiscountCard mastercard number 77777, DiscountCard mastercard number 88888, DiscountCard mastercard number 99999]
+¨17:09:13.434 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+¨17:09:13.435 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+¨17:09:13.435 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+¨17:09:13.435 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+¨17:09:13.435 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+¨17:09:13.435 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 66666
+¨17:09:13.435 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 77777
+¨17:09:13.436 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 88888
+¨17:09:13.436 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 99999
+Û!!![DiscountCard mastercard number 11111, DiscountCard mastercard number 22222, DiscountCard mastercard number 33333, DiscountCard mastercard number 44444, DiscountCard mastercard number 55555, DiscountCard mastercard number 66666, DiscountCard mastercard number 77777, DiscountCard mastercard number 88888, DiscountCard mastercard number 99999]
+*!!!!DiscountCard mastercard number 11111
+&*     The item chicken is promotional
+ *     Its amount is more than 5
+*     You get a 10% discount 
+$*     The cost chicken will be:$2,7
+*     Instead of $3.0        
+.5     chicken           $2,7       $13,5     
+.1     milk              $1.0       $1        
+.2     brot              $1.5       $3        
+.6     pizza             $3.5       $21       
+"*     The item pie is promotional
+ *     Its amount is more than 5
+*     You get a 10% discount 
+ *     The cost pie will be:$4,5
+*     Instead of $5.0        
+.9     pie               $4,5       $40,5     
+.8     popcorn           $4.5       $36       
+&*     The item pudding is promotional
+ *     Its amount is more than 5
+*     You get a 10% discount 
+$*     The cost pudding will be:$3,6
+*     Instead of $4.0        
+.7     pudding           $3,6       $25,2     
+.4     chocolate         $2.5       $10       
+.3     icecream          $2.0       $6        
+)----------------------------------------
+)#	  DiscountCard mastercard number 11111
+#	  has been provided
+#	  Included 10% discount
+)----------------------------------------
++####  Total cost:                 $140,58
+m17:09:15.170 [Test worker] INFO  edu.clevertec.check.service.OutputCheckService - Print check to console...
 )****************************************
 )*               Dionis                 *
 )*           EKE "Centrail"             *
@@ -20,7 +71,7 @@
 (REGN:3100016076           UNP:390286042
 (KASSA:0001 Change:000750  DKH:000271821
 (31 Osipova Tatiana     CHK:01/000000285
-$TIME  12:06:06		   DATE  2023-02-20
+$TIME  17:09:15		   DATE  2023-02-26
 )----------------------------------------
 )QTY   DESCRIPTION       PRICE      TOTAL
 &*     The item chicken is promotional
@@ -53,50 +104,2786 @@
 #	  Included 10% discount
 )----------------------------------------
 +####  Total cost:                 $140,58
-t12:06:06.440 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 4
-‘12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
-‘12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
-‘12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
-‘12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
-‘12:06:06.526 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
-‘12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
-‘12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
-‘12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
-‘12:06:06.604 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
-‘12:06:06.605 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
-˜12:06:06.726 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
-•12:06:06.853 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
-–12:06:06.974 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 11111
-‘12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
-‘12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
-‘12:06:07.092 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
-‘12:06:07.093 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
-‘12:06:07.093 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
-‘12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
-‘12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
-‘12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
-‘12:06:07.223 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
-‘12:06:07.224 [Test worker] INFO  e.c.c.r.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
-o12:06:07.455 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
-Ÿ12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
- 12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
-£12:06:07.571 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
-¥12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
-¢12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
-¡12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
-¢12:06:07.572 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
-£12:06:07.573 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
-ž12:06:07.573 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
-Ÿ12:06:07.693 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
- 12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
-£12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
-¥12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
-¢12:06:07.694 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
-¡12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
-¢12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
-£12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
-ž12:06:07.695 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
-©12:06:07.812 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
-Ÿ12:06:07.931 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
-Ÿ12:06:08.046 [Test worker] INFO  e.c.c.r.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
-`12:06:08.070 [Test worker] INFO  e.c.check.service.OutputCheckService - Print check to File...
+ ‚17:09:16.529 [Test worker] INFO  org.eclipse.jetty.util.log - Logging initialized @7835ms to org.eclipse.jetty.util.log.Slf4jLog
+Z17:09:16.720 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:16.840 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3f985a86{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+T17:09:16.841 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @8148ms
+1
+™17:09:17.257 [qtp1854577712-25] INFO  edu.clevertec.check.controller.CheckController - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+»17:09:17.335 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+¼17:09:17.391 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+¿17:09:17.444 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+Á17:09:17.512 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+¾17:09:17.566 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+½17:09:17.619 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+¾17:09:17.784 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+¿17:09:17.858 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+º17:09:17.922 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+…17:09:17.923 [qtp1854577712-25] INFO  edu.clevertec.check.validation.impl.DiscountCardValidationImpl - number DiscountCard is valid
+ƒ17:09:17.923 [qtp1854577712-25] INFO  edu.clevertec.check.validation.impl.DiscountCardValidationImpl - name DiscountCard is valid
+­17:09:17.981 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+­17:09:17.981 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+­17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+­17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+­17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+­17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 66666
+­17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 77777
+­17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 88888
+­17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 99999
+Û!!![DiscountCard mastercard number 11111, DiscountCard mastercard number 22222, DiscountCard mastercard number 33333, DiscountCard mastercard number 44444, DiscountCard mastercard number 55555, DiscountCard mastercard number 66666, DiscountCard mastercard number 77777, DiscountCard mastercard number 88888, DiscountCard mastercard number 99999]
+­17:09:18.204 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+­17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+­17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+­17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+­17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+­17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 66666
+­17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 77777
+­17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 88888
+­17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 99999
+Û!!![DiscountCard mastercard number 11111, DiscountCard mastercard number 22222, DiscountCard mastercard number 33333, DiscountCard mastercard number 44444, DiscountCard mastercard number 55555, DiscountCard mastercard number 66666, DiscountCard mastercard number 77777, DiscountCard mastercard number 88888, DiscountCard mastercard number 99999]
+*!!!!DiscountCard mastercard number 11111
+&*     The item chicken is promotional
+ *     Its amount is more than 5
+*     You get a 10% discount 
+$*     The cost chicken will be:$2,7
+*     Instead of $3.0        
+.5     chicken           $2,7       $13,5     
+.1     milk              $1.0       $1        
+.2     brot              $1.5       $3        
+.6     pizza             $3.5       $21       
+"*     The item pie is promotional
+ *     Its amount is more than 5
+*     You get a 10% discount 
+ *     The cost pie will be:$4,5
+*     Instead of $5.0        
+.9     pie               $4,5       $40,5     
+.8     popcorn           $4.5       $36       
+&*     The item pudding is promotional
+ *     Its amount is more than 5
+*     You get a 10% discount 
+$*     The cost pudding will be:$3,6
+*     Instead of $4.0        
+.7     pudding           $3,6       $25,2     
+.4     chocolate         $2.5       $10       
+.3     icecream          $2.0       $6        
+)----------------------------------------
+)#	  DiscountCard mastercard number 11111
+#	  has been provided
+#	  Included 10% discount
+)----------------------------------------
++####  Total cost:                 $140,58
+2
+3
+4
+“17:09:18.741 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@3f985a86{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:18.864 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:18.872 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2dfe5525{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:18.872 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @10179ms
+™17:09:19.054 [qtp1041611526-38] INFO  edu.clevertec.check.controller.DiscountCardController - Starting DiscountCardController for DEL request: /cards/2
+17:09:19.125 [qtp1041611526-38] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 2
+š17:09:19.132 [qtp1041611526-38] INFO  edu.clevertec.check.controller.DiscountCardController - Stopping  DiscountCardController for DEL request: /cards/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:19.259 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@2dfe5525{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:19.349 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:19.355 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2ab0702e{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:19.355 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @10662ms
+™17:09:19.359 [qtp2044272973-53] INFO  edu.clevertec.check.controller.DiscountCardController - Starting DiscountCardController for GET request: /cards/2
+±17:09:19.443 [qtp2044272973-53] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 22222
+™17:09:19.553 [qtp2044272973-53] INFO  edu.clevertec.check.controller.DiscountCardController - Stopping DiscountCardController for GET request: /cards/2
+™17:09:19.667 [qtp2044272973-47] INFO  edu.clevertec.check.controller.DiscountCardController - Starting DiscountCardController for PUT request: /cards/2
+¦17:09:19.669 [qtp2044272973-47] INFO  edu.clevertec.check.controller.DiscountCardController - Incoming JSON: {"id":2,"name":"goldCard","discount":20,"number":22222}
+²17:09:19.732 [qtp2044272973-47] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard goldCard number 22222
+™17:09:19.733 [qtp2044272973-47] INFO  edu.clevertec.check.controller.DiscountCardController - Stopping DiscountCardController for PUT request: /cards/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:19.831 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@2ab0702e{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:19.964 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:19.971 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@435e60ff{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:19.971 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @11277ms
+š17:09:19.981 [qtp1858976440-63] INFO  edu.clevertec.check.controller.DiscountCardController - Starting DiscountCardController for POST request: /cards/2
+¨17:09:19.981 [qtp1858976440-63] INFO  edu.clevertec.check.controller.DiscountCardController - Incoming JSON: {"id":2,"name":"mastercard","discount":20,"number":22222}
+²17:09:20.053 [qtp1858976440-63] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 22222
+š17:09:20.054 [qtp1858976440-63] INFO  edu.clevertec.check.controller.DiscountCardController - Stopping DiscountCardController for POST request: /cards/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:20.151 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@435e60ff{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+
+	Z17:09:20.262 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+
+	“17:09:20.269 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@17690e14{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+
+	U17:09:20.269 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @11576ms
+
+	™17:09:20.327 [qtp1727026317-73] INFO  edu.clevertec.check.controller.DiscountCardController - Starting DiscountCardController for GET request: /cards/2
+
+	±17:09:20.444 [qtp1727026317-73] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 22222
+
+	™17:09:20.446 [qtp1727026317-73] INFO  edu.clevertec.check.controller.DiscountCardController - Stopping DiscountCardController for GET request: /cards/2
+
+	 @AfterEach
+
+	(--  SET "user" TO product_market_test;
+
+	,-- create schema product_market_test_java;
+
+	-- SHOW search_path;
+
+	"-- DROP TABLE IF EXISTS product;
+
+	(-- DROP TABLE IF EXISTS discount_card;
+
+	drop table product
+
+	
+
+	drop table discount_card
+
+	
+
+	create table product
+
+	(
+
+	%    id          SERIAL PRIMARY KEY,
+
+	    name        varchar(25),
+
+	$    price        double precision,
+
+	    is_promotional boolean
+
+	)
+
+	
+
+	>------------------------------------------------------------
+
+	create table discount_card
+
+	(
+
+	    id   SERIAL PRIMARY KEY,
+
+	    name        varchar(25),
+
+	    discount int,
+
+	    number  int
+
+	)
+
+	
+
+	<insert into product ( name, price, is_promotional ) values
+
+	 ('milk', 1.0, true),
+
+	 ('brot', 1.5, false),
+
+	 ('icecream', 2.0, true),
+
+	 ('chocolate', 2.5, false),
+
+	 ('chicken', 3.0, true),
+
+	 ('pizza', 3.5, false),
+
+	 ('pudding', 4.0, true),
+
+	 ('popcorn', 4.5, false),
+
+	 ('pie', 5.0, true)
+
+	
+
+	;insert into discount_card (name, discount, number) values
+
+	 ( 'mastercard',10, 11111),
+
+	 ( 'mastercard',20, 22222),
+
+	 ( 'mastercard',30, 33333),
+
+	 ( 'mastercard',40, 44444),
+
+	 ( 'mastercard',50, 55555),
+
+	 ( 'mastercard',60, 66666),
+
+	 ( 'mastercard',70, 77777),
+
+	 ( 'mastercard',80, 88888),
+
+	 ( 'mastercard',90, 99999)
+
+	
+
+	"-- DROP DATABASE product_market;
+
+	-- drop table discount_card;
+
+	-- drop table product;
+
+	-- drop table discount_card;
+
+	--
+
+	0-- SELECT nextval('product_id_seq'::regclass);
+
+	'-- select setval('product_id_seq',9);
+
+	“17:09:20.541 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@17690e14{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+
+Z17:09:20.619 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+
+“17:09:20.625 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@320a8ebf{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+
+U17:09:20.625 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @11933ms
+
+˜17:09:20.630 [qtp707719282-89] INFO  edu.clevertec.check.controller.DiscountCardController - Starting DiscountCardController for GET request: /cards/2
+
+°17:09:20.701 [qtp707719282-89] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 22222
+
+˜17:09:20.703 [qtp707719282-89] INFO  edu.clevertec.check.controller.DiscountCardController - Stopping DiscountCardController for GET request: /cards/2
+
+ @AfterEach
+
+(--  SET "user" TO product_market_test;
+
+,-- create schema product_market_test_java;
+
+-- SHOW search_path;
+
+"-- DROP TABLE IF EXISTS product;
+
+(-- DROP TABLE IF EXISTS discount_card;
+
+drop table product
+
+
+
+drop table discount_card
+
+
+
+create table product
+
+(
+
+%    id          SERIAL PRIMARY KEY,
+
+    name        varchar(25),
+
+$    price        double precision,
+
+    is_promotional boolean
+
+)
+
+
+
+>------------------------------------------------------------
+
+create table discount_card
+
+(
+
+    id   SERIAL PRIMARY KEY,
+
+    name        varchar(25),
+
+    discount int,
+
+    number  int
+
+)
+
+
+
+<insert into product ( name, price, is_promotional ) values
+
+ ('milk', 1.0, true),
+
+ ('brot', 1.5, false),
+
+ ('icecream', 2.0, true),
+
+ ('chocolate', 2.5, false),
+
+ ('chicken', 3.0, true),
+
+ ('pizza', 3.5, false),
+
+ ('pudding', 4.0, true),
+
+ ('popcorn', 4.5, false),
+
+ ('pie', 5.0, true)
+
+
+
+;insert into discount_card (name, discount, number) values
+
+ ( 'mastercard',10, 11111),
+
+ ( 'mastercard',20, 22222),
+
+ ( 'mastercard',30, 33333),
+
+ ( 'mastercard',40, 44444),
+
+ ( 'mastercard',50, 55555),
+
+ ( 'mastercard',60, 66666),
+
+ ( 'mastercard',70, 77777),
+
+ ( 'mastercard',80, 88888),
+
+ ( 'mastercard',90, 99999)
+
+
+
+"-- DROP DATABASE product_market;
+
+-- drop table discount_card;
+
+-- drop table product;
+
+-- drop table discount_card;
+
+--
+
+0-- SELECT nextval('product_id_seq'::regclass);
+
+'-- select setval('product_id_seq',9);
+
+“17:09:20.799 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@320a8ebf{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:20.939 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:20.946 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@31a3f4de{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:20.946 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @12253ms
+‘17:09:20.973 [qtp585496942-107] INFO  edu.clevertec.check.controller.ProductController - Starting ProductController for DELrequest: /products/2
+‹17:09:21.055 [qtp585496942-107] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was deleted in the database: id: 2
+’17:09:21.056 [qtp585496942-107] INFO  edu.clevertec.check.controller.ProductController - Stopping  ProductController for DELrequest: /products/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:21.145 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@31a3f4de{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:21.251 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:21.258 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1894e40d{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:21.259 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @12566ms
+“17:09:21.266 [qtp1866340787-115] INFO  edu.clevertec.check.controller.ProductController - Starting ProductController for GET request: /products/2
+½17:09:21.325 [qtp1866340787-115] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+“17:09:21.337 [qtp1866340787-115] INFO  edu.clevertec.check.controller.ProductController - Stopping ProductController for GET request: /products/2
+“17:09:21.346 [qtp1866340787-121] INFO  edu.clevertec.check.controller.ProductController - Starting ProductController for PUT request: /products/2
+§17:09:21.347 [qtp1866340787-121] INFO  edu.clevertec.check.controller.ProductController - Incoming JSON: {"id":2,"name":"goldCard","price":1.5,"isPromotional":false}
+È17:09:21.404 [qtp1866340787-121] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=2, name=goldCard, price=1.5, isPromotional=false)
+“17:09:21.405 [qtp1866340787-121] INFO  edu.clevertec.check.controller.ProductController - Stopping ProductController for PUT request: /products/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:21.504 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@1894e40d{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:21.586 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:21.591 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@68d651f2{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:21.592 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @12898ms
+“17:09:21.598 [qtp356005505-137] INFO  edu.clevertec.check.controller.ProductController - Starting ProductController for POST request: /products/2
+¥17:09:21.598 [qtp356005505-137] INFO  edu.clevertec.check.controller.ProductController - Incoming JSON: {"id":3,"name":"icecream","price":2.0,"isPromotional":true}
+À17:09:21.651 [qtp356005505-137] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=icecream, price=2.0, isPromotional=true)
+“17:09:21.652 [qtp356005505-137] INFO  edu.clevertec.check.controller.ProductController - Stopping ProductController for POST request: /products/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:21.750 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@68d651f2{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:21.833 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:21.840 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1bc49bc5{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:21.840 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @13146ms
+’17:09:21.846 [qtp275002771-147] INFO  edu.clevertec.check.controller.ProductController - Starting ProductController for GET request: /products/2
+¼17:09:21.946 [qtp275002771-147] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+’17:09:21.949 [qtp275002771-147] INFO  edu.clevertec.check.controller.ProductController - Stopping ProductController for GET request: /products/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:22.057 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@1bc49bc5{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+Z17:09:22.134 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+“17:09:22.142 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@42373389{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+U17:09:22.142 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @13449ms
+“17:09:22.147 [qtp1332150216-163] INFO  edu.clevertec.check.controller.ProductController - Starting ProductController for GET request: /products/2
+½17:09:22.232 [qtp1332150216-163] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+“17:09:22.239 [qtp1332150216-163] INFO  edu.clevertec.check.controller.ProductController - Stopping ProductController for GET request: /products/2
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+“17:09:22.351 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@42373389{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+ !!!
+ (--  SET "user" TO product_market_test;
+ ,-- create schema product_market_test_java;
+ -- SHOW search_path;
+ "-- DROP TABLE IF EXISTS product;
+ (-- DROP TABLE IF EXISTS discount_card;
+ drop table product
+ 
+ drop table discount_card
+ 
+ create table product
+ (
+ %    id          SERIAL PRIMARY KEY,
+     name        varchar(25),
+ $    price        double precision,
+     is_promotional boolean
+ )
+ 
+ >------------------------------------------------------------
+ create table discount_card
+ (
+     id   SERIAL PRIMARY KEY,
+     name        varchar(25),
+     discount int,
+     number  int
+ )
+ 
+ <insert into product ( name, price, is_promotional ) values
+  ('milk', 1.0, true),
+  ('brot', 1.5, false),
+  ('icecream', 2.0, true),
+  ('chocolate', 2.5, false),
+  ('chicken', 3.0, true),
+  ('pizza', 3.5, false),
+  ('pudding', 4.0, true),
+  ('popcorn', 4.5, false),
+  ('pie', 5.0, true)
+ 
+ ;insert into discount_card (name, discount, number) values
+  ( 'mastercard',10, 11111),
+  ( 'mastercard',20, 22222),
+  ( 'mastercard',30, 33333),
+  ( 'mastercard',40, 44444),
+  ( 'mastercard',50, 55555),
+  ( 'mastercard',60, 66666),
+  ( 'mastercard',70, 77777),
+  ( 'mastercard',80, 88888),
+  ( 'mastercard',90, 99999)
+ 
+ "-- DROP DATABASE product_market;
+ -- drop table discount_card;
+ -- drop table product;
+ -- drop table discount_card;
+ --
+ 0-- SELECT nextval('product_id_seq'::regclass);
+ '-- select setval('product_id_seq',9);
+ !
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+ @AfterEach
+(--  SET "user" TO product_market_test;
+,-- create schema product_market_test_java;
+-- SHOW search_path;
+"-- DROP TABLE IF EXISTS product;
+(-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+%    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+$    price        double precision,
+    is_promotional boolean
+)
+
+>------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+<insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+;insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+"-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+0-- SELECT nextval('product_id_seq'::regclass);
+'-- select setval('product_id_seq',9);
+  @AfterEach
+ (--  SET "user" TO product_market_test;
+ ,-- create schema product_market_test_java;
+ -- SHOW search_path;
+ "-- DROP TABLE IF EXISTS product;
+ (-- DROP TABLE IF EXISTS discount_card;
+ drop table product
+ 
+ drop table discount_card
+ 
+ create table product
+ (
+ %    id          SERIAL PRIMARY KEY,
+     name        varchar(25),
+ $    price        double precision,
+     is_promotional boolean
+ )
+ 
+ >------------------------------------------------------------
+ create table discount_card
+ (
+     id   SERIAL PRIMARY KEY,
+     name        varchar(25),
+     discount int,
+     number  int
+ )
+ 
+ <insert into product ( name, price, is_promotional ) values
+  ('milk', 1.0, true),
+  ('brot', 1.5, false),
+  ('icecream', 2.0, true),
+  ('chocolate', 2.5, false),
+  ('chicken', 3.0, true),
+  ('pizza', 3.5, false),
+  ('pudding', 4.0, true),
+  ('popcorn', 4.5, false),
+  ('pie', 5.0, true)
+ 
+ ;insert into discount_card (name, discount, number) values
+  ( 'mastercard',10, 11111),
+  ( 'mastercard',20, 22222),
+  ( 'mastercard',30, 33333),
+  ( 'mastercard',40, 44444),
+  ( 'mastercard',50, 55555),
+  ( 'mastercard',60, 66666),
+  ( 'mastercard',70, 77777),
+  ( 'mastercard',80, 88888),
+  ( 'mastercard',90, 99999)
+ 
+ "-- DROP DATABASE product_market;
+ -- drop table discount_card;
+ -- drop table product;
+ -- drop table discount_card;
+ --
+ 0-- SELECT nextval('product_id_seq'::regclass);
+ '-- select setval('product_id_seq',9);
+"! @AfterEach
+"!(--  SET "user" TO product_market_test;
+"!,-- create schema product_market_test_java;
+"!-- SHOW search_path;
+"!"-- DROP TABLE IF EXISTS product;
+"!(-- DROP TABLE IF EXISTS discount_card;
+"!drop table product
+"!
+"!drop table discount_card
+"!
+"!create table product
+"!(
+"!%    id          SERIAL PRIMARY KEY,
+"!    name        varchar(25),
+"!$    price        double precision,
+"!    is_promotional boolean
+"!)
+"!
+"!>------------------------------------------------------------
+"!create table discount_card
+"!(
+"!    id   SERIAL PRIMARY KEY,
+"!    name        varchar(25),
+"!    discount int,
+"!    number  int
+"!)
+"!
+"!<insert into product ( name, price, is_promotional ) values
+"! ('milk', 1.0, true),
+"! ('brot', 1.5, false),
+"! ('icecream', 2.0, true),
+"! ('chocolate', 2.5, false),
+"! ('chicken', 3.0, true),
+"! ('pizza', 3.5, false),
+"! ('pudding', 4.0, true),
+"! ('popcorn', 4.5, false),
+"! ('pie', 5.0, true)
+"!
+"!;insert into discount_card (name, discount, number) values
+"! ( 'mastercard',10, 11111),
+"! ( 'mastercard',20, 22222),
+"! ( 'mastercard',30, 33333),
+"! ( 'mastercard',40, 44444),
+"! ( 'mastercard',50, 55555),
+"! ( 'mastercard',60, 66666),
+"! ( 'mastercard',70, 77777),
+"! ( 'mastercard',80, 88888),
+"! ( 'mastercard',90, 99999)
+"!
+"!"-- DROP DATABASE product_market;
+"!-- drop table discount_card;
+"!-- drop table product;
+"!-- drop table discount_card;
+"!--
+"!0-- SELECT nextval('product_id_seq'::regclass);
+"!'-- select setval('product_id_seq',9);
+"#¯17:09:23.372 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity has been updated in the database: DiscountCard mastercard number 77777
+"# @AfterEach
+"#(--  SET "user" TO product_market_test;
+"#,-- create schema product_market_test_java;
+"#-- SHOW search_path;
+"#"-- DROP TABLE IF EXISTS product;
+"#(-- DROP TABLE IF EXISTS discount_card;
+"#drop table product
+"#
+"#drop table discount_card
+"#
+"#create table product
+"#(
+"#%    id          SERIAL PRIMARY KEY,
+"#    name        varchar(25),
+"#$    price        double precision,
+"#    is_promotional boolean
+"#)
+"#
+"#>------------------------------------------------------------
+"#create table discount_card
+"#(
+"#    id   SERIAL PRIMARY KEY,
+"#    name        varchar(25),
+"#    discount int,
+"#    number  int
+"#)
+"#
+"#<insert into product ( name, price, is_promotional ) values
+"# ('milk', 1.0, true),
+"# ('brot', 1.5, false),
+"# ('icecream', 2.0, true),
+"# ('chocolate', 2.5, false),
+"# ('chicken', 3.0, true),
+"# ('pizza', 3.5, false),
+"# ('pudding', 4.0, true),
+"# ('popcorn', 4.5, false),
+"# ('pie', 5.0, true)
+"#
+"#;insert into discount_card (name, discount, number) values
+"# ( 'mastercard',10, 11111),
+"# ( 'mastercard',20, 22222),
+"# ( 'mastercard',30, 33333),
+"# ( 'mastercard',40, 44444),
+"# ( 'mastercard',50, 55555),
+"# ( 'mastercard',60, 66666),
+"# ( 'mastercard',70, 77777),
+"# ( 'mastercard',80, 88888),
+"# ( 'mastercard',90, 99999)
+"#
+"#"-- DROP DATABASE product_market;
+"#-- drop table discount_card;
+"#-- drop table product;
+"#-- drop table discount_card;
+"#--
+"#0-- SELECT nextval('product_id_seq'::regclass);
+"#'-- select setval('product_id_seq',9);
+"$ @AfterEach
+"$(--  SET "user" TO product_market_test;
+"$,-- create schema product_market_test_java;
+"$-- SHOW search_path;
+"$"-- DROP TABLE IF EXISTS product;
+"$(-- DROP TABLE IF EXISTS discount_card;
+"$drop table product
+"$
+"$drop table discount_card
+"$
+"$create table product
+"$(
+"$%    id          SERIAL PRIMARY KEY,
+"$    name        varchar(25),
+"$$    price        double precision,
+"$    is_promotional boolean
+"$)
+"$
+"$>------------------------------------------------------------
+"$create table discount_card
+"$(
+"$    id   SERIAL PRIMARY KEY,
+"$    name        varchar(25),
+"$    discount int,
+"$    number  int
+"$)
+"$
+"$<insert into product ( name, price, is_promotional ) values
+"$ ('milk', 1.0, true),
+"$ ('brot', 1.5, false),
+"$ ('icecream', 2.0, true),
+"$ ('chocolate', 2.5, false),
+"$ ('chicken', 3.0, true),
+"$ ('pizza', 3.5, false),
+"$ ('pudding', 4.0, true),
+"$ ('popcorn', 4.5, false),
+"$ ('pie', 5.0, true)
+"$
+"$;insert into discount_card (name, discount, number) values
+"$ ( 'mastercard',10, 11111),
+"$ ( 'mastercard',20, 22222),
+"$ ( 'mastercard',30, 33333),
+"$ ( 'mastercard',40, 44444),
+"$ ( 'mastercard',50, 55555),
+"$ ( 'mastercard',60, 66666),
+"$ ( 'mastercard',70, 77777),
+"$ ( 'mastercard',80, 88888),
+"$ ( 'mastercard',90, 99999)
+"$
+"$"-- DROP DATABASE product_market;
+"$-- drop table discount_card;
+"$-- drop table product;
+"$-- drop table discount_card;
+"$--
+"$0-- SELECT nextval('product_id_seq'::regclass);
+"$'-- select setval('product_id_seq',9);
+&% @AfterEach
+&%(--  SET "user" TO product_market_test;
+&%,-- create schema product_market_test_java;
+&%-- SHOW search_path;
+&%"-- DROP TABLE IF EXISTS product;
+&%(-- DROP TABLE IF EXISTS discount_card;
+&%drop table product
+&%
+&%drop table discount_card
+&%
+&%create table product
+&%(
+&%%    id          SERIAL PRIMARY KEY,
+&%    name        varchar(25),
+&%$    price        double precision,
+&%    is_promotional boolean
+&%)
+&%
+&%>------------------------------------------------------------
+&%create table discount_card
+&%(
+&%    id   SERIAL PRIMARY KEY,
+&%    name        varchar(25),
+&%    discount int,
+&%    number  int
+&%)
+&%
+&%<insert into product ( name, price, is_promotional ) values
+&% ('milk', 1.0, true),
+&% ('brot', 1.5, false),
+&% ('icecream', 2.0, true),
+&% ('chocolate', 2.5, false),
+&% ('chicken', 3.0, true),
+&% ('pizza', 3.5, false),
+&% ('pudding', 4.0, true),
+&% ('popcorn', 4.5, false),
+&% ('pie', 5.0, true)
+&%
+&%;insert into discount_card (name, discount, number) values
+&% ( 'mastercard',10, 11111),
+&% ( 'mastercard',20, 22222),
+&% ( 'mastercard',30, 33333),
+&% ( 'mastercard',40, 44444),
+&% ( 'mastercard',50, 55555),
+&% ( 'mastercard',60, 66666),
+&% ( 'mastercard',70, 77777),
+&% ( 'mastercard',80, 88888),
+&% ( 'mastercard',90, 99999)
+&%
+&%"-- DROP DATABASE product_market;
+&%-- drop table discount_card;
+&%-- drop table product;
+&%-- drop table discount_card;
+&%--
+&%0-- SELECT nextval('product_id_seq'::regclass);
+&%'-- select setval('product_id_seq',9);
+&'‹17:09:23.871 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was deleted in the database: id: 4
+&' @AfterEach
+&'(--  SET "user" TO product_market_test;
+&',-- create schema product_market_test_java;
+&'-- SHOW search_path;
+&'"-- DROP TABLE IF EXISTS product;
+&'(-- DROP TABLE IF EXISTS discount_card;
+&'drop table product
+&'
+&'drop table discount_card
+&'
+&'create table product
+&'(
+&'%    id          SERIAL PRIMARY KEY,
+&'    name        varchar(25),
+&'$    price        double precision,
+&'    is_promotional boolean
+&')
+&'
+&'>------------------------------------------------------------
+&'create table discount_card
+&'(
+&'    id   SERIAL PRIMARY KEY,
+&'    name        varchar(25),
+&'    discount int,
+&'    number  int
+&')
+&'
+&'<insert into product ( name, price, is_promotional ) values
+&' ('milk', 1.0, true),
+&' ('brot', 1.5, false),
+&' ('icecream', 2.0, true),
+&' ('chocolate', 2.5, false),
+&' ('chicken', 3.0, true),
+&' ('pizza', 3.5, false),
+&' ('pudding', 4.0, true),
+&' ('popcorn', 4.5, false),
+&' ('pie', 5.0, true)
+&'
+&';insert into discount_card (name, discount, number) values
+&' ( 'mastercard',10, 11111),
+&' ( 'mastercard',20, 22222),
+&' ( 'mastercard',30, 33333),
+&' ( 'mastercard',40, 44444),
+&' ( 'mastercard',50, 55555),
+&' ( 'mastercard',60, 66666),
+&' ( 'mastercard',70, 77777),
+&' ( 'mastercard',80, 88888),
+&' ( 'mastercard',90, 99999)
+&'
+&'"-- DROP DATABASE product_market;
+&'-- drop table discount_card;
+&'-- drop table product;
+&'-- drop table discount_card;
+&'--
+&'0-- SELECT nextval('product_id_seq'::regclass);
+&''-- select setval('product_id_seq',9);
+&( @AfterEach
+&((--  SET "user" TO product_market_test;
+&(,-- create schema product_market_test_java;
+&(-- SHOW search_path;
+&("-- DROP TABLE IF EXISTS product;
+&((-- DROP TABLE IF EXISTS discount_card;
+&(drop table product
+&(
+&(drop table discount_card
+&(
+&(create table product
+&((
+&(%    id          SERIAL PRIMARY KEY,
+&(    name        varchar(25),
+&($    price        double precision,
+&(    is_promotional boolean
+&()
+&(
+&(>------------------------------------------------------------
+&(create table discount_card
+&((
+&(    id   SERIAL PRIMARY KEY,
+&(    name        varchar(25),
+&(    discount int,
+&(    number  int
+&()
+&(
+&(<insert into product ( name, price, is_promotional ) values
+&( ('milk', 1.0, true),
+&( ('brot', 1.5, false),
+&( ('icecream', 2.0, true),
+&( ('chocolate', 2.5, false),
+&( ('chicken', 3.0, true),
+&( ('pizza', 3.5, false),
+&( ('pudding', 4.0, true),
+&( ('popcorn', 4.5, false),
+&( ('pie', 5.0, true)
+&(
+&(;insert into discount_card (name, discount, number) values
+&( ( 'mastercard',10, 11111),
+&( ( 'mastercard',20, 22222),
+&( ( 'mastercard',30, 33333),
+&( ( 'mastercard',40, 44444),
+&( ( 'mastercard',50, 55555),
+&( ( 'mastercard',60, 66666),
+&( ( 'mastercard',70, 77777),
+&( ( 'mastercard',80, 88888),
+&( ( 'mastercard',90, 99999)
+&(
+&("-- DROP DATABASE product_market;
+&(-- drop table discount_card;
+&(-- drop table product;
+&(-- drop table discount_card;
+&(--
+&(0-- SELECT nextval('product_id_seq'::regclass);
+&('-- select setval('product_id_seq',9);
+*)Œ17:09:24.295 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is find in the database: null
+*) @AfterEach
+*)(--  SET "user" TO product_market_test;
+*),-- create schema product_market_test_java;
+*)-- SHOW search_path;
+*)"-- DROP TABLE IF EXISTS product;
+*)(-- DROP TABLE IF EXISTS discount_card;
+*)drop table product
+*)
+*)drop table discount_card
+*)
+*)create table product
+*)(
+*)%    id          SERIAL PRIMARY KEY,
+*)    name        varchar(25),
+*)$    price        double precision,
+*)    is_promotional boolean
+*))
+*)
+*)>------------------------------------------------------------
+*)create table discount_card
+*)(
+*)    id   SERIAL PRIMARY KEY,
+*)    name        varchar(25),
+*)    discount int,
+*)    number  int
+*))
+*)
+*)<insert into product ( name, price, is_promotional ) values
+*) ('milk', 1.0, true),
+*) ('brot', 1.5, false),
+*) ('icecream', 2.0, true),
+*) ('chocolate', 2.5, false),
+*) ('chicken', 3.0, true),
+*) ('pizza', 3.5, false),
+*) ('pudding', 4.0, true),
+*) ('popcorn', 4.5, false),
+*) ('pie', 5.0, true)
+*)
+*);insert into discount_card (name, discount, number) values
+*) ( 'mastercard',10, 11111),
+*) ( 'mastercard',20, 22222),
+*) ( 'mastercard',30, 33333),
+*) ( 'mastercard',40, 44444),
+*) ( 'mastercard',50, 55555),
+*) ( 'mastercard',60, 66666),
+*) ( 'mastercard',70, 77777),
+*) ( 'mastercard',80, 88888),
+*) ( 'mastercard',90, 99999)
+*)
+*)"-- DROP DATABASE product_market;
+*)-- drop table discount_card;
+*)-- drop table product;
+*)-- drop table discount_card;
+*)--
+*)0-- SELECT nextval('product_id_seq'::regclass);
+*)'-- select setval('product_id_seq',9);
+*+¬17:09:24.446 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is find in the database: DiscountCard mastercard number 11111
+*+ @AfterEach
+*+(--  SET "user" TO product_market_test;
+*+,-- create schema product_market_test_java;
+*+-- SHOW search_path;
+*+"-- DROP TABLE IF EXISTS product;
+*+(-- DROP TABLE IF EXISTS discount_card;
+*+drop table product
+*+
+*+drop table discount_card
+*+
+*+create table product
+*+(
+*+%    id          SERIAL PRIMARY KEY,
+*+    name        varchar(25),
+*+$    price        double precision,
+*+    is_promotional boolean
+*+)
+*+
+*+>------------------------------------------------------------
+*+create table discount_card
+*+(
+*+    id   SERIAL PRIMARY KEY,
+*+    name        varchar(25),
+*+    discount int,
+*+    number  int
+*+)
+*+
+*+<insert into product ( name, price, is_promotional ) values
+*+ ('milk', 1.0, true),
+*+ ('brot', 1.5, false),
+*+ ('icecream', 2.0, true),
+*+ ('chocolate', 2.5, false),
+*+ ('chicken', 3.0, true),
+*+ ('pizza', 3.5, false),
+*+ ('pudding', 4.0, true),
+*+ ('popcorn', 4.5, false),
+*+ ('pie', 5.0, true)
+*+
+*+;insert into discount_card (name, discount, number) values
+*+ ( 'mastercard',10, 11111),
+*+ ( 'mastercard',20, 22222),
+*+ ( 'mastercard',30, 33333),
+*+ ( 'mastercard',40, 44444),
+*+ ( 'mastercard',50, 55555),
+*+ ( 'mastercard',60, 66666),
+*+ ( 'mastercard',70, 77777),
+*+ ( 'mastercard',80, 88888),
+*+ ( 'mastercard',90, 99999)
+*+
+*+"-- DROP DATABASE product_market;
+*+-- drop table discount_card;
+*+-- drop table product;
+*+-- drop table discount_card;
+*+--
+*+0-- SELECT nextval('product_id_seq'::regclass);
+*+'-- select setval('product_id_seq',9);
+*,Œ17:09:24.616 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is find in the database: null
+*, @AfterEach
+*,(--  SET "user" TO product_market_test;
+*,,-- create schema product_market_test_java;
+*,-- SHOW search_path;
+*,"-- DROP TABLE IF EXISTS product;
+*,(-- DROP TABLE IF EXISTS discount_card;
+*,drop table product
+*,
+*,drop table discount_card
+*,
+*,create table product
+*,(
+*,%    id          SERIAL PRIMARY KEY,
+*,    name        varchar(25),
+*,$    price        double precision,
+*,    is_promotional boolean
+*,)
+*,
+*,>------------------------------------------------------------
+*,create table discount_card
+*,(
+*,    id   SERIAL PRIMARY KEY,
+*,    name        varchar(25),
+*,    discount int,
+*,    number  int
+*,)
+*,
+*,<insert into product ( name, price, is_promotional ) values
+*, ('milk', 1.0, true),
+*, ('brot', 1.5, false),
+*, ('icecream', 2.0, true),
+*, ('chocolate', 2.5, false),
+*, ('chicken', 3.0, true),
+*, ('pizza', 3.5, false),
+*, ('pudding', 4.0, true),
+*, ('popcorn', 4.5, false),
+*, ('pie', 5.0, true)
+*,
+*,;insert into discount_card (name, discount, number) values
+*, ( 'mastercard',10, 11111),
+*, ( 'mastercard',20, 22222),
+*, ( 'mastercard',30, 33333),
+*, ( 'mastercard',40, 44444),
+*, ( 'mastercard',50, 55555),
+*, ( 'mastercard',60, 66666),
+*, ( 'mastercard',70, 77777),
+*, ( 'mastercard',80, 88888),
+*, ( 'mastercard',90, 99999)
+*,
+*,"-- DROP DATABASE product_market;
+*,-- drop table discount_card;
+*,-- drop table product;
+*,-- drop table discount_card;
+*,--
+*,0-- SELECT nextval('product_id_seq'::regclass);
+*,'-- select setval('product_id_seq',9);
+.-­17:09:24.801 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The discountCard is saved in the database: DiscountCard mastercard number 11111
+.- @AfterEach
+.-(--  SET "user" TO product_market_test;
+.-,-- create schema product_market_test_java;
+.--- SHOW search_path;
+.-"-- DROP TABLE IF EXISTS product;
+.-(-- DROP TABLE IF EXISTS discount_card;
+.-drop table product
+.-
+.-drop table discount_card
+.-
+.-create table product
+.-(
+.-%    id          SERIAL PRIMARY KEY,
+.-    name        varchar(25),
+.-$    price        double precision,
+.-    is_promotional boolean
+.-)
+.-
+.->------------------------------------------------------------
+.-create table discount_card
+.-(
+.-    id   SERIAL PRIMARY KEY,
+.-    name        varchar(25),
+.-    discount int,
+.-    number  int
+.-)
+.-
+.-<insert into product ( name, price, is_promotional ) values
+.- ('milk', 1.0, true),
+.- ('brot', 1.5, false),
+.- ('icecream', 2.0, true),
+.- ('chocolate', 2.5, false),
+.- ('chicken', 3.0, true),
+.- ('pizza', 3.5, false),
+.- ('pudding', 4.0, true),
+.- ('popcorn', 4.5, false),
+.- ('pie', 5.0, true)
+.-
+.-;insert into discount_card (name, discount, number) values
+.- ( 'mastercard',10, 11111),
+.- ( 'mastercard',20, 22222),
+.- ( 'mastercard',30, 33333),
+.- ( 'mastercard',40, 44444),
+.- ( 'mastercard',50, 55555),
+.- ( 'mastercard',60, 66666),
+.- ( 'mastercard',70, 77777),
+.- ( 'mastercard',80, 88888),
+.- ( 'mastercard',90, 99999)
+.-
+.-"-- DROP DATABASE product_market;
+.--- drop table discount_card;
+.--- drop table product;
+.--- drop table discount_card;
+.---
+.-0-- SELECT nextval('product_id_seq'::regclass);
+.-'-- select setval('product_id_seq',9);
+./ @AfterEach
+./(--  SET "user" TO product_market_test;
+./,-- create schema product_market_test_java;
+./-- SHOW search_path;
+./"-- DROP TABLE IF EXISTS product;
+./(-- DROP TABLE IF EXISTS discount_card;
+./drop table product
+./
+./drop table discount_card
+./
+./create table product
+./(
+./%    id          SERIAL PRIMARY KEY,
+./    name        varchar(25),
+./$    price        double precision,
+./    is_promotional boolean
+./)
+./
+./>------------------------------------------------------------
+./create table discount_card
+./(
+./    id   SERIAL PRIMARY KEY,
+./    name        varchar(25),
+./    discount int,
+./    number  int
+./)
+./
+./<insert into product ( name, price, is_promotional ) values
+./ ('milk', 1.0, true),
+./ ('brot', 1.5, false),
+./ ('icecream', 2.0, true),
+./ ('chocolate', 2.5, false),
+./ ('chicken', 3.0, true),
+./ ('pizza', 3.5, false),
+./ ('pudding', 4.0, true),
+./ ('popcorn', 4.5, false),
+./ ('pie', 5.0, true)
+./
+./;insert into discount_card (name, discount, number) values
+./ ( 'mastercard',10, 11111),
+./ ( 'mastercard',20, 22222),
+./ ( 'mastercard',30, 33333),
+./ ( 'mastercard',40, 44444),
+./ ( 'mastercard',50, 55555),
+./ ( 'mastercard',60, 66666),
+./ ( 'mastercard',70, 77777),
+./ ( 'mastercard',80, 88888),
+./ ( 'mastercard',90, 99999)
+./
+./"-- DROP DATABASE product_market;
+./-- drop table discount_card;
+./-- drop table product;
+./-- drop table discount_card;
+./--
+./0-- SELECT nextval('product_id_seq'::regclass);
+./'-- select setval('product_id_seq',9);
+10 @AfterEach
+10(--  SET "user" TO product_market_test;
+10,-- create schema product_market_test_java;
+10-- SHOW search_path;
+10"-- DROP TABLE IF EXISTS product;
+10(-- DROP TABLE IF EXISTS discount_card;
+10drop table product
+10
+10drop table discount_card
+10
+10create table product
+10(
+10%    id          SERIAL PRIMARY KEY,
+10    name        varchar(25),
+10$    price        double precision,
+10    is_promotional boolean
+10)
+10
+10>------------------------------------------------------------
+10create table discount_card
+10(
+10    id   SERIAL PRIMARY KEY,
+10    name        varchar(25),
+10    discount int,
+10    number  int
+10)
+10
+10<insert into product ( name, price, is_promotional ) values
+10 ('milk', 1.0, true),
+10 ('brot', 1.5, false),
+10 ('icecream', 2.0, true),
+10 ('chocolate', 2.5, false),
+10 ('chicken', 3.0, true),
+10 ('pizza', 3.5, false),
+10 ('pudding', 4.0, true),
+10 ('popcorn', 4.5, false),
+10 ('pie', 5.0, true)
+10
+10;insert into discount_card (name, discount, number) values
+10 ( 'mastercard',10, 11111),
+10 ( 'mastercard',20, 22222),
+10 ( 'mastercard',30, 33333),
+10 ( 'mastercard',40, 44444),
+10 ( 'mastercard',50, 55555),
+10 ( 'mastercard',60, 66666),
+10 ( 'mastercard',70, 77777),
+10 ( 'mastercard',80, 88888),
+10 ( 'mastercard',90, 99999)
+10
+10"-- DROP DATABASE product_market;
+10-- drop table discount_card;
+10-- drop table product;
+10-- drop table discount_card;
+10--
+100-- SELECT nextval('product_id_seq'::regclass);
+10'-- select setval('product_id_seq',9);
+12¨17:09:25.358 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+12¨17:09:25.358 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+12¨17:09:25.358 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+12¨17:09:25.358 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+12¨17:09:25.358 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+12 @AfterEach
+12(--  SET "user" TO product_market_test;
+12,-- create schema product_market_test_java;
+12-- SHOW search_path;
+12"-- DROP TABLE IF EXISTS product;
+12(-- DROP TABLE IF EXISTS discount_card;
+12drop table product
+12
+12drop table discount_card
+12
+12create table product
+12(
+12%    id          SERIAL PRIMARY KEY,
+12    name        varchar(25),
+12$    price        double precision,
+12    is_promotional boolean
+12)
+12
+12>------------------------------------------------------------
+12create table discount_card
+12(
+12    id   SERIAL PRIMARY KEY,
+12    name        varchar(25),
+12    discount int,
+12    number  int
+12)
+12
+12<insert into product ( name, price, is_promotional ) values
+12 ('milk', 1.0, true),
+12 ('brot', 1.5, false),
+12 ('icecream', 2.0, true),
+12 ('chocolate', 2.5, false),
+12 ('chicken', 3.0, true),
+12 ('pizza', 3.5, false),
+12 ('pudding', 4.0, true),
+12 ('popcorn', 4.5, false),
+12 ('pie', 5.0, true)
+12
+12;insert into discount_card (name, discount, number) values
+12 ( 'mastercard',10, 11111),
+12 ( 'mastercard',20, 22222),
+12 ( 'mastercard',30, 33333),
+12 ( 'mastercard',40, 44444),
+12 ( 'mastercard',50, 55555),
+12 ( 'mastercard',60, 66666),
+12 ( 'mastercard',70, 77777),
+12 ( 'mastercard',80, 88888),
+12 ( 'mastercard',90, 99999)
+12
+12"-- DROP DATABASE product_market;
+12-- drop table discount_card;
+12-- drop table product;
+12-- drop table discount_card;
+12--
+120-- SELECT nextval('product_id_seq'::regclass);
+12'-- select setval('product_id_seq',9);
+13¨17:09:25.518 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+13¨17:09:25.518 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+13¨17:09:25.518 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+13¨17:09:25.519 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+13¨17:09:25.519 [Test worker] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+13 @AfterEach
+13(--  SET "user" TO product_market_test;
+13,-- create schema product_market_test_java;
+13-- SHOW search_path;
+13"-- DROP TABLE IF EXISTS product;
+13(-- DROP TABLE IF EXISTS discount_card;
+13drop table product
+13
+13drop table discount_card
+13
+13create table product
+13(
+13%    id          SERIAL PRIMARY KEY,
+13    name        varchar(25),
+13$    price        double precision,
+13    is_promotional boolean
+13)
+13
+13>------------------------------------------------------------
+13create table discount_card
+13(
+13    id   SERIAL PRIMARY KEY,
+13    name        varchar(25),
+13    discount int,
+13    number  int
+13)
+13
+13<insert into product ( name, price, is_promotional ) values
+13 ('milk', 1.0, true),
+13 ('brot', 1.5, false),
+13 ('icecream', 2.0, true),
+13 ('chocolate', 2.5, false),
+13 ('chicken', 3.0, true),
+13 ('pizza', 3.5, false),
+13 ('pudding', 4.0, true),
+13 ('popcorn', 4.5, false),
+13 ('pie', 5.0, true)
+13
+13;insert into discount_card (name, discount, number) values
+13 ( 'mastercard',10, 11111),
+13 ( 'mastercard',20, 22222),
+13 ( 'mastercard',30, 33333),
+13 ( 'mastercard',40, 44444),
+13 ( 'mastercard',50, 55555),
+13 ( 'mastercard',60, 66666),
+13 ( 'mastercard',70, 77777),
+13 ( 'mastercard',80, 88888),
+13 ( 'mastercard',90, 99999)
+13
+13"-- DROP DATABASE product_market;
+13-- drop table discount_card;
+13-- drop table product;
+13-- drop table discount_card;
+13--
+130-- SELECT nextval('product_id_seq'::regclass);
+13'-- select setval('product_id_seq',9);
+54†17:09:25.817 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was deleted in the database: id: 5
+54 @AfterEach
+54(--  SET "user" TO product_market_test;
+54,-- create schema product_market_test_java;
+54-- SHOW search_path;
+54"-- DROP TABLE IF EXISTS product;
+54(-- DROP TABLE IF EXISTS discount_card;
+54drop table product
+54
+54drop table discount_card
+54
+54create table product
+54(
+54%    id          SERIAL PRIMARY KEY,
+54    name        varchar(25),
+54$    price        double precision,
+54    is_promotional boolean
+54)
+54
+54>------------------------------------------------------------
+54create table discount_card
+54(
+54    id   SERIAL PRIMARY KEY,
+54    name        varchar(25),
+54    discount int,
+54    number  int
+54)
+54
+54<insert into product ( name, price, is_promotional ) values
+54 ('milk', 1.0, true),
+54 ('brot', 1.5, false),
+54 ('icecream', 2.0, true),
+54 ('chocolate', 2.5, false),
+54 ('chicken', 3.0, true),
+54 ('pizza', 3.5, false),
+54 ('pudding', 4.0, true),
+54 ('popcorn', 4.5, false),
+54 ('pie', 5.0, true)
+54
+54;insert into discount_card (name, discount, number) values
+54 ( 'mastercard',10, 11111),
+54 ( 'mastercard',20, 22222),
+54 ( 'mastercard',30, 33333),
+54 ( 'mastercard',40, 44444),
+54 ( 'mastercard',50, 55555),
+54 ( 'mastercard',60, 66666),
+54 ( 'mastercard',70, 77777),
+54 ( 'mastercard',80, 88888),
+54 ( 'mastercard',90, 99999)
+54
+54"-- DROP DATABASE product_market;
+54-- drop table discount_card;
+54-- drop table product;
+54-- drop table discount_card;
+54--
+540-- SELECT nextval('product_id_seq'::regclass);
+54'-- select setval('product_id_seq',9);
+56 @AfterEach
+56(--  SET "user" TO product_market_test;
+56,-- create schema product_market_test_java;
+56-- SHOW search_path;
+56"-- DROP TABLE IF EXISTS product;
+56(-- DROP TABLE IF EXISTS discount_card;
+56drop table product
+56
+56drop table discount_card
+56
+56create table product
+56(
+56%    id          SERIAL PRIMARY KEY,
+56    name        varchar(25),
+56$    price        double precision,
+56    is_promotional boolean
+56)
+56
+56>------------------------------------------------------------
+56create table discount_card
+56(
+56    id   SERIAL PRIMARY KEY,
+56    name        varchar(25),
+56    discount int,
+56    number  int
+56)
+56
+56<insert into product ( name, price, is_promotional ) values
+56 ('milk', 1.0, true),
+56 ('brot', 1.5, false),
+56 ('icecream', 2.0, true),
+56 ('chocolate', 2.5, false),
+56 ('chicken', 3.0, true),
+56 ('pizza', 3.5, false),
+56 ('pudding', 4.0, true),
+56 ('popcorn', 4.5, false),
+56 ('pie', 5.0, true)
+56
+56;insert into discount_card (name, discount, number) values
+56 ( 'mastercard',10, 11111),
+56 ( 'mastercard',20, 22222),
+56 ( 'mastercard',30, 33333),
+56 ( 'mastercard',40, 44444),
+56 ( 'mastercard',50, 55555),
+56 ( 'mastercard',60, 66666),
+56 ( 'mastercard',70, 77777),
+56 ( 'mastercard',80, 88888),
+56 ( 'mastercard',90, 99999)
+56
+56"-- DROP DATABASE product_market;
+56-- drop table discount_card;
+56-- drop table product;
+56-- drop table discount_card;
+56--
+560-- SELECT nextval('product_id_seq'::regclass);
+56'-- select setval('product_id_seq',9);
+57 @AfterEach
+57(--  SET "user" TO product_market_test;
+57,-- create schema product_market_test_java;
+57-- SHOW search_path;
+57"-- DROP TABLE IF EXISTS product;
+57(-- DROP TABLE IF EXISTS discount_card;
+57drop table product
+57
+57drop table discount_card
+57
+57create table product
+57(
+57%    id          SERIAL PRIMARY KEY,
+57    name        varchar(25),
+57$    price        double precision,
+57    is_promotional boolean
+57)
+57
+57>------------------------------------------------------------
+57create table discount_card
+57(
+57    id   SERIAL PRIMARY KEY,
+57    name        varchar(25),
+57    discount int,
+57    number  int
+57)
+57
+57<insert into product ( name, price, is_promotional ) values
+57 ('milk', 1.0, true),
+57 ('brot', 1.5, false),
+57 ('icecream', 2.0, true),
+57 ('chocolate', 2.5, false),
+57 ('chicken', 3.0, true),
+57 ('pizza', 3.5, false),
+57 ('pudding', 4.0, true),
+57 ('popcorn', 4.5, false),
+57 ('pie', 5.0, true)
+57
+57;insert into discount_card (name, discount, number) values
+57 ( 'mastercard',10, 11111),
+57 ( 'mastercard',20, 22222),
+57 ( 'mastercard',30, 33333),
+57 ( 'mastercard',40, 44444),
+57 ( 'mastercard',50, 55555),
+57 ( 'mastercard',60, 66666),
+57 ( 'mastercard',70, 77777),
+57 ( 'mastercard',80, 88888),
+57 ( 'mastercard',90, 99999)
+57
+57"-- DROP DATABASE product_market;
+57-- drop table discount_card;
+57-- drop table product;
+57-- drop table discount_card;
+57--
+570-- SELECT nextval('product_id_seq'::regclass);
+57'-- select setval('product_id_seq',9);
+98À17:09:26.325 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity has been updated in the database: Product(id=9, name=banana, price=10.0, isPromotional=true)
+98 @AfterEach
+98(--  SET "user" TO product_market_test;
+98,-- create schema product_market_test_java;
+98-- SHOW search_path;
+98"-- DROP TABLE IF EXISTS product;
+98(-- DROP TABLE IF EXISTS discount_card;
+98drop table product
+98
+98drop table discount_card
+98
+98create table product
+98(
+98%    id          SERIAL PRIMARY KEY,
+98    name        varchar(25),
+98$    price        double precision,
+98    is_promotional boolean
+98)
+98
+98>------------------------------------------------------------
+98create table discount_card
+98(
+98    id   SERIAL PRIMARY KEY,
+98    name        varchar(25),
+98    discount int,
+98    number  int
+98)
+98
+98<insert into product ( name, price, is_promotional ) values
+98 ('milk', 1.0, true),
+98 ('brot', 1.5, false),
+98 ('icecream', 2.0, true),
+98 ('chocolate', 2.5, false),
+98 ('chicken', 3.0, true),
+98 ('pizza', 3.5, false),
+98 ('pudding', 4.0, true),
+98 ('popcorn', 4.5, false),
+98 ('pie', 5.0, true)
+98
+98;insert into discount_card (name, discount, number) values
+98 ( 'mastercard',10, 11111),
+98 ( 'mastercard',20, 22222),
+98 ( 'mastercard',30, 33333),
+98 ( 'mastercard',40, 44444),
+98 ( 'mastercard',50, 55555),
+98 ( 'mastercard',60, 66666),
+98 ( 'mastercard',70, 77777),
+98 ( 'mastercard',80, 88888),
+98 ( 'mastercard',90, 99999)
+98
+98"-- DROP DATABASE product_market;
+98-- drop table discount_card;
+98-- drop table product;
+98-- drop table discount_card;
+98--
+980-- SELECT nextval('product_id_seq'::regclass);
+98'-- select setval('product_id_seq',9);
+9: @AfterEach
+9:(--  SET "user" TO product_market_test;
+9:,-- create schema product_market_test_java;
+9:-- SHOW search_path;
+9:"-- DROP TABLE IF EXISTS product;
+9:(-- DROP TABLE IF EXISTS discount_card;
+9:drop table product
+9:
+9:drop table discount_card
+9:
+9:create table product
+9:(
+9:%    id          SERIAL PRIMARY KEY,
+9:    name        varchar(25),
+9:$    price        double precision,
+9:    is_promotional boolean
+9:)
+9:
+9:>------------------------------------------------------------
+9:create table discount_card
+9:(
+9:    id   SERIAL PRIMARY KEY,
+9:    name        varchar(25),
+9:    discount int,
+9:    number  int
+9:)
+9:
+9:<insert into product ( name, price, is_promotional ) values
+9: ('milk', 1.0, true),
+9: ('brot', 1.5, false),
+9: ('icecream', 2.0, true),
+9: ('chocolate', 2.5, false),
+9: ('chicken', 3.0, true),
+9: ('pizza', 3.5, false),
+9: ('pudding', 4.0, true),
+9: ('popcorn', 4.5, false),
+9: ('pie', 5.0, true)
+9:
+9:;insert into discount_card (name, discount, number) values
+9: ( 'mastercard',10, 11111),
+9: ( 'mastercard',20, 22222),
+9: ( 'mastercard',30, 33333),
+9: ( 'mastercard',40, 44444),
+9: ( 'mastercard',50, 55555),
+9: ( 'mastercard',60, 66666),
+9: ( 'mastercard',70, 77777),
+9: ( 'mastercard',80, 88888),
+9: ( 'mastercard',90, 99999)
+9:
+9:"-- DROP DATABASE product_market;
+9:-- drop table discount_card;
+9:-- drop table product;
+9:-- drop table discount_card;
+9:--
+9:0-- SELECT nextval('product_id_seq'::regclass);
+9:'-- select setval('product_id_seq',9);
+9; @AfterEach
+9;(--  SET "user" TO product_market_test;
+9;,-- create schema product_market_test_java;
+9;-- SHOW search_path;
+9;"-- DROP TABLE IF EXISTS product;
+9;(-- DROP TABLE IF EXISTS discount_card;
+9;drop table product
+9;
+9;drop table discount_card
+9;
+9;create table product
+9;(
+9;%    id          SERIAL PRIMARY KEY,
+9;    name        varchar(25),
+9;$    price        double precision,
+9;    is_promotional boolean
+9;)
+9;
+9;>------------------------------------------------------------
+9;create table discount_card
+9;(
+9;    id   SERIAL PRIMARY KEY,
+9;    name        varchar(25),
+9;    discount int,
+9;    number  int
+9;)
+9;
+9;<insert into product ( name, price, is_promotional ) values
+9; ('milk', 1.0, true),
+9; ('brot', 1.5, false),
+9; ('icecream', 2.0, true),
+9; ('chocolate', 2.5, false),
+9; ('chicken', 3.0, true),
+9; ('pizza', 3.5, false),
+9; ('pudding', 4.0, true),
+9; ('popcorn', 4.5, false),
+9; ('pie', 5.0, true)
+9;
+9;;insert into discount_card (name, discount, number) values
+9; ( 'mastercard',10, 11111),
+9; ( 'mastercard',20, 22222),
+9; ( 'mastercard',30, 33333),
+9; ( 'mastercard',40, 44444),
+9; ( 'mastercard',50, 55555),
+9; ( 'mastercard',60, 66666),
+9; ( 'mastercard',70, 77777),
+9; ( 'mastercard',80, 88888),
+9; ( 'mastercard',90, 99999)
+9;
+9;"-- DROP DATABASE product_market;
+9;-- drop table discount_card;
+9;-- drop table product;
+9;-- drop table discount_card;
+9;--
+9;0-- SELECT nextval('product_id_seq'::regclass);
+9;'-- select setval('product_id_seq',9);
+=< @AfterEach
+=<(--  SET "user" TO product_market_test;
+=<,-- create schema product_market_test_java;
+=<-- SHOW search_path;
+=<"-- DROP TABLE IF EXISTS product;
+=<(-- DROP TABLE IF EXISTS discount_card;
+=<drop table product
+=<
+=<drop table discount_card
+=<
+=<create table product
+=<(
+=<%    id          SERIAL PRIMARY KEY,
+=<    name        varchar(25),
+=<$    price        double precision,
+=<    is_promotional boolean
+=<)
+=<
+=<>------------------------------------------------------------
+=<create table discount_card
+=<(
+=<    id   SERIAL PRIMARY KEY,
+=<    name        varchar(25),
+=<    discount int,
+=<    number  int
+=<)
+=<
+=<<insert into product ( name, price, is_promotional ) values
+=< ('milk', 1.0, true),
+=< ('brot', 1.5, false),
+=< ('icecream', 2.0, true),
+=< ('chocolate', 2.5, false),
+=< ('chicken', 3.0, true),
+=< ('pizza', 3.5, false),
+=< ('pudding', 4.0, true),
+=< ('popcorn', 4.5, false),
+=< ('pie', 5.0, true)
+=<
+=<;insert into discount_card (name, discount, number) values
+=< ( 'mastercard',10, 11111),
+=< ( 'mastercard',20, 22222),
+=< ( 'mastercard',30, 33333),
+=< ( 'mastercard',40, 44444),
+=< ( 'mastercard',50, 55555),
+=< ( 'mastercard',60, 66666),
+=< ( 'mastercard',70, 77777),
+=< ( 'mastercard',80, 88888),
+=< ( 'mastercard',90, 99999)
+=<
+=<"-- DROP DATABASE product_market;
+=<-- drop table discount_card;
+=<-- drop table product;
+=<-- drop table discount_card;
+=<--
+=<0-- SELECT nextval('product_id_seq'::regclass);
+=<'-- select setval('product_id_seq',9);
+=> @AfterEach
+=>(--  SET "user" TO product_market_test;
+=>,-- create schema product_market_test_java;
+=>-- SHOW search_path;
+=>"-- DROP TABLE IF EXISTS product;
+=>(-- DROP TABLE IF EXISTS discount_card;
+=>drop table product
+=>
+=>drop table discount_card
+=>
+=>create table product
+=>(
+=>%    id          SERIAL PRIMARY KEY,
+=>    name        varchar(25),
+=>$    price        double precision,
+=>    is_promotional boolean
+=>)
+=>
+=>>------------------------------------------------------------
+=>create table discount_card
+=>(
+=>    id   SERIAL PRIMARY KEY,
+=>    name        varchar(25),
+=>    discount int,
+=>    number  int
+=>)
+=>
+=><insert into product ( name, price, is_promotional ) values
+=> ('milk', 1.0, true),
+=> ('brot', 1.5, false),
+=> ('icecream', 2.0, true),
+=> ('chocolate', 2.5, false),
+=> ('chicken', 3.0, true),
+=> ('pizza', 3.5, false),
+=> ('pudding', 4.0, true),
+=> ('popcorn', 4.5, false),
+=> ('pie', 5.0, true)
+=>
+=>;insert into discount_card (name, discount, number) values
+=> ( 'mastercard',10, 11111),
+=> ( 'mastercard',20, 22222),
+=> ( 'mastercard',30, 33333),
+=> ( 'mastercard',40, 44444),
+=> ( 'mastercard',50, 55555),
+=> ( 'mastercard',60, 66666),
+=> ( 'mastercard',70, 77777),
+=> ( 'mastercard',80, 88888),
+=> ( 'mastercard',90, 99999)
+=>
+=>"-- DROP DATABASE product_market;
+=>-- drop table discount_card;
+=>-- drop table product;
+=>-- drop table discount_card;
+=>--
+=>0-- SELECT nextval('product_id_seq'::regclass);
+=>'-- select setval('product_id_seq',9);
+=?¶17:09:27.250 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+=? @AfterEach
+=?(--  SET "user" TO product_market_test;
+=?,-- create schema product_market_test_java;
+=?-- SHOW search_path;
+=?"-- DROP TABLE IF EXISTS product;
+=?(-- DROP TABLE IF EXISTS discount_card;
+=?drop table product
+=?
+=?drop table discount_card
+=?
+=?create table product
+=?(
+=?%    id          SERIAL PRIMARY KEY,
+=?    name        varchar(25),
+=?$    price        double precision,
+=?    is_promotional boolean
+=?)
+=?
+=?>------------------------------------------------------------
+=?create table discount_card
+=?(
+=?    id   SERIAL PRIMARY KEY,
+=?    name        varchar(25),
+=?    discount int,
+=?    number  int
+=?)
+=?
+=?<insert into product ( name, price, is_promotional ) values
+=? ('milk', 1.0, true),
+=? ('brot', 1.5, false),
+=? ('icecream', 2.0, true),
+=? ('chocolate', 2.5, false),
+=? ('chicken', 3.0, true),
+=? ('pizza', 3.5, false),
+=? ('pudding', 4.0, true),
+=? ('popcorn', 4.5, false),
+=? ('pie', 5.0, true)
+=?
+=?;insert into discount_card (name, discount, number) values
+=? ( 'mastercard',10, 11111),
+=? ( 'mastercard',20, 22222),
+=? ( 'mastercard',30, 33333),
+=? ( 'mastercard',40, 44444),
+=? ( 'mastercard',50, 55555),
+=? ( 'mastercard',60, 66666),
+=? ( 'mastercard',70, 77777),
+=? ( 'mastercard',80, 88888),
+=? ( 'mastercard',90, 99999)
+=?
+=?"-- DROP DATABASE product_market;
+=?-- drop table discount_card;
+=?-- drop table product;
+=?-- drop table discount_card;
+=?--
+=?0-- SELECT nextval('product_id_seq'::regclass);
+=?'-- select setval('product_id_seq',9);
+=@ @AfterEach
+=@(--  SET "user" TO product_market_test;
+=@,-- create schema product_market_test_java;
+=@-- SHOW search_path;
+=@"-- DROP TABLE IF EXISTS product;
+=@(-- DROP TABLE IF EXISTS discount_card;
+=@drop table product
+=@
+=@drop table discount_card
+=@
+=@create table product
+=@(
+=@%    id          SERIAL PRIMARY KEY,
+=@    name        varchar(25),
+=@$    price        double precision,
+=@    is_promotional boolean
+=@)
+=@
+=@>------------------------------------------------------------
+=@create table discount_card
+=@(
+=@    id   SERIAL PRIMARY KEY,
+=@    name        varchar(25),
+=@    discount int,
+=@    number  int
+=@)
+=@
+=@<insert into product ( name, price, is_promotional ) values
+=@ ('milk', 1.0, true),
+=@ ('brot', 1.5, false),
+=@ ('icecream', 2.0, true),
+=@ ('chocolate', 2.5, false),
+=@ ('chicken', 3.0, true),
+=@ ('pizza', 3.5, false),
+=@ ('pudding', 4.0, true),
+=@ ('popcorn', 4.5, false),
+=@ ('pie', 5.0, true)
+=@
+=@;insert into discount_card (name, discount, number) values
+=@ ( 'mastercard',10, 11111),
+=@ ( 'mastercard',20, 22222),
+=@ ( 'mastercard',30, 33333),
+=@ ( 'mastercard',40, 44444),
+=@ ( 'mastercard',50, 55555),
+=@ ( 'mastercard',60, 66666),
+=@ ( 'mastercard',70, 77777),
+=@ ( 'mastercard',80, 88888),
+=@ ( 'mastercard',90, 99999)
+=@
+=@"-- DROP DATABASE product_market;
+=@-- drop table discount_card;
+=@-- drop table product;
+=@-- drop table discount_card;
+=@--
+=@0-- SELECT nextval('product_id_seq'::regclass);
+=@'-- select setval('product_id_seq',9);
+BA¶17:09:27.767 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+BA @AfterEach
+BA(--  SET "user" TO product_market_test;
+BA,-- create schema product_market_test_java;
+BA-- SHOW search_path;
+BA"-- DROP TABLE IF EXISTS product;
+BA(-- DROP TABLE IF EXISTS discount_card;
+BAdrop table product
+BA
+BAdrop table discount_card
+BA
+BAcreate table product
+BA(
+BA%    id          SERIAL PRIMARY KEY,
+BA    name        varchar(25),
+BA$    price        double precision,
+BA    is_promotional boolean
+BA)
+BA
+BA>------------------------------------------------------------
+BAcreate table discount_card
+BA(
+BA    id   SERIAL PRIMARY KEY,
+BA    name        varchar(25),
+BA    discount int,
+BA    number  int
+BA)
+BA
+BA<insert into product ( name, price, is_promotional ) values
+BA ('milk', 1.0, true),
+BA ('brot', 1.5, false),
+BA ('icecream', 2.0, true),
+BA ('chocolate', 2.5, false),
+BA ('chicken', 3.0, true),
+BA ('pizza', 3.5, false),
+BA ('pudding', 4.0, true),
+BA ('popcorn', 4.5, false),
+BA ('pie', 5.0, true)
+BA
+BA;insert into discount_card (name, discount, number) values
+BA ( 'mastercard',10, 11111),
+BA ( 'mastercard',20, 22222),
+BA ( 'mastercard',30, 33333),
+BA ( 'mastercard',40, 44444),
+BA ( 'mastercard',50, 55555),
+BA ( 'mastercard',60, 66666),
+BA ( 'mastercard',70, 77777),
+BA ( 'mastercard',80, 88888),
+BA ( 'mastercard',90, 99999)
+BA
+BA"-- DROP DATABASE product_market;
+BA-- drop table discount_card;
+BA-- drop table product;
+BA-- drop table discount_card;
+BA--
+BA0-- SELECT nextval('product_id_seq'::regclass);
+BA'-- select setval('product_id_seq',9);
+BC @AfterEach
+BC(--  SET "user" TO product_market_test;
+BC,-- create schema product_market_test_java;
+BC-- SHOW search_path;
+BC"-- DROP TABLE IF EXISTS product;
+BC(-- DROP TABLE IF EXISTS discount_card;
+BCdrop table product
+BC
+BCdrop table discount_card
+BC
+BCcreate table product
+BC(
+BC%    id          SERIAL PRIMARY KEY,
+BC    name        varchar(25),
+BC$    price        double precision,
+BC    is_promotional boolean
+BC)
+BC
+BC>------------------------------------------------------------
+BCcreate table discount_card
+BC(
+BC    id   SERIAL PRIMARY KEY,
+BC    name        varchar(25),
+BC    discount int,
+BC    number  int
+BC)
+BC
+BC<insert into product ( name, price, is_promotional ) values
+BC ('milk', 1.0, true),
+BC ('brot', 1.5, false),
+BC ('icecream', 2.0, true),
+BC ('chocolate', 2.5, false),
+BC ('chicken', 3.0, true),
+BC ('pizza', 3.5, false),
+BC ('pudding', 4.0, true),
+BC ('popcorn', 4.5, false),
+BC ('pie', 5.0, true)
+BC
+BC;insert into discount_card (name, discount, number) values
+BC ( 'mastercard',10, 11111),
+BC ( 'mastercard',20, 22222),
+BC ( 'mastercard',30, 33333),
+BC ( 'mastercard',40, 44444),
+BC ( 'mastercard',50, 55555),
+BC ( 'mastercard',60, 66666),
+BC ( 'mastercard',70, 77777),
+BC ( 'mastercard',80, 88888),
+BC ( 'mastercard',90, 99999)
+BC
+BC"-- DROP DATABASE product_market;
+BC-- drop table discount_card;
+BC-- drop table product;
+BC-- drop table discount_card;
+BC--
+BC0-- SELECT nextval('product_id_seq'::regclass);
+BC'-- select setval('product_id_seq',9);
+BD¶17:09:28.197 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The product is saved in the database: Product(id=10, name=pie, price=5.0, isPromotional=true)
+BD @AfterEach
+BD(--  SET "user" TO product_market_test;
+BD,-- create schema product_market_test_java;
+BD-- SHOW search_path;
+BD"-- DROP TABLE IF EXISTS product;
+BD(-- DROP TABLE IF EXISTS discount_card;
+BDdrop table product
+BD
+BDdrop table discount_card
+BD
+BDcreate table product
+BD(
+BD%    id          SERIAL PRIMARY KEY,
+BD    name        varchar(25),
+BD$    price        double precision,
+BD    is_promotional boolean
+BD)
+BD
+BD>------------------------------------------------------------
+BDcreate table discount_card
+BD(
+BD    id   SERIAL PRIMARY KEY,
+BD    name        varchar(25),
+BD    discount int,
+BD    number  int
+BD)
+BD
+BD<insert into product ( name, price, is_promotional ) values
+BD ('milk', 1.0, true),
+BD ('brot', 1.5, false),
+BD ('icecream', 2.0, true),
+BD ('chocolate', 2.5, false),
+BD ('chicken', 3.0, true),
+BD ('pizza', 3.5, false),
+BD ('pudding', 4.0, true),
+BD ('popcorn', 4.5, false),
+BD ('pie', 5.0, true)
+BD
+BD;insert into discount_card (name, discount, number) values
+BD ( 'mastercard',10, 11111),
+BD ( 'mastercard',20, 22222),
+BD ( 'mastercard',30, 33333),
+BD ( 'mastercard',40, 44444),
+BD ( 'mastercard',50, 55555),
+BD ( 'mastercard',60, 66666),
+BD ( 'mastercard',70, 77777),
+BD ( 'mastercard',80, 88888),
+BD ( 'mastercard',90, 99999)
+BD
+BD"-- DROP DATABASE product_market;
+BD-- drop table discount_card;
+BD-- drop table product;
+BD-- drop table discount_card;
+BD--
+BD0-- SELECT nextval('product_id_seq'::regclass);
+BD'-- select setval('product_id_seq',9);
+FE¶17:09:28.345 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+FE·17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+FEº17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+FE¼17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+FE¹17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+FE¸17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+FE¹17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+FEº17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+FEµ17:09:28.346 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+FE @AfterEach
+FE(--  SET "user" TO product_market_test;
+FE,-- create schema product_market_test_java;
+FE-- SHOW search_path;
+FE"-- DROP TABLE IF EXISTS product;
+FE(-- DROP TABLE IF EXISTS discount_card;
+FEdrop table product
+FE
+FEdrop table discount_card
+FE
+FEcreate table product
+FE(
+FE%    id          SERIAL PRIMARY KEY,
+FE    name        varchar(25),
+FE$    price        double precision,
+FE    is_promotional boolean
+FE)
+FE
+FE>------------------------------------------------------------
+FEcreate table discount_card
+FE(
+FE    id   SERIAL PRIMARY KEY,
+FE    name        varchar(25),
+FE    discount int,
+FE    number  int
+FE)
+FE
+FE<insert into product ( name, price, is_promotional ) values
+FE ('milk', 1.0, true),
+FE ('brot', 1.5, false),
+FE ('icecream', 2.0, true),
+FE ('chocolate', 2.5, false),
+FE ('chicken', 3.0, true),
+FE ('pizza', 3.5, false),
+FE ('pudding', 4.0, true),
+FE ('popcorn', 4.5, false),
+FE ('pie', 5.0, true)
+FE
+FE;insert into discount_card (name, discount, number) values
+FE ( 'mastercard',10, 11111),
+FE ( 'mastercard',20, 22222),
+FE ( 'mastercard',30, 33333),
+FE ( 'mastercard',40, 44444),
+FE ( 'mastercard',50, 55555),
+FE ( 'mastercard',60, 66666),
+FE ( 'mastercard',70, 77777),
+FE ( 'mastercard',80, 88888),
+FE ( 'mastercard',90, 99999)
+FE
+FE"-- DROP DATABASE product_market;
+FE-- drop table discount_card;
+FE-- drop table product;
+FE-- drop table discount_card;
+FE--
+FE0-- SELECT nextval('product_id_seq'::regclass);
+FE'-- select setval('product_id_seq',9);
+FG¶17:09:28.518 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+FG·17:09:28.518 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+FGº17:09:28.518 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+FG¼17:09:28.518 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+FG¹17:09:28.518 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+FG¸17:09:28.519 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+FG¹17:09:28.519 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+FGº17:09:28.519 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+FGµ17:09:28.519 [Test worker] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+FG @AfterEach
+FG(--  SET "user" TO product_market_test;
+FG,-- create schema product_market_test_java;
+FG-- SHOW search_path;
+FG"-- DROP TABLE IF EXISTS product;
+FG(-- DROP TABLE IF EXISTS discount_card;
+FGdrop table product
+FG
+FGdrop table discount_card
+FG
+FGcreate table product
+FG(
+FG%    id          SERIAL PRIMARY KEY,
+FG    name        varchar(25),
+FG$    price        double precision,
+FG    is_promotional boolean
+FG)
+FG
+FG>------------------------------------------------------------
+FGcreate table discount_card
+FG(
+FG    id   SERIAL PRIMARY KEY,
+FG    name        varchar(25),
+FG    discount int,
+FG    number  int
+FG)
+FG
+FG<insert into product ( name, price, is_promotional ) values
+FG ('milk', 1.0, true),
+FG ('brot', 1.5, false),
+FG ('icecream', 2.0, true),
+FG ('chocolate', 2.5, false),
+FG ('chicken', 3.0, true),
+FG ('pizza', 3.5, false),
+FG ('pudding', 4.0, true),
+FG ('popcorn', 4.5, false),
+FG ('pie', 5.0, true)
+FG
+FG;insert into discount_card (name, discount, number) values
+FG ( 'mastercard',10, 11111),
+FG ( 'mastercard',20, 22222),
+FG ( 'mastercard',30, 33333),
+FG ( 'mastercard',40, 44444),
+FG ( 'mastercard',50, 55555),
+FG ( 'mastercard',60, 66666),
+FG ( 'mastercard',70, 77777),
+FG ( 'mastercard',80, 88888),
+FG ( 'mastercard',90, 99999)
+FG
+FG"-- DROP DATABASE product_market;
+FG-- drop table discount_card;
+FG-- drop table product;
+FG-- drop table discount_card;
+FG--
+FG0-- SELECT nextval('product_id_seq'::regclass);
+FG'-- select setval('product_id_seq',9);
+IHj17:09:28.626 [Test worker] INFO  edu.clevertec.check.service.OutputCheckService - Print check to File...

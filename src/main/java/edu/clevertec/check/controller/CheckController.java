@@ -8,6 +8,7 @@ import edu.clevertec.check.service.OrderProcessingService;
 import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
+import edu.clevertec.check.util.ConnectionManagerImpl;
 import edu.clevertec.check.validation.impl.DataValidation;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 @WebServlet({"/pdf"})
 @Slf4j
@@ -29,8 +31,8 @@ public class CheckController extends HttpServlet {
         String storageArguments = req.getParameter("arguments");
         String[] split = storageArguments.split(" ");
         DataValidation.requiredNotEmptyArgs(split);
-        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
-                (new ProductRepoImpl()), split,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
+        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),
+                new ProductServiceImpl (new ProductRepoImpl()), split,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing().formationOfCheck();
         System.out.println(2);
 

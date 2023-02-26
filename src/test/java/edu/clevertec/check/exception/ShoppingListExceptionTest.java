@@ -6,6 +6,7 @@ import edu.clevertec.check.service.OrderProcessingService;
 import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
+import edu.clevertec.check.util.ConnectionManagerImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +19,7 @@ class ShoppingListExceptionTest {
     OrderProcessingService resultProcessedData;
     @BeforeEach
     void init (){
-         resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
+         resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(), new ProductServiceImpl
                  (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
 
     }

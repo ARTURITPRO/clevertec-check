@@ -16,4 +16,4 @@ create table discount_card
 );
 
 -- DROP DATABASE product_market;
--- drop table discount_card;
+drop table discount_card;

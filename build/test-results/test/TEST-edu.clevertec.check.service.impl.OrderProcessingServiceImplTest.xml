@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-02-20T09:06:10" hostname="DESKTOP-H3UOLLG" time="2.392">
+<testsuite name="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-02-26T14:09:31" hostname="DESKTOP-H3UOLLG" time="0.263">
   <properties/>
-  <testcase name="orderProcessing()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.611"/>
-  <testcase name="getResultProcessedData()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.001"/>
-  <testcase name="setDiscountCard()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.0"/>
-  <testcase name="getTotalCost()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.747"/>
-  <testcase name="getOrderFromCheck()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.487"/>
-  <testcase name="getCustomShoppingList()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.541"/>
-  <testcase name="formationOfCheck()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.0"/>
+  <testcase name="getResultProcessedData()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.225"/>
+  <testcase name="setDiscountCard()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.003"/>
+  <testcase name="getTotalCost()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.003"/>
+  <testcase name="orderProcessingCheckHashMapProduct()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.012"/>
+  <testcase name="getOrderFromCheck()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.002"/>
+  <testcase name="getCustomShoppingList()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.002"/>
+  <testcase name="formationOfCheck()" classname="edu.clevertec.check.service.impl.OrderProcessingServiceImplTest" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

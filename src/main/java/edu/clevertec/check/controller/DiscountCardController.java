@@ -6,6 +6,8 @@ import edu.clevertec.check.entity.DiscountCard;
 import edu.clevertec.check.repository.impl.DiscountCardRepoImpl;
 import edu.clevertec.check.service.DiscountCardService;
 import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
+import edu.clevertec.check.util.ConnectionManager;
+import edu.clevertec.check.util.ConnectionManagerImpl;
 import edu.clevertec.check.util.ReaderRequestBody;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +27,7 @@ public class DiscountCardController extends HttpServlet {
             cardRepo = new DiscountCardServiceImpl(new DiscountCardRepoImpl());
     private Integer pageSize = 20;
     private Integer size = 1;
+    private final ConnectionManager connectionManager = new ConnectionManagerImpl();
 
     @Override
     @SneakyThrows
@@ -36,13 +39,13 @@ public class DiscountCardController extends HttpServlet {
         if (req.getParameterMap().containsKey("pageSize") && req.getParameterMap().containsKey("size")) {
             pageSize = Integer.parseInt(req.getParameter("pageSize"));
             size = Integer.parseInt(req.getParameter("size"));
-            productsJson = new ObjectMapper().writeValueAsString(cardRepo.findAll(pageSize, size));
+            productsJson = new ObjectMapper().writeValueAsString(cardRepo.findAll(connectionManager, pageSize, size));
         } else {
             String[] requestPath = req.getRequestURI().split("/");
             productsJson = new ObjectMapper().writeValueAsString(
                     req.getRequestURI().contains("/cards/")
-                            ? cardRepo.findById(Integer.valueOf(requestPath[requestPath.length - 1])).get()
-                            : cardRepo.findAll(pageSize));
+                            ? cardRepo.findById(connectionManager, Integer.valueOf(requestPath[requestPath.length - 1])).get()
+                            : cardRepo.findAll(connectionManager, pageSize));
         }
 
         PrintWriter out = resp.getWriter();
@@ -63,7 +66,7 @@ public class DiscountCardController extends HttpServlet {
         log.info("Incoming JSON: {}", requestBody);
 
         DiscountCard discountCard = gsonMapper.fromJson(requestBody, DiscountCard.class);
-        cardRepo.save(discountCard);
+        cardRepo.save(connectionManager, discountCard);
 
         PrintWriter out = resp.getWriter();
         resp.setContentType("application/json");
@@ -82,7 +85,7 @@ public class DiscountCardController extends HttpServlet {
         log.info("Incoming JSON: {}", requestBody);
 
         DiscountCard discountCard = gsonMapper.fromJson(requestBody, DiscountCard.class);
-        cardRepo.update(discountCard);
+        cardRepo.update(connectionManager, discountCard);
 
         PrintWriter out = resp.getWriter();
         resp.setContentType("application/json");
@@ -98,7 +101,7 @@ public class DiscountCardController extends HttpServlet {
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp)  {
         log.info("Starting DiscountCardController for DEL request: {}", req.getRequestURI());
         String[] requestPath = req.getRequestURI().split("/");
-        boolean isRemove = cardRepo.delete(Integer.valueOf(requestPath[requestPath.length - 1]));
+        boolean isRemove = cardRepo.delete(connectionManager, Integer.valueOf(requestPath[requestPath.length - 1]));
 
         try (PrintWriter writer = resp.getWriter()) {
             if (isRemove) {

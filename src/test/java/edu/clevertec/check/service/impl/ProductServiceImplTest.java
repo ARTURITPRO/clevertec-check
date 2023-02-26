@@ -3,32 +3,41 @@ package edu.clevertec.check.service.impl;
 import edu.clevertec.check.entity.Product;
 import edu.clevertec.check.repository.impl.ProductRepoImpl;
 import edu.clevertec.check.service.ProductService;
-import edu.clevertec.check.util.ConnectionManager;
-import lombok.Cleanup;
-import lombok.SneakyThrows;
-import org.junit.jupiter.api.AfterEach;
+import edu.clevertec.check.util.ConnectionManagerTest;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
 
-
+@ExtendWith(MockitoExtension.class)
 class ProductServiceImplTest {
-    List<Product> customShoppingList;
-    ProductService<Integer, Product> productService;
-    Connection connection;
+    private List<Product> expectedCustomShoppingList;
+
+    @Mock
+    private ProductService<Integer, Product> productService;
+
+    @Mock
+    private ConnectionManagerTest connectionManagerTest;
+
+    @Mock
+    ProductRepoImpl productRepo = new ProductRepoImpl();
 
     @BeforeEach
     void init() {
-        connection = ConnectionManager.get();
-        productService = new ProductServiceImpl(new ProductRepoImpl());
-        customShoppingList = new ArrayList<>();
+        connectionManagerTest = new ConnectionManagerTest();
+        productService = new ProductServiceImpl(productRepo);
+        expectedCustomShoppingList = new ArrayList<>();
         Product milk = Product.builder().id(1).name("milk").price(1.0).isPromotional(true).build();
         Product brot = Product.builder().id(2).name("brot").price(1.5).isPromotional(false).build();
         Product icecream = Product.builder().id(3).name("icecream").price(2.0).isPromotional(true).build();
@@ -38,76 +47,73 @@ class ProductServiceImplTest {
         Product pudding = Product.builder().id(7).name("pudding").price(4.0).isPromotional(true).build();
         Product popcorn = Product.builder().id(8).name("popcorn").price(4.5).isPromotional(false).build();
         Product pie = Product.builder().id(9).name("pie").price(5.0).isPromotional(true).build();
-        customShoppingList.add(milk);
-        customShoppingList.add(brot);
-        customShoppingList.add(icecream);
-        customShoppingList.add(chocolate);
-        customShoppingList.add(chicken);
-        customShoppingList.add(pizza);
-        customShoppingList.add(pudding);
-        customShoppingList.add(popcorn);
-        customShoppingList.add(pie);
+        expectedCustomShoppingList.add(milk);
+        expectedCustomShoppingList.add(brot);
+        expectedCustomShoppingList.add(icecream);
+        expectedCustomShoppingList.add(chocolate);
+        expectedCustomShoppingList.add(chicken);
+        expectedCustomShoppingList.add(pizza);
+        expectedCustomShoppingList.add(pudding);
+        expectedCustomShoppingList.add(popcorn);
+        expectedCustomShoppingList.add(pie);
     }
 
-    @Test
-    void findAll() {
-        assertEquals(customShoppingList, productService.findAll(9, 1));
+    @Nested
+    class FindAllListProduct {
+        @Test
+        void findAllPageSizeAndSizeListProduct() {
+            when(productRepo.findAll(connectionManagerTest, 9, 1)).thenReturn(expectedCustomShoppingList);
+            Collection<Product> actualListProduct = productService.findAll(connectionManagerTest, 9, 1);
+            assertEquals(expectedCustomShoppingList, actualListProduct);
+        }
+
+        @Test
+        void findAllSizeProduct() {
+            when(productRepo.findAll(connectionManagerTest, 9)).thenReturn(expectedCustomShoppingList);
+            Collection<Product> actualListProduct = productService.findAll(connectionManagerTest, 9);
+            assertEquals(expectedCustomShoppingList, actualListProduct);
+        }
     }
 
-    @Test
-    void testFindAll() {
-        assertEquals(customShoppingList, productService.findAll(9));
+    @Nested
+    class SaveProductTest {
+        @Test
+        void saveProduct() {
+            Product expectedProduct = Product.builder().id(9).name("pie").price(5.0).isPromotional(true).build();
+            when(productRepo.save(connectionManagerTest, expectedProduct)).thenReturn(expectedProduct);
+            Product actualProduct = productService.save(connectionManagerTest, expectedProduct);
+            assertEquals(expectedProduct, actualProduct);
+        }
     }
 
-    @SneakyThrows
-    @Test
-    void save() {
-        Product coco = Product.builder().id(9).name("pie").price(5.0).isPromotional(true).build();
-        assertEquals(coco, productService.save(coco));
+    @Nested
+    class FindByIdProductTest {
+        @Test
+        void findByIdProduct() {
+            Product expectedProduct = expectedCustomShoppingList.get(0);
+            when(productRepo.findById(connectionManagerTest, 1)).thenReturn(Optional.of(expectedProduct));
+            Product actualProduct = productService.findById(connectionManagerTest, 1).get();
+            assertEquals(expectedCustomShoppingList.get(0), actualProduct);
+        }
     }
 
-    @Test
-    void findById() {
-        assertEquals(customShoppingList.get(0), productService.findById(1).get());
+    @Nested
+    class updateProductTest {
+        @Test
+        void updateProduct() {
+            Product expectedProduct = Product.builder().id(9).name("pie").price(700.0).isPromotional(true).build();
+            when(productRepo.update(connectionManagerTest, expectedProduct)).thenReturn(Optional.ofNullable(expectedProduct));
+            Product actualProduct = productService.update(connectionManagerTest, expectedProduct).get();
+            assertEquals(expectedProduct, actualProduct);
+        }
     }
 
-    @Test
-    void update() {
-        Product banana = Product.builder().id(9).name("banana").price(10.0).isPromotional(true).build();
-        assertEquals(banana, productService.update(banana).get());
-    }
-
-    @Test
-    void delete() {
-        assertTrue(productService.delete(5));
-    }
-
-    @SneakyThrows
-    @AfterEach
-    void after() {
-        @Cleanup PreparedStatement dropTableProduct = connection.prepareStatement(
-                "DROP TABLE product;");
-        dropTableProduct.executeUpdate();
-        @Cleanup PreparedStatement createTableProduct = connection.prepareStatement(
-                "create table product" +
-                        "(" +
-                        "    id          SERIAL PRIMARY KEY," +
-                        "    name        varchar(25)," +
-                        "    price        double precision," +
-                        "    is_promotional boolean" +
-                        ");");
-        createTableProduct.executeUpdate();
-        @Cleanup PreparedStatement insertTableProduct = connection.prepareStatement(
-                "insert into product ( name, price, is_promotional ) values" +
-                        "('milk', 1.0, true)," +
-                        "('brot', 1.5, false)," +
-                        "('icecream', 2.0, true)," +
-                        "('chocolate', 2.5, false)," +
-                        "('chicken', 3.0, true)," +
-                        "('pizza', 3.5, false)," +
-                        "('pudding', 4.0, true)," +
-                        "('popcorn', 4.5, false)," +
-                        "('pie', 5.0, true);");
-        insertTableProduct.executeUpdate();
+    @Nested
+    class DeleteBuIdProductTest {
+        @Test
+        void deleteBuIdProduct() {
+            when(productRepo.delete(connectionManagerTest, 5)).thenReturn(true);
+            assertTrue(productService.delete(connectionManagerTest, 5));
+        }
     }
 }

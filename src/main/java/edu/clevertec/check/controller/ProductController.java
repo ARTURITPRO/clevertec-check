@@ -6,6 +6,8 @@ import edu.clevertec.check.entity.Product;
 import edu.clevertec.check.repository.impl.ProductRepoImpl;
 import edu.clevertec.check.service.ProductService;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
+import edu.clevertec.check.util.ConnectionManager;
+import edu.clevertec.check.util.ConnectionManagerImpl;
 import edu.clevertec.check.util.ReaderRequestBody;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +16,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet({"/products", "/products/*"})
@@ -26,6 +27,7 @@ public class ProductController extends HttpServlet {
     private final Gson gsonMapper = new Gson();
     private Integer pageSize = 20;
     private Integer size = 1;
+    private ConnectionManager connectionManager = new ConnectionManagerImpl();
     @Override
     @SneakyThrows
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
@@ -36,14 +38,14 @@ public class ProductController extends HttpServlet {
         if (req.getParameterMap().containsKey("pageSize") && req.getParameterMap().containsKey("size")) {
             pageSize = Integer.parseInt(req.getParameter("pageSize"));
             size = Integer.parseInt(req.getParameter("size"));
-            productsJson = new ObjectMapper().writeValueAsString(productService.findAll(pageSize,size)
+            productsJson = new ObjectMapper().writeValueAsString(productService.findAll(connectionManager, pageSize,size)
             );
         } else {
             String[] requestPath = req.getRequestURI().split("/");
             productsJson = new ObjectMapper().writeValueAsString(
                     req.getRequestURI().contains("/products/")
-                            ? productService.findById(Integer.valueOf(requestPath[requestPath.length - 1])).get()
-                            : productService.findAll(pageSize)
+                            ? productService.findById(connectionManager, Integer.valueOf(requestPath[requestPath.length - 1])).get()
+                            : productService.findAll(connectionManager, pageSize)
             );
         }
 
@@ -66,7 +68,7 @@ public class ProductController extends HttpServlet {
         log.info("Incoming JSON: {}", requestBody);
 
         Product product = gsonMapper.fromJson(requestBody, Product.class);
-        productService.save(product);
+        productService.save(connectionManager, product);
 
         PrintWriter out = resp.getWriter();
         resp.setContentType("application/json");
@@ -85,7 +87,7 @@ public class ProductController extends HttpServlet {
         log.info("Incoming JSON: {}", requestBody);
 
         Product product = objectMapper.readValue(requestBody, Product.class);
-        productService.update(product);
+        productService.update(connectionManager, product);
 
         PrintWriter out = resp.getWriter();
         resp.setContentType("application/json");
@@ -101,7 +103,7 @@ public class ProductController extends HttpServlet {
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp)  {
         log.info("Starting ProductController for DELrequest: {}", req.getRequestURI());
         String[] requestPath = req.getRequestURI().split("/");
-        boolean isRemove = productService.delete(Integer.valueOf(requestPath[requestPath.length - 1]));
+        boolean isRemove = productService.delete(connectionManager, Integer.valueOf(requestPath[requestPath.length - 1]));
 
         try (PrintWriter writer = resp.getWriter()) {
             if (isRemove) {

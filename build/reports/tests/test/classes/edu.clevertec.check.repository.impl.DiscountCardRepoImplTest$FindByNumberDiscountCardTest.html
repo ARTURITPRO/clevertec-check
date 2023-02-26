@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - FindByNumberDiscountCardTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>FindByNumberDiscountCardTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/edu.clevertec.check.repository.impl.html">edu.clevertec.check.repository.impl</a> &gt; DiscountCardRepoImplTest$FindByNumberDiscountCardTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.602s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">findByNegativeNumberDiscountCardThrows()</td>
+<td class="success">0.140s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findByNonExistentNumberDiscountCardThrows()</td>
+<td class="success">0.155s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findByNullNumberDiscountCardThrows()</td>
+<td class="success">0.159s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findByNumberDiscountCard()</td>
+<td class="success">0.148s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre> @AfterEach
+--  SET &quot;user&quot; TO product_market_test;
+-- create schema product_market_test_java;
+-- SHOW search_path;
+-- DROP TABLE IF EXISTS product;
+-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+    price        double precision,
+    is_promotional boolean
+)
+
+------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+-- SELECT nextval('product_id_seq'::regclass);
+-- select setval('product_id_seq',9);
+ @AfterEach
+--  SET &quot;user&quot; TO product_market_test;
+-- create schema product_market_test_java;
+-- SHOW search_path;
+-- DROP TABLE IF EXISTS product;
+-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+    price        double precision,
+    is_promotional boolean
+)
+
+------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+-- SELECT nextval('product_id_seq'::regclass);
+-- select setval('product_id_seq',9);
+ @AfterEach
+--  SET &quot;user&quot; TO product_market_test;
+-- create schema product_market_test_java;
+-- SHOW search_path;
+-- DROP TABLE IF EXISTS product;
+-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+    price        double precision,
+    is_promotional boolean
+)
+
+------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+-- SELECT nextval('product_id_seq'::regclass);
+-- select setval('product_id_seq',9);
+ @AfterEach
+--  SET &quot;user&quot; TO product_market_test;
+-- create schema product_market_test_java;
+-- SHOW search_path;
+-- DROP TABLE IF EXISTS product;
+-- DROP TABLE IF EXISTS discount_card;
+drop table product
+
+drop table discount_card
+
+create table product
+(
+    id          SERIAL PRIMARY KEY,
+    name        varchar(25),
+    price        double precision,
+    is_promotional boolean
+)
+
+------------------------------------------------------------
+create table discount_card
+(
+    id   SERIAL PRIMARY KEY,
+    name        varchar(25),
+    discount int,
+    number  int
+)
+
+insert into product ( name, price, is_promotional ) values
+ ('milk', 1.0, true),
+ ('brot', 1.5, false),
+ ('icecream', 2.0, true),
+ ('chocolate', 2.5, false),
+ ('chicken', 3.0, true),
+ ('pizza', 3.5, false),
+ ('pudding', 4.0, true),
+ ('popcorn', 4.5, false),
+ ('pie', 5.0, true)
+
+insert into discount_card (name, discount, number) values
+ ( 'mastercard',10, 11111),
+ ( 'mastercard',20, 22222),
+ ( 'mastercard',30, 33333),
+ ( 'mastercard',40, 44444),
+ ( 'mastercard',50, 55555),
+ ( 'mastercard',60, 66666),
+ ( 'mastercard',70, 77777),
+ ( 'mastercard',80, 88888),
+ ( 'mastercard',90, 99999)
+
+-- DROP DATABASE product_market;
+-- drop table discount_card;
+-- drop table product;
+-- drop table discount_card;
+--
+-- SELECT nextval('product_id_seq'::regclass);
+-- select setval('product_id_seq',9);
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 26 февр. 2023 г., 17:09:32</p>
+</div>
+</div>
+</body>
+</html>

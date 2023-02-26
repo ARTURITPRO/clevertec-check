@@ -3,6 +3,7 @@ package edu.clevertec.check.repository.impl;
 import edu.clevertec.check.entity.Product;
 import edu.clevertec.check.repository.ProductRepo;
 import edu.clevertec.check.util.ConnectionManager;
+import edu.clevertec.check.util.ConnectionManagerImpl;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -21,8 +22,8 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
 
     @SneakyThrows
     @Override
-    public Collection<Product> findAll(Integer pageSize) {
-        Connection connection = ConnectionManager.get();
+    public Collection<Product> findAll(ConnectionManager connectionManager, Integer pageSize) {
+        Connection connection = connectionManager.get();
         return findAll( connection, pageSize);
     }
     @SneakyThrows
@@ -42,8 +43,8 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
 
     @SneakyThrows
     @Override
-    public Collection<Product> findAll(Integer pageSize, Integer size) {
-        Connection connection = ConnectionManager.get();
+    public Collection<Product> findAll(ConnectionManager connectionManager, Integer pageSize, Integer size) {
+        Connection connection = connectionManager.get();
         return findAll(connection,pageSize, size );
     }
 
@@ -66,8 +67,8 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
     }
     @SneakyThrows
     @Override
-    public Product save(Product product) {
-        Connection connection = ConnectionManager.get();
+    public Product save(ConnectionManager connectionManager, Product product) {
+        Connection connection = connectionManager.get();
         return save(connection, product);
     }
 
@@ -90,8 +91,8 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
 
     @SneakyThrows
     @Override
-    public Optional<Product> findById(Integer id) {
-        Connection connection = ConnectionManager.get();
+    public Optional<Product> findById(ConnectionManager connectionManager, Integer id) {
+        Connection connection = connectionManager.get();
         return Optional.ofNullable(findById(connection, id));
     }
 
@@ -114,8 +115,8 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
     }
 
     @Override
-    public Optional<Product> update(Product product) {
-        Connection connection = ConnectionManager.get();
+    public Optional<Product> update(ConnectionManager connectionManager, Product product) {
+        Connection connection = connectionManager.get();
         return Optional.ofNullable(update(connection, product));
     }
 
@@ -141,8 +142,8 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
 
     @SneakyThrows
     @Override
-    public boolean delete(Integer id) {
-        Connection connection = ConnectionManager.get();
+    public boolean delete(ConnectionManager connectionManager, Integer id) {
+        Connection connection = connectionManager.get();
         return delete(connection, id);
     }
 

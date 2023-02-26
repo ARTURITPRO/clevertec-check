@@ -10,6 +10,7 @@ import edu.clevertec.check.service.OutputCheckService;
 import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
+import edu.clevertec.check.util.ConnectionManagerImpl;
 import edu.clevertec.check.validation.impl.DataValidation;
 import edu.clevertec.check.validation.impl.FileValidationImpl;
 import lombok.SneakyThrows;
@@ -55,9 +56,11 @@ public class CheckRunner {
      */
     @SneakyThrows
     private static OrderProcessingService generateCheck(String[] data)  {
-        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ProductServiceImpl
+
+        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(), new ProductServiceImpl
                 (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
-        resultProcessedData.orderProcessing().formationOfCheck();
+        resultProcessedData.orderProcessing();
+        resultProcessedData.formationOfCheck();
         CashReceiptPdfFilePrinter printer = new CashReceiptPdfFilePrinterImpl();
         printer.print(resultProcessedData); //Print check to PDF file (in root project)
         return resultProcessedData;

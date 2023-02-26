@@ -1,22 +1,22 @@
 package edu.clevertec.check.service;
 
-import edu.clevertec.check.service.impl.OrderProcessingServiceImplTest;
 import lombok.SneakyThrows;
-import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
-import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.File;
+import java.io.FileReader;
+import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 class OutputCheckServiceTest {
+
     StringBuilder stringBuilder;
+
     StringBuilder stringBuilderFile;
 
     @BeforeEach

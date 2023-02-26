@@ -1,31 +1,48 @@
 package edu.clevertec.check.repository.impl;
 
 import edu.clevertec.check.entity.DiscountCard;
-import edu.clevertec.check.util.ConnectionManager;
-import lombok.Cleanup;
+import edu.clevertec.check.util.ConnectionManagerTest;
 import lombok.SneakyThrows;
-import org.junit.Before;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.apache.ibatis.jdbc.ScriptRunner;
+import org.junit.jupiter.api.*;
+import org.postgresql.util.PSQLException;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.Reader;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("DiscountCardRepoImplTest")
 class DiscountCardRepoImplTest {
-    List<DiscountCard> listDiscountCard;
-    Connection connection;
-    DiscountCardRepoImpl  discountCardRepo;
-    @BeforeEach
-    void init() {
-        discountCardRepo = new DiscountCardRepoImpl();
-        connection = ConnectionManager.get();
+
+    private static List<DiscountCard> listDiscountCard;
+
+    private static ScriptRunner scriptRunner;
+
+    private static Connection connection;
+
+    private static Reader reader;
+
+    private static ConnectionManagerTest connectionManagerTest = new ConnectionManagerTest();
+
+    private static DiscountCardRepoImpl discountCardRepo = new DiscountCardRepoImpl();
+
+    @SneakyThrows
+    @BeforeAll
+    static void initlistDiscountCard() {
+        connection = connectionManagerTest.get();
+        scriptRunner = new ScriptRunner(connection);
+        reader = new BufferedReader(new FileReader("src/test/resources/db.migration/test.sql"));
+        System.out.println("!!!");
+
+        scriptRunner.runScript(reader);
+        System.out.println("!");
+
         listDiscountCard = new ArrayList<>();
         DiscountCard mastercard1 = DiscountCard.builder().id(1).name("mastercard").discount(10).number(11111).build();
         DiscountCard mastercard2 = DiscountCard.builder().id(2).name("mastercard").discount(20).number(22222).build();
@@ -39,80 +56,131 @@ class DiscountCardRepoImplTest {
         listDiscountCard.add(mastercard5);
     }
 
-    @Test
-    void findAll() {
-        assertEquals(listDiscountCard , discountCardRepo.findAll(connection, 5,1));
+    @Nested
+    class FindAllDiscountCardRepoTest {
+
+        @Test
+        void testFindAllPageSizeAndSizeListDiscountCard() {
+            assertEquals(listDiscountCard, discountCardRepo.findAll(connectionManagerTest, 5, 1));
+        }
+
+        @Test
+        void testFindAllPageSizeListDiscountCard() {
+            assertEquals(listDiscountCard, discountCardRepo.findAll(connectionManagerTest, 5));
+        }
+
+        @Test
+        void testFindAllPageSizeNegativeNumberDiscountCardThrows() {
+            assertThrows(PSQLException.class, () -> discountCardRepo.findAll(connectionManagerTest, -5));
+        }
     }
 
-    @Test
-    void testFindAll() {
-        assertEquals(listDiscountCard , discountCardRepo.findAll(connection, 5));
+    @Nested
+    class SaveDiscountCardTest {
+
+        @Test
+        void saveDiscountCard() {
+            DiscountCard mastercard1 = DiscountCard.builder().id(1).name("mastercard").discount(10).number(11111).build();
+            assertEquals(mastercard1, discountCardRepo.save(connectionManagerTest, mastercard1));
+        }
+
+        @Test
+        void saveNullDiscountCard() {
+            assertThrows(NullPointerException.class, () -> discountCardRepo.save(connectionManagerTest, null));
+        }
     }
 
-    @Test
-    void testFindAll1() {
-        assertEquals(listDiscountCard , discountCardRepo.findAll(5));
+    @Nested
+    class FindByIdDiscountCardTest {
+
+        @Test
+        void findByIdDiscountCard() {
+            assertEquals(listDiscountCard.get(0), discountCardRepo.findById(connectionManagerTest, 1).get());
+        }
+
+        @Test
+        void findByIdNegativeNumberDiscountCardThrows() {
+            assertThrows(NoSuchElementException.class, () -> discountCardRepo.findById(connectionManagerTest, -1).get());
+        }
+
+        @Test
+        void findByIdBigValueDiscountCardThrows() {
+            assertThrows(NoSuchElementException.class, () -> discountCardRepo.findById(connectionManagerTest, 100).get());
+        }
     }
 
-    @Test
-    void testFindAll2() {
-        assertEquals(listDiscountCard , discountCardRepo.findAll(5,1));
+    @Nested
+    class DeleteTest {
+
+        @Test
+        void deleteDiscountCard() {
+            assertTrue(discountCardRepo.delete(connectionManagerTest, 4));
+        }
+
+        @Test
+        void deleteNullDiscountCardThrows() {
+            assertThrows(NullPointerException.class, () -> discountCardRepo.delete(connectionManagerTest, null));
+        }
+
+        @Test
+        void deleteNullNonExistentElementDiscountCardThrows() {
+            assertFalse(discountCardRepo.delete(connectionManagerTest, 100));
+        }
+
     }
 
-    @Test
-    void save() {
-        DiscountCard mastercard1 = DiscountCard.builder().id(1).name("mastercard").discount(10).number(11111).build();
-        assertEquals(mastercard1, discountCardRepo.save(mastercard1));
+    @Nested
+    class UpdateTestDiscountCard {
+
+        @Test
+        void updateDiscountCard() {
+            DiscountCard mastercard5 = DiscountCard.builder().id(5).name("mastercard").discount(70).number(77777).build();
+            assertEquals(mastercard5, discountCardRepo.update(connectionManagerTest, mastercard5).get());
+        }
+
+        @Test
+        void updateNullDiscountCardThrows() {
+            DiscountCard mastercard5 = DiscountCard.builder().id(5).name("mastercard").discount(70).number(77777).build();
+            assertThrows(NullPointerException.class, () -> discountCardRepo.update(connectionManagerTest, null).get());
+        }
+
+        @Test
+        void updateNegativeElementIdDiscountCardThrows() {
+            DiscountCard mastercard5 = DiscountCard.builder().id(-3).name("mastercard").discount(70).number(77777).build();
+            assertThrows(NoSuchElementException.class, () -> discountCardRepo.update(connectionManagerTest, mastercard5).get());
+        }
     }
 
-    @Test
-    void findById() {
-        assertEquals(listDiscountCard.get(0), discountCardRepo.findById(1).get());
-    }
+    @Nested
+    class FindByNumberDiscountCardTest {
+        @Test
+        void findByNumberDiscountCard() {
+            assertEquals(listDiscountCard.get(0), discountCardRepo.findByNumber(connectionManagerTest, 11111).get());
+        }
 
-    @Test
-    void delete() {
-       assertTrue(discountCardRepo.delete(4));
-    }
+        @Test
+        void findByNullNumberDiscountCardThrows() {
+            assertThrows(NullPointerException.class, () -> discountCardRepo.findByNumber(connectionManagerTest, null).get());
+        }
 
-    @Test
-    void update() {
-        DiscountCard mastercard5 = DiscountCard.builder().id(5).name("mastercard").discount(70).number(77777).build();
-        assertEquals(mastercard5, discountCardRepo.update(mastercard5).get());
-    }
+        @Test
+        void findByNegativeNumberDiscountCardThrows() {
+            assertThrows(NoSuchElementException.class, () -> discountCardRepo.findByNumber(connectionManagerTest, -1).get());
+        }
 
-    @Test
-    void findByNumber() {
-        assertEquals(listDiscountCard.get(0), discountCardRepo.findByNumber(11111).get());
+        @Test
+        void findByNonExistentNumberDiscountCardThrows() {
+            assertThrows(NoSuchElementException.class, () -> discountCardRepo.findByNumber(connectionManagerTest, 100).get());
+        }
     }
 
     @SneakyThrows
     @AfterEach
     void after() {
-        @Cleanup PreparedStatement dropTableProduct = connection.prepareStatement(
-                "drop table discount_card;");
-        dropTableProduct.executeUpdate();
-        @Cleanup PreparedStatement createTableProduct = connection.prepareStatement(
-                "create table discount_card" +
-                        "(" +
-                        "    id   SERIAL PRIMARY KEY," +
-                        "    name        varchar(25)," +
-                        "    discount int," +
-                        "    number  int" +
-                        ");");
-        createTableProduct.executeUpdate();
-        @Cleanup PreparedStatement insertTableProduct = connection.prepareStatement(
-                "insert into discount_card (name, discount, number) values" +
-                        "( 'mastercard',10, 11111)," +
-                        "( 'mastercard',20, 22222)," +
-                        "( 'mastercard',30, 33333)," +
-                        "( 'mastercard',40, 44444)," +
-                        "( 'mastercard',50, 55555)," +
-                        "( 'mastercard',60, 66666)," +
-                        "( 'mastercard',70, 77777)," +
-                        "( 'mastercard',80, 88888)," +
-                        "( 'mastercard',90, 99999);");
-        insertTableProduct.executeUpdate();
+        System.out.println(" @AfterEach");
+        connection = connectionManagerTest.get();
+        scriptRunner = new ScriptRunner(connection);
+        reader = new BufferedReader(new FileReader("src/test/resources/db.migration/test.sql"));
+        scriptRunner.runScript(reader);
     }
-
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.clevertec.check.controller.CheckControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-26T14:09:16" hostname="DESKTOP-H3UOLLG" time="2.11">
+  <properties/>
+  <testcase name="doGetTest_statusCreated()" classname="edu.clevertec.check.controller.CheckControllerTest" time="2.11"/>
+  <system-out><![CDATA[17:09:16.529 [Test worker] INFO  org.eclipse.jetty.util.log - Logging initialized @7835ms to org.eclipse.jetty.util.log.Slf4jLog
+17:09:16.720 [Test worker] INFO  org.eclipse.jetty.server.Server - jetty-9.4.3.v20170317
+17:09:16.840 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3f985a86{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+17:09:16.841 [Test worker] INFO  org.eclipse.jetty.server.Server - Started @8148ms
+1
+17:09:17.257 [qtp1854577712-25] INFO  edu.clevertec.check.controller.CheckController - Input args: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111
+17:09:17.335 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=1, name=milk, price=1.0, isPromotional=true)
+17:09:17.391 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=2, name=brot, price=1.5, isPromotional=false)
+17:09:17.444 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=3, name=icecream, price=2.0, isPromotional=true)
+17:09:17.512 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=4, name=chocolate, price=2.5, isPromotional=false)
+17:09:17.566 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=5, name=chicken, price=3.0, isPromotional=true)
+17:09:17.619 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=6, name=pizza, price=3.5, isPromotional=false)
+17:09:17.784 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=7, name=pudding, price=4.0, isPromotional=true)
+17:09:17.858 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=8, name=popcorn, price=4.5, isPromotional=false)
+17:09:17.922 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.ProductRepoImpl - The entity was found in the database: Product(id=9, name=pie, price=5.0, isPromotional=true)
+17:09:17.923 [qtp1854577712-25] INFO  edu.clevertec.check.validation.impl.DiscountCardValidationImpl - number DiscountCard is valid
+17:09:17.923 [qtp1854577712-25] INFO  edu.clevertec.check.validation.impl.DiscountCardValidationImpl - name DiscountCard is valid
+17:09:17.981 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+17:09:17.981 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 66666
+17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 77777
+17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 88888
+17:09:17.982 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 99999
+!!![DiscountCard mastercard number 11111, DiscountCard mastercard number 22222, DiscountCard mastercard number 33333, DiscountCard mastercard number 44444, DiscountCard mastercard number 55555, DiscountCard mastercard number 66666, DiscountCard mastercard number 77777, DiscountCard mastercard number 88888, DiscountCard mastercard number 99999]
+17:09:18.204 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 11111
+17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 22222
+17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 33333
+17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 44444
+17:09:18.205 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 55555
+17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 66666
+17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 77777
+17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 88888
+17:09:18.206 [qtp1854577712-25] INFO  edu.clevertec.check.repository.impl.DiscountCardRepoImpl - The entity was found in the database: DiscountCard mastercard number 99999
+!!![DiscountCard mastercard number 11111, DiscountCard mastercard number 22222, DiscountCard mastercard number 33333, DiscountCard mastercard number 44444, DiscountCard mastercard number 55555, DiscountCard mastercard number 66666, DiscountCard mastercard number 77777, DiscountCard mastercard number 88888, DiscountCard mastercard number 99999]
+!!!!DiscountCard mastercard number 11111
+*     The item chicken is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost chicken will be:$2,7
+*     Instead of $3.0        
+5     chicken           $2,7       $13,5     
+1     milk              $1.0       $1        
+2     brot              $1.5       $3        
+6     pizza             $3.5       $21       
+*     The item pie is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost pie will be:$4,5
+*     Instead of $5.0        
+9     pie               $4,5       $40,5     
+8     popcorn           $4.5       $36       
+*     The item pudding is promotional
+*     Its amount is more than 5
+*     You get a 10% discount 
+*     The cost pudding will be:$3,6
+*     Instead of $4.0        
+7     pudding           $3,6       $25,2     
+4     chocolate         $2.5       $10       
+3     icecream          $2.0       $6        
+----------------------------------------
+#	  DiscountCard mastercard number 11111
+#	  has been provided
+#	  Included 10% discount
+----------------------------------------
+####  Total cost:                 $140,58
+2
+3
+4
+17:09:18.741 [Test worker] INFO  org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@3f985a86{HTTP/1.1,[http/1.1]}{0.0.0.0:6001}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
