@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.clevertec.check.service.OutputCheckServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-26T14:09:28" hostname="DESKTOP-H3UOLLG" time="2.003">
-  <properties/>
-  <testcase name="printCheckToFile()" classname="edu.clevertec.check.service.OutputCheckServiceTest" time="0.005"/>
-  <testcase name="printCheckToConsole()" classname="edu.clevertec.check.service.OutputCheckServiceTest" time="1.997"/>
-  <system-out><![CDATA[17:09:28.626 [Test worker] INFO  edu.clevertec.check.service.OutputCheckService - Print check to File...
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
