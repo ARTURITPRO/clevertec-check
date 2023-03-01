@@ -1,2 +1,10 @@
+.idea/
+*.iml
+target
+/.gradle/
+/.idea/
+build/
+out/
+*.log
 
 checkOfSupermarket.pdf
