@@ -4,3 +4,9 @@ db.username: postgres
 db.password: 0147896325aA
 db.driver: org.postgresql.Driver
 db.autorundbsql: true
+
+#To implement the LFU cache
+cache.size: 10
+cache.algorithm: LFU
+print.output.type: file
+print.base.url: D://check-gradle/receipts/

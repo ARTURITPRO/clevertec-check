@@ -1,15 +1,18 @@
 package edu.clevertec.check.service.impl;
 
+import edu.clevertec.check.annotation.Caches;
 import edu.clevertec.check.entity.Product;
 import edu.clevertec.check.repository.ProductRepo;
 import edu.clevertec.check.service.ProductService;
 import edu.clevertec.check.util.ConnectionManager;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Collection;
 import java.util.Objects;
 import java.util.Optional;
 
+@Slf4j
 public  class ProductServiceImpl implements ProductService<Integer, Product> {
     private final ProductRepo<Integer, Product> productRepo;
 
@@ -27,24 +30,28 @@ public  class ProductServiceImpl implements ProductService<Integer, Product> {
         return productRepo.findAll(connectionManager, pageSize);
     }
 
+    @Caches
     @SneakyThrows
     @Override
     public Product save(ConnectionManager connectionManager, Product product) {
         return productRepo.save(connectionManager, product);
     }
 
+    @Caches
     @SneakyThrows
     @Override
     public Optional<Product> findById(ConnectionManager connectionManager, Integer id) {
         return productRepo.findById(connectionManager, id);
     }
 
+    @Caches
     @SneakyThrows
     @Override
     public Optional<Product> update(ConnectionManager connectionManager, Product product) {
         return productRepo.update(connectionManager, product);
     }
 
+    @Caches
     @SneakyThrows
     @Override
     public boolean delete(ConnectionManager connectionManager, Integer id) {

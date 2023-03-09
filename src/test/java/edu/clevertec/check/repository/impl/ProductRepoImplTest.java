@@ -154,7 +154,6 @@ class ProductRepoImplTest {
     @SneakyThrows
     @AfterEach
     void after() {
-        System.out.println(" @AfterEach");
         connection = connectionManagerTest.get();
         scriptRunner = new ScriptRunner(connection);
         reader = new BufferedReader(new FileReader("src/test/resources/db.migration/test.sql"));
