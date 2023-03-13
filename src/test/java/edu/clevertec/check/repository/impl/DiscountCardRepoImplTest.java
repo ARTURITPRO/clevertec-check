@@ -38,10 +38,8 @@ class DiscountCardRepoImplTest {
         connection = connectionManagerTest.get();
         scriptRunner = new ScriptRunner(connection);
         reader = new BufferedReader(new FileReader("src/test/resources/db.migration/test.sql"));
-        System.out.println("!!!");
 
         scriptRunner.runScript(reader);
-        System.out.println("!");
 
         listDiscountCard = new ArrayList<>();
         DiscountCard mastercard1 = DiscountCard.builder().id(1).name("mastercard").discount(10).number(11111).build();
@@ -177,7 +175,6 @@ class DiscountCardRepoImplTest {
     @SneakyThrows
     @AfterEach
     void after() {
-        System.out.println(" @AfterEach");
         connection = connectionManagerTest.get();
         scriptRunner = new ScriptRunner(connection);
         reader = new BufferedReader(new FileReader("src/test/resources/db.migration/test.sql"));
