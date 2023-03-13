@@ -3,7 +3,6 @@ package edu.clevertec.check.repository.impl;
 import edu.clevertec.check.entity.Product;
 import edu.clevertec.check.repository.ProductRepo;
 import edu.clevertec.check.util.ConnectionManager;
-import edu.clevertec.check.util.ConnectionManagerImpl;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -88,6 +87,7 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
         log.info("The product is saved in the database: {}", product);
         return product;
     }
+
 
     @SneakyThrows
     @Override

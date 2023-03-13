@@ -31,7 +31,7 @@ public class CheckRunner {
      * @param args parameters of a set of products, their quantities and type of discount card, or path file.
      */
     public static void main(String[] args) {
-        log.info("Input args: " + String.join(" ", args));
+        log.debug("Input args: " + String.join(" ", args));
         DataValidation.requiredNotEmptyArgs(args);
 
         if (DataValidation.isReadFromConsole(args)) {
