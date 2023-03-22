@@ -6,7 +6,7 @@ ZWDN:304219              CKHO:300030394
 REGN:3100016076           UNP:390286042
 KASSA:0001 Change:000750  DKH:000271821
 31 Osipova Tatiana     CHK:01/000000285
-TIME  11:57:56		   DATE  2023-03-22
+TIME  13:33:34		   DATE  2023-03-22
 ----------------------------------------
 QTY   DESCRIPTION       PRICE      TOTAL
 *     The item chicken is promotional

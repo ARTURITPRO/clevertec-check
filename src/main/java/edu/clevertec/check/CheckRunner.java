@@ -1,6 +1,8 @@
 package edu.clevertec.check;
 
 import edu.clevertec.check.exception.DataException;
+import edu.clevertec.check.pdf.CashReceiptPdfFilePrinter;
+import edu.clevertec.check.pdf.cashreceiptpdffileprinterimpl.CashReceiptPdfFilePrinterImpl;
 import edu.clevertec.check.repository.impl.DiscountCardRepoImpl;
 import edu.clevertec.check.repository.impl.ProductRepoImpl;
 import edu.clevertec.check.service.OrderProcessingService;
@@ -59,6 +61,8 @@ public class CheckRunner {
                 (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing();
         resultProcessedData.formationOfCheck();
+        CashReceiptPdfFilePrinter printer = new CashReceiptPdfFilePrinterImpl();
+        printer.print(resultProcessedData); //Print check to PDF file (in root project)
         return resultProcessedData;
     }
 }
