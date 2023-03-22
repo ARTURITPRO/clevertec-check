@@ -28,6 +28,7 @@ public class ProductController extends HttpServlet {
     private Integer pageSize = 20;
     private Integer size = 1;
     private ConnectionManager connectionManager = new ConnectionManagerImpl();
+
     @Override
     @SneakyThrows
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
@@ -38,7 +39,7 @@ public class ProductController extends HttpServlet {
         if (req.getParameterMap().containsKey("pageSize") && req.getParameterMap().containsKey("size")) {
             pageSize = Integer.parseInt(req.getParameter("pageSize"));
             size = Integer.parseInt(req.getParameter("size"));
-            productsJson = new ObjectMapper().writeValueAsString(productService.findAll(connectionManager, pageSize,size)
+            productsJson = new ObjectMapper().writeValueAsString(productService.findAll(connectionManager, pageSize, size)
             );
         } else {
             String[] requestPath = req.getRequestURI().split("/");
@@ -61,7 +62,7 @@ public class ProductController extends HttpServlet {
 
     @Override
     @SneakyThrows
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         log.info("Starting ProductController for POST request: {}", req.getRequestURI());
 
         String requestBody = ReaderRequestBody.getRequestBody(req);
@@ -80,7 +81,7 @@ public class ProductController extends HttpServlet {
 
     @Override
     @SneakyThrows
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) {
         log.info("Starting ProductController for PUT request: {}", req.getRequestURI());
 
         String requestBody = ReaderRequestBody.getRequestBody(req);
@@ -100,7 +101,7 @@ public class ProductController extends HttpServlet {
 
     @Override
     @SneakyThrows
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
         log.info("Starting ProductController for DELrequest: {}", req.getRequestURI());
         String[] requestPath = req.getRequestURI().split("/");
         boolean isRemove = productService.delete(connectionManager, Integer.valueOf(requestPath[requestPath.length - 1]));

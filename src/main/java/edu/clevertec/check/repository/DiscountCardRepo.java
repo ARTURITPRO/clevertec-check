@@ -9,16 +9,16 @@ public interface DiscountCardRepo<K, T> {
 
     Collection<T> findAll(ConnectionManager connectionManager, K pageSize);
 
-    Collection<T> findAll(ConnectionManager connectionManager,K pageSize, K size);
+    Collection<T> findAll(ConnectionManager connectionManager, K pageSize, K size);
 
-    T save(ConnectionManager connectionManager,T entity);
+    T save(ConnectionManager connectionManager, T entity);
 
-    Optional<T> findById(ConnectionManager connectionManager,K id);
+    Optional<T> findById(ConnectionManager connectionManager, K id);
 
-    Optional<T> update(ConnectionManager connectionManager,T entity);
+    Optional<T> update(ConnectionManager connectionManager, T entity);
 
-    boolean delete(ConnectionManager connectionManager,K id);
+    boolean delete(ConnectionManager connectionManager, K id);
 
-    Optional<T> findByNumber(ConnectionManager connectionManager,K number);
+    Optional<T> findByNumber(ConnectionManager connectionManager, K number);
 
 }

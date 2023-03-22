@@ -2,12 +2,11 @@ package edu.clevertec.check.util;
 
 import lombok.Data;
 import lombok.SneakyThrows;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 @Data
-public class ConnectionManagerImpl implements ConnectionManager{
+public class ConnectionManagerImpl implements ConnectionManager {
 
     private static final String PROPERTIES_FILE = "application.yml";
     private static final String URL = "db.url";
@@ -15,7 +14,7 @@ public class ConnectionManagerImpl implements ConnectionManager{
     private static final String PASSWORD = "db.password";
     private static final String DRIVER = "db.driver";
 
-     static {
+    static {
         loadDriver();
     }
 
@@ -26,7 +25,7 @@ public class ConnectionManagerImpl implements ConnectionManager{
 
     @SneakyThrows
     @Override
-    public  Connection get() {
+    public Connection get() {
         return DriverManager.getConnection(
                 SettingsUtil.get(URL),
                 SettingsUtil.get(USER),

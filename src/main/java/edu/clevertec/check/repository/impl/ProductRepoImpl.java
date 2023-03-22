@@ -23,11 +23,12 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
     @Override
     public Collection<Product> findAll(ConnectionManager connectionManager, Integer pageSize) {
         Connection connection = connectionManager.get();
-        return findAll( connection, pageSize);
+        return findAll(connection, pageSize);
     }
+
     @SneakyThrows
     public Collection<Product> findAll(Connection connection, Integer pageSize) {
-                PreparedStatement stmt = connection.prepareStatement(
+        PreparedStatement stmt = connection.prepareStatement(
                 "select * from product ORDER BY id " + "LIMIT ?;");
         stmt.setObject(1, pageSize);
         ResultSet resultSet = stmt.executeQuery();
@@ -44,7 +45,7 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
     @Override
     public Collection<Product> findAll(ConnectionManager connectionManager, Integer pageSize, Integer size) {
         Connection connection = connectionManager.get();
-        return findAll(connection,pageSize, size );
+        return findAll(connection, pageSize, size);
     }
 
     @SneakyThrows
@@ -64,6 +65,7 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
         }
         return products;
     }
+
     @SneakyThrows
     @Override
     public Product save(ConnectionManager connectionManager, Product product) {
@@ -87,7 +89,6 @@ public class ProductRepoImpl implements ProductRepo<Integer, Product> {
         log.info("The product is saved in the database: {}", product);
         return product;
     }
-
 
     @SneakyThrows
     @Override

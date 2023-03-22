@@ -19,9 +19,10 @@ import java.io.PrintWriter;
 public class ProductControllerNoObjectMapper extends HttpServlet {
     private ConnectionManager connectionManager = new ConnectionManagerImpl();
     private final ProductService<Integer, Product> productService = new ProductServiceImpl(new ProductRepoImpl());
+
     @Override
     @SneakyThrows
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         Integer idProduct = Integer.parseInt(req.getParameter("idProduct"));
         String nameProduct = req.getParameter("name");
         Double priceProduct = Double.parseDouble(req.getParameter("cost"));
@@ -34,9 +35,10 @@ public class ProductControllerNoObjectMapper extends HttpServlet {
         writer.write(id);
         resp.setStatus(200);
     }
+
     @Override
     @SneakyThrows
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         System.out.println("123");
         Integer idProduct = Integer.parseInt(req.getParameter("idProduct"));
         Product product = productService.findById(connectionManager, idProduct).get();

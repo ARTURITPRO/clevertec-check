@@ -56,7 +56,6 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
      */
     private final DiscountCardService<Integer, DiscountCard> discountCardService;
 
-
     /**
      * The order processing is used only after string array validation.
      */
@@ -125,7 +124,6 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
             Matcher matcherMastercard = patternMastercard.matcher(str);
             boolean foundMasterCard = matcherMastercard.find();
 
-
             if (foundMasterCard) {
                 String[] argsCard = str.split("-");
                 DiscountCardValidation discountCardValidation = new DiscountCardValidationImpl(argsCard);
@@ -137,13 +135,12 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
 
                 log.debug("numberCard: " + numberCard);
                 discountCard = getDiscountCardFromDataBaseByNumber(numberCard, discountCardService);
-                System.out.println("!!!!"+getDiscountCardFromDataBaseByNumber(numberCard, discountCardService));
+                System.out.println("!!!!" + getDiscountCardFromDataBaseByNumber(numberCard, discountCardService));
                 continue;
             }
             ProductValidation productValidation = new ProductValidationImpl();
             Predicate<String> predicate = productValidation::isValidProductAndQuantity;
             productValidation.isValid(predicate, data);
-
 
             String[] argsProduct = str.split("-");
             int idProduct = Integer.parseInt(argsProduct[0]);
@@ -299,10 +296,10 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
      * @return one discount card from the store list.
      * @throws DiscountCardException if the discount Card could not be found.
      */
-    private DiscountCard getDiscountCardFromDataBaseByNumber( int numberDiscountCard,
+    private DiscountCard getDiscountCardFromDataBaseByNumber(int numberDiscountCard,
                                                              DiscountCardService<Integer, DiscountCard> discountCardService) {
         log.debug("search DiscountCard with number = " + numberDiscountCard);
-        System.out.println("!!!"+discountCardService.findAll(connectionManager, 10));
+        System.out.println("!!!" + discountCardService.findAll(connectionManager, 10));
         return discountCardService.findByNumber(connectionManager, numberDiscountCard).orElseThrow(() ->
                 new DiscountCardException(String.format("DiscountCard number= %s not found in Data Base!",
                         numberDiscountCard)));
@@ -325,8 +322,3 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
         return productService;
     }
 }
-
-
-
-
-

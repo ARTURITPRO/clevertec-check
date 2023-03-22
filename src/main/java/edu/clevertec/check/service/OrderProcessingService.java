@@ -2,9 +2,6 @@ package edu.clevertec.check.service;
 
 import edu.clevertec.check.entity.DiscountCard;
 import edu.clevertec.check.entity.Product;
-import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Map;
 
@@ -44,7 +41,7 @@ public interface OrderProcessingService {
     /**
      * This is a list of products with quantities, which was obtained by converting through.
      *
-     * @return  list of products with quantities.
+     * @return list of products with quantities.
      */
     Map<Product, Integer> getCustomShoppingList();
 
@@ -54,6 +51,7 @@ public interface OrderProcessingService {
      * @return total cost.
      */
     double getTotalCost();
+
     /**
      * Pattern for validating input mastercard.
      */
@@ -76,6 +74,7 @@ public interface OrderProcessingService {
 
     /**
      * Used to get the final data that will be used to generate the receipt.
+     *
      * @return final data.
      */
     OrderProcessingService getResultProcessedData();
@@ -83,16 +82,15 @@ public interface OrderProcessingService {
     /**
      * Set type of DiscountCard.
      */
-     void setDiscountCard(DiscountCard discountCard);
+    void setDiscountCard(DiscountCard discountCard);
 
     /**
      * Get type of DiscountCard.
      */
-     DiscountCard getDiscountCard();
+    DiscountCard getDiscountCard();
 
     /**
      * Set a list of products with quantities.
      */
-     void setCustomShoppingList(Map<Product, Integer> mapCustomShoppingList);
+    void setCustomShoppingList(Map<Product, Integer> mapCustomShoppingList);
 }
-

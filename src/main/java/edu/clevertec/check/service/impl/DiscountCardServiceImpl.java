@@ -10,7 +10,6 @@ import java.util.Collection;
 import java.util.Objects;
 import java.util.Optional;
 
-
 public  class DiscountCardServiceImpl implements DiscountCardService<Integer, DiscountCard> {
     private final DiscountCardRepo<Integer, DiscountCard> entityRepo;
 
@@ -80,5 +79,4 @@ public  class DiscountCardServiceImpl implements DiscountCardService<Integer, Di
         return "DiscountCardServiceImpl[" +
                 "entityRepo=" + entityRepo + ']';
     }
-
 }

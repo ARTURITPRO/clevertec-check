@@ -2,7 +2,6 @@ package edu.clevertec.check.service;
 
 import edu.clevertec.check.entity.Product;
 import edu.clevertec.check.util.ConnectionManager;
-
 import java.util.Collection;
 import java.util.Optional;
 

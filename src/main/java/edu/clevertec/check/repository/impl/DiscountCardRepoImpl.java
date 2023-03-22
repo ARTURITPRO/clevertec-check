@@ -19,13 +19,13 @@ import java.util.Optional;
 @Slf4j
 public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountCard> {
 
-
     @SneakyThrows
     @Override
-    public Collection<DiscountCard> findAll(ConnectionManager connectionManager, Integer pageSize  ) {
+    public Collection<DiscountCard> findAll(ConnectionManager connectionManager, Integer pageSize) {
         Connection connection = connectionManager.get();
-        return findAll(connection,pageSize);
+        return findAll(connection, pageSize);
     }
+
     @SneakyThrows
     public Collection<DiscountCard> findAll(Connection connection, Integer pageSize) {
         PreparedStatement stmt = connection.prepareStatement(
@@ -43,7 +43,7 @@ public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountC
 
     @SneakyThrows
     @Override
-    public Collection<DiscountCard> findAll(ConnectionManager connectionManager,Integer pageSize, Integer size) {
+    public Collection<DiscountCard> findAll(ConnectionManager connectionManager, Integer pageSize, Integer size) {
         Connection connection = connectionManager.get();
         return findAll(connection, pageSize, size);
     }
@@ -65,6 +65,7 @@ public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountC
         }
         return discountCards;
     }
+
     @Override
     @SneakyThrows
     public DiscountCard save(ConnectionManager connectionManager, DiscountCard discountCard) {
@@ -94,7 +95,7 @@ public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountC
 
     @SneakyThrows
     @Override
-    public Optional<DiscountCard> findById(ConnectionManager connectionManager,Integer id) {
+    public Optional<DiscountCard> findById(ConnectionManager connectionManager, Integer id) {
         Connection connection = connectionManager.get();
         return Optional.ofNullable(findById(connection, id));
     }
@@ -119,7 +120,7 @@ public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountC
 
     @Override
     @SneakyThrows
-    public boolean delete(ConnectionManager connectionManager,Integer id) {
+    public boolean delete(ConnectionManager connectionManager, Integer id) {
         Connection connection = connectionManager.get();
         return delete(connection, id);
     }
@@ -140,7 +141,7 @@ public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountC
     }
 
     @Override
-    public Optional<DiscountCard> update(ConnectionManager connectionManager,DiscountCard discountCard) {
+    public Optional<DiscountCard> update(ConnectionManager connectionManager, DiscountCard discountCard) {
         Connection connection = connectionManager.get();
         return Optional.ofNullable(update(connection, discountCard));
     }
@@ -166,10 +167,9 @@ public class DiscountCardRepoImpl implements DiscountCardRepo<Integer, DiscountC
         return discountCard;
     }
 
-
     @SneakyThrows
     @Override
-    public Optional<DiscountCard> findByNumber(ConnectionManager connectionManager,Integer number) {
+    public Optional<DiscountCard> findByNumber(ConnectionManager connectionManager, Integer number) {
         Connection connection = connectionManager.get();
         return Optional.ofNullable(findByNumber(connection, number));
     }

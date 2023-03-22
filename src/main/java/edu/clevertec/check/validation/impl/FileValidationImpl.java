@@ -18,8 +18,8 @@ import java.util.function.Predicate;
  * Used for file validation.
  * </p>
  *
- * @version JDK 17
  * @author Artur Malashkov
+ * @version JDK 17
  */
 @Slf4j
 public class FileValidationImpl implements FileValidation {
@@ -51,12 +51,12 @@ public class FileValidationImpl implements FileValidation {
      * </p>
      *
      * @param predicate this is a functional interface.
-     * @param str this is the file path.
+     * @param str       this is the file path.
      * @return try, if  the args is the path to the source file.
      */
-    public static boolean isValid (Predicate<String []> predicate, String[] str){
+    public static boolean isValid(Predicate<String[]> predicate, String[] str) {
         predicate.test(str);
-        return  true;
+        return true;
     }
 
     /**
@@ -83,7 +83,7 @@ public class FileValidationImpl implements FileValidation {
             while (Objects.nonNull(line = bufferedReader.readLine())) {
                 listOfStrings.add(line);
             }
-            String [] fileContents =  listOfStrings.toArray(new String[0]);
+            String[] fileContents = listOfStrings.toArray(new String[0]);
             log.debug("file contents:" + Arrays.toString(fileContents));
             return fileContents;
         }

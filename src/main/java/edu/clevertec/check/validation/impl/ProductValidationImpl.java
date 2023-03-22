@@ -13,8 +13,8 @@ import java.util.function.Predicate;
  * Checks the Product and their quantities.
  * </p>
  *
- * @version JDK 17
  * @author Artur Malashkov
+ * @version JDK 17
  */
 @Slf4j
 public class ProductValidationImpl implements ProductValidation {
@@ -26,13 +26,13 @@ public class ProductValidationImpl implements ProductValidation {
      * and the quantity of products
      * </p>
      *
-     * @param  str contains the name of the product and its quantity.
+     * @param str contains the name of the product and its quantity.
      * @return true, if the ID and quantity of the products are validated.
-     * @throws ProductException         if the format of the type and quantity of the product is incorrectly specified
-     * in line args, or  if the quantity of the product exceeds the store's stock of 9999 the quantity of any product
+     * @throws ProductException if the format of the type and quantity of the product is incorrectly specified
+     *                          in line args, or  if the quantity of the product exceeds the store's stock of 9999 the quantity of any product
      * @see Product
      */
-    public  boolean isValidProductAndQuantity(String str ) {
+    public boolean isValidProductAndQuantity(String str) {
         log.debug("isValidProductAndQuantity(String str) = " + str);
         if (!str.matches(PATTERN_IDPRODUCT_QUANTITY)) throw new ProductException("Exception!, minimal " +
                 "edu.clevertec.check.dto.product index = 1, minimal edu.clevertec.check.dto.product quantity = 1");
@@ -50,11 +50,11 @@ public class ProductValidationImpl implements ProductValidation {
      * </p>
      *
      * @param predicate this is a functional interface.
-     * @param str a string containing the id and quantity of the product.
+     * @param str       a string containing the id and quantity of the product.
      * @return true, if the ID and quantity of the products are validated.
      */
-    public  boolean isValid (Predicate<String> predicate, String str ){
-            predicate.test(str);
-        return  true;
+    public boolean isValid(Predicate<String> predicate, String str) {
+        predicate.test(str);
+        return true;
     }
 }

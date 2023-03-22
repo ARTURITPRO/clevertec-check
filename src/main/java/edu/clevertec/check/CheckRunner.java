@@ -55,10 +55,9 @@ public class CheckRunner {
      * @return OrderProcessingService which contains processed data.
      */
     @SneakyThrows
-    private static OrderProcessingService generateCheck(String[] data)  {
-
-        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(), new ProductServiceImpl
-                (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
+    private static OrderProcessingService generateCheck(String[] data) {
+        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),
+                new ProductServiceImpl(new ProductRepoImpl()), data, new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing();
         resultProcessedData.formationOfCheck();
         CashReceiptPdfFilePrinter printer = new CashReceiptPdfFilePrinterImpl();
@@ -66,5 +65,3 @@ public class CheckRunner {
         return resultProcessedData;
     }
 }
-
-

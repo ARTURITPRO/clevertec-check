@@ -1,14 +1,13 @@
 package edu.clevertec.check.validation;
 
-
 /**
  * Validation
  * <p>
  * Used to validate an array of strings.
  * </p>
  *
- * @version JDK 17
  * @author Artur Malashkov
+ * @version JDK 17
  */
 public interface DiscountCardValidation {
     /**
@@ -23,7 +22,7 @@ public interface DiscountCardValidation {
      */
     String PATTERN_NAME_CARD = "(?i)\\s*masterCard\\s*";
     /**
-     *  {@value #PATTERN_NUMBER_CARD}Pattern for validating number card.
+     * {@value #PATTERN_NUMBER_CARD}Pattern for validating number card.
      */
     String PATTERN_NUMBER_CARD = "\\s*\\d{5}\\s*";
 }

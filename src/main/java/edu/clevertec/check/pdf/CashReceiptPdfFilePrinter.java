@@ -7,8 +7,8 @@ import java.io.IOException;
 /**
  * Used to print a receipt in PDF format.
  *
- * @version JDK 1.8
  * @author Artur Malashkov
+ * @version JDK 1.8
  */
 public interface CashReceiptPdfFilePrinter {
 
@@ -17,7 +17,6 @@ public interface CashReceiptPdfFilePrinter {
      *
      * @param cashReceipt data for receipt generation and subsequent printing
      * @throws IOException Signals that an I/O exception to some sort has occurred.
-     *
      */
     byte[] print(OrderProcessingService cashReceipt) throws IOException;
 

@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Slf4j
-public  class ProductServiceImpl implements ProductService<Integer, Product> {
+public class ProductServiceImpl implements ProductService<Integer, Product> {
     private final ProductRepo<Integer, Product> productRepo;
 
     public ProductServiceImpl(ProductRepo<Integer, Product> productRepo) {
@@ -80,5 +80,4 @@ public  class ProductServiceImpl implements ProductService<Integer, Product> {
         return "ProductServiceImpl[" +
                 "productRepo=" + productRepo + ']';
     }
-
 }

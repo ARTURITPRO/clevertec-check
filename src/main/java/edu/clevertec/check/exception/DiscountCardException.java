@@ -1,6 +1,5 @@
 package edu.clevertec.check.exception;
 
-
 /**
  * Class for creating Exception DiscountCardException.
  *
@@ -20,5 +19,4 @@ public class DiscountCardException extends RuntimeException {
     public String getMessage() {
         return message;
     }
-
 }

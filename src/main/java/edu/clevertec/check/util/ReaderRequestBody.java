@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
 
-
 /**
  * The utility for reading a request body
  *

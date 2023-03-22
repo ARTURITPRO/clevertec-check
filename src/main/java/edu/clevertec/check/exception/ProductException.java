@@ -19,5 +19,4 @@ public class ProductException extends RuntimeException {
     public String getMessage() {
         return message;
     }
-
 }

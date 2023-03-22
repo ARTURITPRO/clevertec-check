@@ -6,8 +6,8 @@ package edu.clevertec.check.validation;
  * Used for file validation.
  * </p>
  *
- * @version JDK 17
  * @author Artur Malashkov
+ * @version JDK 17
  */
 public interface FileValidation {
 
@@ -20,7 +20,5 @@ public interface FileValidation {
      * @param args an array containing the path to the file with parameters or parameters.
      * @return try, if  the args is the path to the source file.
      */
-     boolean isValidFile(String[] args) ;
-
-
+    boolean isValidFile(String[] args);
 }

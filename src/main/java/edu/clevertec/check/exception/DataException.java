@@ -19,5 +19,4 @@ public class DataException extends RuntimeException {
     public String getMessage() {
         return message;
     }
-
 }

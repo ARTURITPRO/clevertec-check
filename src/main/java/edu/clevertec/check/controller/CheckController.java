@@ -32,7 +32,7 @@ public class CheckController extends HttpServlet {
         String[] split = storageArguments.split(" ");
         DataValidation.requiredNotEmptyArgs(split);
         OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),
-                new ProductServiceImpl (new ProductRepoImpl()), split,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
+                new ProductServiceImpl(new ProductRepoImpl()), split, new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing().formationOfCheck();
         System.out.println(2);
 
@@ -50,6 +50,4 @@ public class CheckController extends HttpServlet {
             resp.sendError(400, "Incorrect request: " + e.getMessage());
         }
     }
-
-
 }

@@ -1,7 +1,6 @@
 package edu.clevertec.check.validation.impl;
 
 import edu.clevertec.check.exception.DataException;
-import edu.clevertec.check.validation.impl.FileValidationImpl;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
@@ -15,14 +14,14 @@ import java.util.regex.Pattern;
  * Used to validate an array of strings. And control the printing of a receipt to the console or file,
  * depending on the arguments passed to the args-array.
  * </p>
- * @version JDK 1.8
+ *
  * @author Artur Malashkov
+ * @version JDK 1.8
  */
 @Slf4j
 public class DataValidation {
 
     public static String PATTERN_DATA_VALIDATION_STRING_ARRAY = "\\s*((\\d+-\\d+)?(\\s+\\d+-\\d+)+\\s+(\\w{8}|\\w{10})-\\d{1,20})\\s*|(\\s*(\\w{8}|\\w{10})-\\d{1,20}\\s*(\\d+-\\d+)?(\\s+\\d+-\\d+)+)\\s*|\\s*((\\d+-\\d+)?(\\s+\\d+-\\d+)+\\s+(\\w{8}|\\w{10})-\\d{1,20}\\s+(\\d+-\\d+)?(\\s+\\d+-\\d+)+)\\s*";
-
 
     /**
      * Is valid
@@ -38,12 +37,11 @@ public class DataValidation {
         Arrays.stream(args).findAny().orElseThrow(() -> new DataException(" Empty Data"));
     }
 
-
     public static boolean isReadFromConsole(String[] args) {
         String inputData = String.join(" ", args);
         Pattern patternArgsConsoleString = Pattern.compile(PATTERN_DATA_VALIDATION_STRING_ARRAY);
         Matcher matcherArgsConsoleString = patternArgsConsoleString.matcher(inputData);
-        if (matcherArgsConsoleString.matches()){
+        if (matcherArgsConsoleString.matches()) {
             log.info("String args is Found");
             return true;
         }

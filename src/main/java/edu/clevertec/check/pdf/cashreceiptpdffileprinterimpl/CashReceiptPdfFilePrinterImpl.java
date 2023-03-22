@@ -54,7 +54,7 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
      */
     @SneakyThrows
     @Override
-    public byte[] print(OrderProcessingService orderProcessingService)  {
+    public byte[] print(OrderProcessingService orderProcessingService) {
 
         @Cleanup ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 

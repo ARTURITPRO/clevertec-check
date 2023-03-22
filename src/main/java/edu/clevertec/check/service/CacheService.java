@@ -9,9 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class CacheService {
-
     private static final CacheService INSTANCE = new CacheService();
-
     private static final String CACHE_ALGORITHM_PROPERTY = "cache.algorithm";
     private static final String CACHE_SIZE_PROPERTY = "cache.size";
     private static final String LRU_CACHE = "LRU";

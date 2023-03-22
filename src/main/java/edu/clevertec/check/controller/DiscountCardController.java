@@ -23,7 +23,7 @@ import java.io.PrintWriter;
 public class DiscountCardController extends HttpServlet {
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final Gson gsonMapper = new Gson();
-    private final DiscountCardService <Integer,DiscountCard>
+    private final DiscountCardService<Integer, DiscountCard>
             cardRepo = new DiscountCardServiceImpl(new DiscountCardRepoImpl());
     private Integer pageSize = 20;
     private Integer size = 1;
@@ -78,7 +78,7 @@ public class DiscountCardController extends HttpServlet {
 
     @Override
     @SneakyThrows
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) {
         log.info("Starting DiscountCardController for PUT request: {}", req.getRequestURI());
 
         String requestBody = ReaderRequestBody.getRequestBody(req);
@@ -98,7 +98,7 @@ public class DiscountCardController extends HttpServlet {
 
     @Override
     @SneakyThrows
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp)  {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
         log.info("Starting DiscountCardController for DEL request: {}", req.getRequestURI());
         String[] requestPath = req.getRequestURI().split("/");
         boolean isRemove = cardRepo.delete(connectionManager, Integer.valueOf(requestPath[requestPath.length - 1]));
@@ -114,5 +114,4 @@ public class DiscountCardController extends HttpServlet {
         }
         log.info("Stopping  DiscountCardController for DEL request: {}", req.getRequestURI());
     }
-
 }
