@@ -12,7 +12,9 @@ import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
 import edu.clevertec.check.util.ConnectionManagerImpl;
 import edu.clevertec.check.validation.impl.DataValidation;
+import edu.clevertec.check.validation.impl.DiscountCardValidationImpl;
 import edu.clevertec.check.validation.impl.FileValidationImpl;
+import edu.clevertec.check.validation.impl.ProductValidationImpl;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
@@ -56,7 +58,7 @@ public class CheckRunner {
      */
     @SneakyThrows
     private static OrderProcessingService generateCheck(String[] data) {
-        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),
+        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(), new ProductValidationImpl(), new DiscountCardValidationImpl(),
                 new ProductServiceImpl(new ProductRepoImpl()), data, new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing();
         resultProcessedData.formationOfCheck();

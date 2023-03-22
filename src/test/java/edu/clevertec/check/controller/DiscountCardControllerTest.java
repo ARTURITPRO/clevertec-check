@@ -7,10 +7,7 @@ import lombok.SneakyThrows;
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletHandler;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -25,6 +22,7 @@ import java.sql.Connection;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@Tag("IntegrationTest")
 class DiscountCardControllerTest {
 
     private static ScriptRunner scriptRunner;
@@ -36,10 +34,10 @@ class DiscountCardControllerTest {
     private static ConnectionManagerImpl connectionManager = new ConnectionManagerImpl();
 
     private final ObjectMapper mapper = new ObjectMapper();
+
     private final RestTemplate restTemplate = new RestTemplate();
 
     private Server server = new Server(6001);;
-
 
     @SneakyThrows
     @BeforeEach
@@ -54,13 +52,13 @@ class DiscountCardControllerTest {
         server.start();
     }
 
-
     @Nested
     class GetTest{
         @Test
         void doGet_statusOK() {
         String resourceUrl = "http://localhost:6001/cards/2";
         ResponseEntity<String> response = restTemplate.getForEntity(resourceUrl, String.class);
+
         assertEquals(response.getStatusCode(), HttpStatus.OK);
         }
 
@@ -69,10 +67,10 @@ class DiscountCardControllerTest {
         void doGet_status()  {
             String resourceUrl = "http://localhost:6001/cards/2";
             ResponseEntity<String> response = restTemplate.getForEntity(resourceUrl, String.class);
+
             assertNotNull(mapper.readValue(response.getBody(), DiscountCard.class));
         }
     }
-
 
     @Test
     void doPostTest_statusOk() {
@@ -81,6 +79,7 @@ class DiscountCardControllerTest {
 
         HttpEntity<DiscountCard> entity = new HttpEntity<>(mastercard2);
         ResponseEntity<DiscountCard> response = restTemplate.exchange(resourceUrl, HttpMethod.POST, entity, DiscountCard.class);
+
         assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 
@@ -96,14 +95,15 @@ class DiscountCardControllerTest {
         // put changed film
         HttpEntity<DiscountCard> entity = new HttpEntity<>(discountCard);
         ResponseEntity<DiscountCard> response = restTemplate.exchange(resourceUrl, HttpMethod.PUT, entity, DiscountCard.class);
-        assertEquals(response.getStatusCode(), HttpStatus.OK);
 
+        assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 
     @Test
     void doDelete() {
         String resourceUrl = "http://localhost:6001/cards/2";
         ResponseEntity<String> response = restTemplate.exchange(resourceUrl, HttpMethod.DELETE, null, String.class);
+
         assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 

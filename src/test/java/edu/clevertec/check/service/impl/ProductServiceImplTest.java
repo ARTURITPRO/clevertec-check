@@ -6,6 +6,7 @@ import edu.clevertec.check.service.ProductService;
 import edu.clevertec.check.util.ConnectionManagerTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -20,9 +21,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
+@Tag("UnitTest")
 @ExtendWith(MockitoExtension.class)
 class ProductServiceImplTest {
-    private List<Product> expectedCustomShoppingList;
 
     @Mock
     private ProductService<Integer, Product> productService;
@@ -31,7 +32,9 @@ class ProductServiceImplTest {
     private ConnectionManagerTest connectionManagerTest;
 
     @Mock
-    ProductRepoImpl productRepo = new ProductRepoImpl();
+    private ProductRepoImpl productRepo = new ProductRepoImpl();
+
+    private List<Product> expectedCustomShoppingList;
 
     @BeforeEach
     void init() {

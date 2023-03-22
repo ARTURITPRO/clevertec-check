@@ -10,7 +10,6 @@ import java.sql.DriverManager;
 public class ConnectionManagerTest implements ConnectionManager{
 
     private static final String PROPERTIES_FILE = "application-test.yml";
-
     private static final String URL = "db.url";
     private static final String USER = "db.username";
     private static final String PASSWORD = "db.password";

@@ -15,7 +15,7 @@ public interface DiscountCardValidation {
      *
      * @return true if the parameters are valid, otherwise false
      */
-    boolean isValid();
+    boolean isValid(String[] argsDiscountCard);
 
     /**
      * {@value #PATTERN_NAME_CARD} Pattern for validating name card.

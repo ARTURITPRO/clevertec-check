@@ -11,8 +11,6 @@ import edu.clevertec.check.service.ProductService;
 import edu.clevertec.check.util.ConnectionManager;
 import edu.clevertec.check.validation.DiscountCardValidation;
 import edu.clevertec.check.validation.ProductValidation;
-import edu.clevertec.check.validation.impl.DiscountCardValidationImpl;
-import edu.clevertec.check.validation.impl.ProductValidationImpl;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -39,6 +37,8 @@ import java.util.regex.Pattern;
 public class OrderProcessingServiceImpl implements OrderProcessingService {
 
     private final ConnectionManager connectionManager;
+    private final ProductValidation productValidation;
+    private final  DiscountCardValidation discountCardValidation;
 
     /**
      * The ProductServiceImpl constructor defines the database implementation.
@@ -126,9 +126,8 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
 
             if (foundMasterCard) {
                 String[] argsCard = str.split("-");
-                DiscountCardValidation discountCardValidation = new DiscountCardValidationImpl(argsCard);
                 log.debug("argsCard: " + Arrays.toString(argsCard));
-                discountCardValidation.isValid();
+                discountCardValidation.isValid(argsCard);
                 String nameCard = argsCard[0];
                 log.debug("nameCard: " + nameCard);
                 int numberCard = Integer.parseInt(argsCard[1]);
@@ -138,7 +137,7 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
                 System.out.println("!!!!" + getDiscountCardFromDataBaseByNumber(numberCard, discountCardService));
                 continue;
             }
-            ProductValidation productValidation = new ProductValidationImpl();
+
             Predicate<String> predicate = productValidation::isValidProductAndQuantity;
             productValidation.isValid(predicate, data);
 

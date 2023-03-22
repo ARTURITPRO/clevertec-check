@@ -10,6 +10,8 @@ import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
 import edu.clevertec.check.util.ConnectionManagerImpl;
 import edu.clevertec.check.validation.impl.DataValidation;
+import edu.clevertec.check.validation.impl.DiscountCardValidationImpl;
+import edu.clevertec.check.validation.impl.ProductValidationImpl;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,7 +33,7 @@ public class CheckController extends HttpServlet {
         String storageArguments = req.getParameter("arguments");
         String[] split = storageArguments.split(" ");
         DataValidation.requiredNotEmptyArgs(split);
-        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),
+        OrderProcessingService resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),  new ProductValidationImpl(), new DiscountCardValidationImpl(),
                 new ProductServiceImpl(new ProductRepoImpl()), split, new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing().formationOfCheck();
         System.out.println(2);

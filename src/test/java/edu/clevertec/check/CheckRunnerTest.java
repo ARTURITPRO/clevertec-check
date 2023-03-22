@@ -8,8 +8,11 @@ import edu.clevertec.check.service.impl.DiscountCardServiceImpl;
 import edu.clevertec.check.service.impl.OrderProcessingServiceImpl;
 import edu.clevertec.check.service.impl.ProductServiceImpl;
 import edu.clevertec.check.util.ConnectionManagerImpl;
+import edu.clevertec.check.validation.impl.DiscountCardValidationImpl;
+import edu.clevertec.check.validation.impl.ProductValidationImpl;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileReader;
@@ -18,15 +21,16 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("IntegrationTest")
 class CheckRunnerTest {
-
     String[] data;
     OrderProcessingService resultProcessedData;
     private Map<Product, Integer> customShoppingList;
     StringBuilder stringBuilder;
     StringBuilder stringBuilderFile;
+
     @BeforeEach
-    void init (){
+    void init() {
         data = new String[10];
         data[0] = "1-1";
         data[1] = "2-2";
@@ -39,8 +43,14 @@ class CheckRunnerTest {
         data[8] = "9-9";
         data[9] = "mastercard-11111";
 
-        resultProcessedData = new OrderProcessingServiceImpl(new ConnectionManagerImpl(),new ProductServiceImpl
-                (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
+        resultProcessedData = new OrderProcessingServiceImpl(
+                new ConnectionManagerImpl(),
+                new ProductValidationImpl(),
+                new DiscountCardValidationImpl(),
+                new ProductServiceImpl(new ProductRepoImpl()),
+                data,
+                new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
+
         customShoppingList = new HashMap<>();
         Product milk = Product.builder().id(1).name("milk").price(1.0).isPromotional(true).build();
         Product brot = Product.builder().id(2).name("brot").price(1.5).isPromotional(false).build();
@@ -51,19 +61,20 @@ class CheckRunnerTest {
         Product pudding = Product.builder().id(7).name("pudding").price(4.0).isPromotional(true).build();
         Product popcorn = Product.builder().id(8).name("popcorn").price(4.5).isPromotional(false).build();
         Product pie = Product.builder().id(9).name("pie").price(5.0).isPromotional(true).build();
-        customShoppingList.put(milk,1);
-        customShoppingList.put(brot,2);
-        customShoppingList.put(icecream,3);
-        customShoppingList.put(chocolate,4);
-        customShoppingList.put(chicken,5);
-        customShoppingList.put(pizza,6);
-        customShoppingList.put(pudding,7);
-        customShoppingList.put(popcorn,8);
-        customShoppingList.put(pie,9);
+
+        customShoppingList.put(milk, 1);
+        customShoppingList.put(brot, 2);
+        customShoppingList.put(icecream, 3);
+        customShoppingList.put(chocolate, 4);
+        customShoppingList.put(chicken, 5);
+        customShoppingList.put(pizza, 6);
+        customShoppingList.put(pudding, 7);
+        customShoppingList.put(popcorn, 8);
+        customShoppingList.put(pie, 9);
 
         stringBuilder = new StringBuilder();
         stringBuilder.append(
-                        "*     The item chicken is promotional\n" +
+                "*     The item chicken is promotional\n" +
                         "*     Its amount is more than 5\n" +
                         "*     You get a 10% discount \n" +
                         "*     The cost chicken will be:$2,7\n" +
@@ -100,16 +111,14 @@ class CheckRunnerTest {
     void main() {
         CheckRunner.main(data);
         stringBuilderFile = new StringBuilder();
-        try(FileReader reader = new FileReader("src/test/resources/receipt.txt"))
-        {
+        try (FileReader reader = new FileReader("src/test/resources/receipt.txt")) {
             // читаем посимвольно
             int c;
-            while((c=reader.read())!=-1){
+            while ((c = reader.read()) != -1) {
                 stringBuilderFile.append((char) c);
             }
         }
-        stringBuilderFile.delete(0,442);
-
+        stringBuilderFile.delete(0, 442);
         assertEquals(stringBuilderFile.toString(), stringBuilder.toString());
     }
 }

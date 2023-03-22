@@ -7,10 +7,7 @@ import lombok.SneakyThrows;
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletHandler;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -25,6 +22,7 @@ import java.sql.Connection;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@Tag("IntegrationTest")
 class ProductControllerTest {
 
     private static ScriptRunner scriptRunner;
@@ -36,10 +34,10 @@ class ProductControllerTest {
     private static ConnectionManagerImpl connectionManager = new ConnectionManagerImpl();
 
     private final ObjectMapper mapper = new ObjectMapper();
+
     private final RestTemplate restTemplate = new RestTemplate();
 
     private Server server = new Server(6001);;
-
 
     @SneakyThrows
     @BeforeEach
@@ -54,13 +52,13 @@ class ProductControllerTest {
         server.start();
     }
 
-
     @Nested
     class GetTest{
         @Test
         void doGet_statusOK() {
             String resourceUrl = "http://localhost:6001/products/2";
             ResponseEntity<String> response = restTemplate.getForEntity(resourceUrl, String.class);
+
             assertEquals(response.getStatusCode(), HttpStatus.OK);
         }
 
@@ -69,6 +67,7 @@ class ProductControllerTest {
         void doGet_status()  {
             String resourceUrl = "http://localhost:6001/products/2";
             ResponseEntity<String> response = restTemplate.getForEntity(resourceUrl, String.class);
+
             assertNotNull(mapper.readValue(response.getBody(), Product.class));
         }
     }
@@ -81,6 +80,7 @@ class ProductControllerTest {
 
         HttpEntity<Product> entity = new HttpEntity<>(icecream);
         ResponseEntity<Product> response = restTemplate.exchange(resourceUrl, HttpMethod.POST, entity, Product.class);
+
         assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 
@@ -96,6 +96,7 @@ class ProductControllerTest {
         // put changed film
         HttpEntity<Product> entity = new HttpEntity<>(discountCard);
         ResponseEntity<Product> response = restTemplate.exchange(resourceUrl, HttpMethod.PUT, entity, Product.class);
+
         assertEquals(response.getStatusCode(), HttpStatus.OK);
 
     }
@@ -104,6 +105,7 @@ class ProductControllerTest {
     void doDelete() {
         String resourceUrl = "http://localhost:6001/products/2";
         ResponseEntity<String> response = restTemplate.exchange(resourceUrl, HttpMethod.DELETE, null, String.class);
+
         assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 

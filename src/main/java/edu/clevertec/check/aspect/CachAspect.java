@@ -29,19 +29,10 @@ public class CachAspect {
 
     private final Cache cache = CacheService.getInstance().getCache();
 
-    /**
-     *
-     */
     @Pointcut("@annotation(edu.clevertec.check.annotation.Caches)")
     public void joinToCache() {
     }
 
-    /**
-     *
-     * @param joinPoint
-     * @return
-     * @throws Throwable
-     */
     @SuppressWarnings("unchecked")
     @Around("joinToCache() && execution( public * edu.clevertec.check.service.impl.ProductServiceImpl.findById(..))")
     public Object searchInTheCacheAndRepo(ProceedingJoinPoint joinPoint) throws Throwable {

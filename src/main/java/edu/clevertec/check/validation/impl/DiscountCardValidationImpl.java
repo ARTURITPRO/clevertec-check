@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 public class DiscountCardValidationImpl implements DiscountCardValidation {
-    private final String[] argsDiscountCard;
+
 
     /**
      * DiscountCard validation
@@ -31,7 +31,7 @@ public class DiscountCardValidationImpl implements DiscountCardValidation {
      *                               contains more or less than 5 digits.
      */
     @Override
-    public boolean isValid() {
+    public boolean isValid(String[] argsDiscountCard) {
         String nameCard = argsDiscountCard[0];
         String numberCardStr = argsDiscountCard[1];
         boolean isValidNumber = numberCardStr.matches(PATTERN_NUMBER_CARD);
@@ -42,6 +42,6 @@ public class DiscountCardValidationImpl implements DiscountCardValidation {
             throw new DiscountCardException("Card number must be 5 digits");
         log.info("number DiscountCard is valid");
         log.info("name DiscountCard is valid");
-        return true;
+        return isValidNumber&&isValidName;
     }
 }

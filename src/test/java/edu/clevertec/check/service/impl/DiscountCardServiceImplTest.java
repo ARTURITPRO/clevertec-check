@@ -6,6 +6,7 @@ import edu.clevertec.check.service.DiscountCardService;
 import edu.clevertec.check.util.ConnectionManagerTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -20,10 +21,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
+@Tag("UnitTest")
 @ExtendWith(MockitoExtension.class)
 class DiscountCardServiceImplTest {
-
-    private List<DiscountCard> expectedListDiscountCard;
 
     @Mock
     private DiscountCardService<Integer, DiscountCard> discountCardService;
@@ -33,6 +33,8 @@ class DiscountCardServiceImplTest {
 
     @Mock
     private DiscountCardRepoImpl discountCardRepo = new DiscountCardRepoImpl();
+
+    private List<DiscountCard> expectedListDiscountCard;
 
     @BeforeEach
     void initListDiscountCard() {
@@ -78,7 +80,6 @@ class DiscountCardServiceImplTest {
         }
     }
 
-
     @Nested
     class FindByIdDiscountCardTest {
         @Test
@@ -115,7 +116,6 @@ class DiscountCardServiceImplTest {
 
     @Nested
     class DeleteDiscountCardTest {
-
         @Test
         void deleteDiscountCardById() {
             when(discountCardRepo.delete(connectionManagerTest, 3)).thenReturn(true);
