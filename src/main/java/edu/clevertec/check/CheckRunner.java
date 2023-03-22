@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 @Slf4j
 public class CheckRunner {
-    private static String MESSAGE_DATA_INVALID = "The %s + is not valid. Check the correctness of the entered data.They must be entered " +
+    private static final String MESSAGE_DATA_INVALID = "The %s + is not valid. Check the correctness of the entered data.They must be entered " +
             "in regular expression format: %s Valid data example: 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 mastercard-11111" +
             " or enter the path of the source file, e.g. src\\main\\resources\\data.txt";
 
