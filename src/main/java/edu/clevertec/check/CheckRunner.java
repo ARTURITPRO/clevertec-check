@@ -61,8 +61,7 @@ public class CheckRunner {
                 (new ProductRepoImpl()), data,  new DiscountCardServiceImpl(new DiscountCardRepoImpl()));
         resultProcessedData.orderProcessing();
         resultProcessedData.formationOfCheck();
-        CashReceiptPdfFilePrinter printer = new CashReceiptPdfFilePrinterImpl();
-        printer.print(resultProcessedData); //Print check to PDF file (in root project)
+
         return resultProcessedData;
     }
 }

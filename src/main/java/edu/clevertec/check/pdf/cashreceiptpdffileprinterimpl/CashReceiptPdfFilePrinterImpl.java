@@ -55,6 +55,7 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
     @SneakyThrows
     @Override
     public byte[] print(OrderProcessingService orderProcessingService)  {
+
         @Cleanup ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
         /** The path to the background file. */
@@ -63,7 +64,7 @@ public class CashReceiptPdfFilePrinterImpl implements CashReceiptPdfFilePrinter 
         @Cleanup PdfDocument backgroundPdfDocument = new PdfDocument(new PdfReader(file));
 
         @Cleanup
-        PdfDocument checkPdfDocument = new PdfDocument(new PdfWriter(outputStream));
+        PdfDocument checkPdfDocument = new PdfDocument(new PdfWriter(PATH_RECORD_FILE));
 
         @Cleanup
         Document document = new Document(checkPdfDocument);

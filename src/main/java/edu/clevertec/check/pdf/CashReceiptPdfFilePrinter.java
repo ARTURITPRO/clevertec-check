@@ -21,6 +21,12 @@ public interface CashReceiptPdfFilePrinter {
      */
     byte[] print(OrderProcessingService cashReceipt) throws IOException;
 
-    String READ_FILE_PATH = "C:\\Users\\maste\\IdeaProjects\\7-clevertec-check-demo-20-12-2022 test\\clevertec-check\\clevertec.pdf";
-
+    /**
+     * ReadFilePath
+     */
+    String READ_FILE_PATH = "src\\main\\resources\\template\\clevertec.pdf";
+    /**
+     * Path Record File
+     */
+    String PATH_RECORD_FILE = "checkOfSupermarket.pdf";
 }

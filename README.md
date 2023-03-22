@@ -16,7 +16,7 @@
 
 ## Перед запуском приложения, нужно выполнить инструкции в файлах:  
 ```sh
-  resources/jdbc/test.sql и resources/jdbc/data.sql 
+  resources/jdbc/schema.sql и resources/jdbc/data.sql 
 ```
   ## Способы запуска
  ### 1.) Запуск через командную строку
