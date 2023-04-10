@@ -36,6 +36,7 @@ class DiscountCardServiceImplTest {
 
     private List<DiscountCard> expectedListDiscountCard;
 
+
     @BeforeEach
     void initListDiscountCard() {
         discountCardService = new DiscountCardServiceImpl(discountCardRepo);

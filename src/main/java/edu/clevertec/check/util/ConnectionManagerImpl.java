@@ -23,6 +23,10 @@ public class ConnectionManagerImpl implements ConnectionManager {
         Class.forName(SettingsUtil.get(DRIVER));
     }
 
+    /**
+     *
+     * @return Connection
+     */
     @SneakyThrows
     @Override
     public Connection get() {
