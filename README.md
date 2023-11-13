@@ -68,7 +68,7 @@ ZWDN:304219              CKHO:300030394
 REGN:3100016076           UNP:390286042
 KASSA:0001 Change:000750  DKH:000271821
 31 Osipova Tatiana     CHK:01/000000285
-TIME  18:18:58		   DATE  2022-12-20
+TIME  18:18:58	       DATE  2022-12-20
 ----------------------------------------
 QTY   DESCRIPTION       PRICE      TOTAL
 *     The item chicken is promotional
@@ -96,9 +96,9 @@ QTY   DESCRIPTION       PRICE      TOTAL
 4     chocolate         $2.5       $10       
 3     icecream          $2.0       $6        
 ----------------------------------------
-#	  DiscountCard mastercard number 11111
-#	  has been provided
-#	  Included 10% discount
+#     DiscountCard mastercard number 11111
+#     has been provided
+#     Included 10% discount
 ----------------------------------------
 ####  Total cost:                 $140,58
 </pre>
